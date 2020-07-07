@@ -1,0 +1,25 @@
+:root {
+  /* Define colors as colors */
+  --black: #1b2d45;
+  --green: #00EBC7;
+  --red: #FF5470;
+  --yellow: #Fde24f;
+  --darkBlue: #00214d;
+  --grey: #BFBFBF;
+  --lightGrey: #F2F4F6;
+
+  /* Define colors intentions */
+  --background: var(--lightGrey);
+  --textColor: var(--black);
+}
+
+
+body {
+    background: var(--background);
+    color: var(--textColor);
+}
+
+.dark {
+  --background: var(--black);
+  --textColor: var(--lightGrey);
+}
