@@ -79,8 +79,6 @@ like `--blue: blue;`
 So instead of saying `background: blue;`
 You say `background: var(--background);`
 
-
-
 ## 6 - CSS Specificity
 
 ## 7 - Typography
