@@ -81,7 +81,51 @@ You say `background: var(--background);`
 
 ## 6 - CSS Specificity
 
+### least to most Specific
+
+element: h1, div
+attribute: class, attribute [type="input"]
+id: Higher. can cause trouble for styling.
+!important: this means that there's a bigger problem with your css.
+
+### Specific based on apply order
+
+```
+h1 {
+  font-size: 1rem;
+}
+
+// this will apply
+h1 {
+  font-size: 2rem;
+}
+```
+
+```
+.header {
+  font-size: 2rem;
+}
+
+// this is ignored, since .header is a class.
+h1 {
+  front-size: 1rem;
+}
+```
+
+```
+// this is ignored. This is 1 level of specificity.
+.header {
+  font-size: 1rem;
+}
+
+// this is applied. Because it's 3 levels of specificity.
+.wrapper .container .header {
+  font-size: 2rem;
+}
+```
+
 ## 7 - Typography
+https://type-scale.com/
 
 ## 8 - Kitchen Sink Files
 
