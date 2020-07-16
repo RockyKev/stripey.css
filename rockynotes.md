@@ -139,6 +139,30 @@ To target placeholder text, you use
 ```
 
 ## 10 - Buttons
+Design tokens - made popular by Tailwind
+
+```
+
+button {
+  --buttonColor: var(--green);
+  --textColor: var(--black);
+
+  appearance: none;
+  color: var(--textColor);
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: 10px;
+  padding: 5px 25px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+button.cancel {
+  --buttonColor: var(--red);
+  --textColor: white;
+}
+
+```
+You turn your default colors of a button into these tokens. Then change them within the state.
 
 
 ## 11 - Elevations
