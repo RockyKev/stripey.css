@@ -167,6 +167,9 @@ You turn your default colors of a button into these tokens. Then change them wit
 
 ## 11 - Elevations
 
+Create a elevation system (He stole it from [tailwind](https://tailwindcss.com/docs/box-shadow/)) to control your shadows and depth.
+
+
 ## 12 - Elements and Layouts
 
 ## 13 - Media Queries

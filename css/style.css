@@ -1,98 +1,112 @@
 :root {
-  /* Define colors as colors */
-  --black: #1b2d45;
-  --green: #00EBC7;
-  --red: #FF5470;
-  --yellow: #Fde24f;
-  --darkBlue: #00214d;
-  --grey: #BFBFBF;
-  --lightGrey: #F2F4F6;
+    /* Define colors as colors */
+    --black: #1b2d45;
+    --green: #00ebc7;
+    --red: #ff5470;
+    --yellow: #fde24f;
+    --darkBlue: #00214d;
+    --grey: #bfbfbf;
+    --lightGrey: #f2f4f6;
 
-  /* Define colors intentions */
-  --primary: var(--green);
-  --danger: var(--red);
+    /* Define colors intentions */
+    --primary: var(--green);
+    --danger: var(--red);
 
-  --background: var(--lightGrey);
-  --textColor: var(--black);
-  --lineColor: var(--grey);
+    --background: var(--lightGrey);
+    --textColor: var(--black);
+    --lineColor: var(--grey);
 
-  --line: solid 1px var(--lineColor);
+    --line: solid 1px var(--lineColor);
 
-  /* Type */
-  --headingFont: 'Space Mono', monospace;
-  --bodyFont: 'Work Sans', sans-serif;
+    /* Type */
+    --headingFont: 'Space Mono', monospace;
+    --bodyFont: 'Work Sans', sans-serif;
 
-  --h1: 3.052em;
-  --h2: 2.441em;
-  --h3: 1.953em;
-  --h4: 1.563em;
-  --h5: 1.25em;
-  --smallText: 0.8em;
+    --h1: 3.052em;
+    --h2: 2.441em;
+    --h3: 1.953em;
+    --h4: 1.563em;
+    --h5: 1.25em;
+    --smallText: 0.8em;
 
-  /* Elevation */
-  --level-1: 0 1px 3px 0 rgba(0 ,0 ,0 , 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* Elevation */
+    --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
-
 
 /* FROM type scale */
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400');
 
-html {font-size: 112.5%;} /*18px*/
+html {
+    font-size: 112.5%;
+} /*18px*/
 
 body {
-  font-family: var(--bodyFont);
-  font-weight: 400;
-  line-height: 1.65;
+    font-family: var(--bodyFont);
+    font-weight: 400;
+    line-height: 1.65;
 }
 
 p {
-  margin-bottom: 1.15rem;
-  max-width: 40em;
+    margin-bottom: 1.15rem;
+    max-width: 40em;
 }
 
 a {
-  color: var(--black);
-  text-decoration: none;
-  border-bottom: solid 2px var(--primary);
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: solid 2px var(--primary);
 }
 
 blockquote {
-  border-left: solid 1px var(--darkBlue);
-  margin: 2em 1em;
-  padding: 1em;
-  background: white;
-  box-shadow: var(--level-3);
-
+    border-left: solid 1px var(--darkBlue);
+    margin: 2em 1em;
+    padding: 1em;
+    background: white;
+    box-shadow: var(--level-3);
 }
 
-h1, h2, h3, h4, h5 {
-  margin: 2.75rem 0 1.05rem;
-  font-family: var(--headingFont);
-  font-weight: 400;
-  line-height: 1.15;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 2.75rem 0 1.05rem;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    line-height: 1.15;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: var(--h1);
+    margin-top: 0;
+    font-size: var(--h1);
 }
 
 h2 {
-  font-size: var(--h1);
+    font-size: var(--h2);
 }
 
 h3 {
-  font-size: var(--h3);}
+    font-size: var(--h3);
+}
 
-h4 {font-size:var(--h4); }
+h4 {
+    font-size: var(--h4);
+}
 
-h5 {font-size: var(--h5);}
+h5 {
+    font-size: var(--h5);
+}
 
-small, .text_small {font-size: var(--smallText);}
+small,
+.text_small {
+    font-size: var(--smallText);
+}
 
 body {
     background: var(--background);
@@ -100,71 +114,96 @@ body {
 }
 
 label {
-  display: block;
-  font-size: var(--smallText);
+    display: block;
+    font-size: var(--smallText);
 }
 
-input, textarea {
-  padding: 4px 6px;
-  border: var(--line);
-  border-radius: 4px;
+input,
+textarea {
+    padding: 4px 6px;
+    border: var(--line);
+    border-radius: 4px;
 }
 
 textarea {
-  width: 100%;
-  height: 5rem;
+    width: 100%;
+    height: 5rem;
 }
-
 
 ::placeholder {
-  color: var(--grey);
+    color: var(--grey);
 }
 
-
 select {
-  border: var(--line);
+    border: var(--line);
 }
 
 hr {
-  border-top: var(--line);
+    border-top: var(--line);
 }
 
 button {
-  --buttonColor: var(--primary);
+    --buttonColor: var(--primary);
 
-  appearance: none;
-  color: var(--textColor);
-  background-color: var(--buttonColor);
-  border: none;
-  border-radius: 10px;
-  padding: 5px 25px;
-  box-shadow: var(--level-1);
-  transition: 0.3s ease-in-out box-shadow;
-
+    appearance: none;
+    color: var(--textColor);
+    background-color: var(--buttonColor);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 25px;
+    box-shadow: var(--level-1);
+    transition: 0.3s ease-in-out box-shadow;
 }
 
 button.cancel {
-  --buttonColor: var(--danger);
-  --textColor: white;
+    --buttonColor: var(--danger);
+    --textColor: white;
 }
 
 button.small {
-  font-size: var(--smallText);
+    font-size: var(--smallText);
 }
 
-
 button[disabled] {
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 button:hover {
-  box-shadow: var(--level-2);
+    box-shadow: var(--level-2);
 }
-
 
 /* CLASSES */
 .dark {
-  --background: var(--black);
-  --textColor: var(--lightGrey);
+    --background: var(--black);
+    --textColor: var(--lightGrey);
 }
 
+.layout {
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* generic grid */
+.grid {
+    --gridColumns: 1;
+    display: grid;
+    grid-template-columns: repeat(var(--gridColumns), 1fr);
+}
+
+.cols-2 {
+    --gridColumns: 2;
+}
+
+.cols-3 {
+    --gridColumns: 3;
+}
+
+.flex {
+    --justifyContent: space-between;
+    display: flex;
+    justify-content: var(--justifyContent);
+}
+
+.flex-around {
+    --justifyContent: space-around;
+}
