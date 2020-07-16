@@ -128,10 +128,18 @@ h1 {
 https://type-scale.com/
 
 ## 8 - Kitchen Sink Files
+This is where we play around with the demo file to see if it aligns with our design.
 
 ## 9 - Forms and Inputs
+To target placeholder text, you use
+```
+::placeholder {
+  color: var(--grey);
+}
+```
 
 ## 10 - Buttons
+
 
 ## 11 - Elevations
 

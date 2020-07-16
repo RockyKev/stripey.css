@@ -11,6 +11,9 @@
   /* Define colors intentions */
   --background: var(--lightGrey);
   --textColor: var(--black);
+  --lineColor: var(--grey);
+
+  --line: solid 1px var(--lineColor);
 
   /* Type */
   --headingFont: 'Space Mono', monospace;
@@ -38,7 +41,25 @@ body {
   line-height: 1.65;
 }
 
-p {margin-bottom: 1.15rem;}
+p {
+  margin-bottom: 1.15rem;
+  max-width: 40em;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: solid 2px var(--green);
+}
+
+blockquote {
+  border-left: solid 1px var(--darkBlue);
+  margin: 2em 1em;
+  padding: 1em;
+  background: white;
+
+
+}
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -54,7 +75,7 @@ h1 {
 
 h2 {
   font-size: var(--h1);
-   }
+}
 
 h3 {
   font-size: var(--h3);}
@@ -65,12 +86,45 @@ h5 {font-size: var(--h5);}
 
 small, .text_small {font-size: var(--smallText);}
 
-
 body {
     background: var(--background);
     color: var(--textColor);
 }
 
+label {
+  display: block;
+  font-size: var(--smallText);
+}
+
+input, textarea {
+  padding: 4px 6px;
+  border: var(--line);
+  border-radius: 4px;
+}
+
+textarea {
+  width: 100%;
+  height: 5rem;
+}
+
+::placeholder {
+  color: var(--grey);
+}
+
+select {
+  border: var(--line);
+}
+
+hr {
+  border-top: var(--line);
+}
+
+button {
+  appearance: none;
+  color: red;
+}
+
+/* CLASSES */
 .dark {
   --background: var(--black);
   --textColor: var(--lightGrey);
