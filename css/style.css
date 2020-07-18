@@ -38,16 +38,28 @@
     --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-    /* Media Queries */
-    --med: 400px;
+    /* Positioning */
+    --containerPadding: 2.5%;
+    --headerHeight: 3rem;
 }
 
 /* FROM type scale */
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400');
 
+/* TYPE SCALE */
 html {
-    font-size: var(--baseFontSize);
-} /*18px*/
+    font-size: var(--baseFontSize); /*18px*/
+    box-sizing: border-box;
+}
+
+/* This disables the box sizing defaults bullshit */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* THE CSS CODE */
 
 body {
     font-family: var(--bodyFont);
@@ -56,6 +68,35 @@ body {
     background: var(--background);
     color: var(--textColor);
     padding-bottom: 300px;
+}
+
+header {
+    --headerBackground: var(--darkBlue);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    height: var(--headerHeight);
+    color: white;
+    height: 3rem;
+    background: var(--headerBackground);
+    box-shadow: var(--level-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--containerPadding);
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+header nav a + a {
+    margin-left: 15px;
 }
 
 p {
@@ -173,17 +214,6 @@ button:hover {
     box-shadow: var(--level-2);
 }
 
-/* CLASSES */
-.dark {
-    --background: var(--black);
-    --textColor: var(--lightGrey);
-}
-
-.layout {
-    margin: 0 auto;
-    width: 95%;
-}
-
 /* layout components */
 .grid {
     --gridColumns: 1;
@@ -209,10 +239,24 @@ button:hover {
     --justifyContent: space-around;
 }
 
+/* UTILITY CLASSES */
+.dark {
+    --background: var(--black);
+    --textColor: var(--lightGrey);
+}
+
+.layout {
+    /* margin: 0 auto;
+    width: 95%; */
+    /* padding: 0 var(--containerPadding); */
+    /* top padding header height + watever padding we want */
+    padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+}
+
 /* Final Media Query */
 @media only screen and (min-width: 800px) {
     :root {
-        --baseFontSize: 80.5%;
+        --baseFontSize: 100.5%;
     }
 
     .grid {
@@ -222,4 +266,11 @@ button:hover {
     .flex {
         display: flex;
     }
+}
+
+/* Extra classes */
+
+.fake-logo {
+    font-size: var(--baseFontSize);
+    margin: 0;
 }

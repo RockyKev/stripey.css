@@ -221,6 +221,30 @@ So on small screens, it's a block element. It only starts breaking into flex pat
 
 ## 14 - Header
 
+This is saying - all elements that are NEXT to that pattern.
+So the first a tag doesn't get a left.
+But the next ones do.
+
+```
+header nav a + a {
+    margin-left: 10px;
+}
+```
+
+You can also mathmatically calculate the header size.
+This statement is saying, use the headerHeight (which is also assigned to the header) and ADD 3rems to give it some extra space.
+
+Like this: https://i.imgur.com/htCIVXT.png
+
+```
+.layout {
+    padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+}
+```
+
+box-sizing border set.
+if you do 100%, it adds 100% PLUS padding.
+
 ## 15 - The footer
 
 ## 16 - BEM and Cards
