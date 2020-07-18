@@ -292,6 +292,22 @@ The last element inside `.card`, remove the margin-bottom.
 
 ## 17 - When to make New Elements
 
+This is more about rules.
+The intention is not to constantly do overrides.
+
+It's also a better idea than creating custom css for every section of element.
+
+aside:
+This is a easy way to do a 2 column approach.
+
+```
+.split {
+    display: grid;
+    grid-template-columns: 33% 65%;
+    grid-gap: 2%;
+}
+```
+
 ## 18 - Super Easy Dark Mode
 
 ## 19 - Super Easy Themeing

@@ -287,6 +287,13 @@ button:hover {
     margin-bottom: 0;
 }
 
+/* Extra classes */
+
+.fake-logo {
+    font-size: var(--baseFontSize);
+    margin: 0;
+}
+
 /* Final Media Query */
 @media only screen and (min-width: 800px) {
     :root {
@@ -300,11 +307,4 @@ button:hover {
     .flex {
         display: flex;
     }
-}
-
-/* Extra classes */
-
-.fake-logo {
-    font-size: var(--baseFontSize);
-    margin: 0;
 }
