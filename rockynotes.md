@@ -1,15 +1,15 @@
 # Leveluptuts - Modern CSS
 
-## 0  - Getting started
+## 0 - Getting started
 
 Notes: It's a quick walkthrough of the files.
 
-1) npm i
-2) `npm run start` creates a dist folder + start server
-3)
-
+1. npm i
+2. `npm run start` creates a dist folder + start server
+3.
 
 ## 1 - What is CSS Reset?
+
 https://css-tricks.com/reboot-resets-reasoning/
 
 What is normalized.css?
@@ -21,6 +21,7 @@ cssreset wa so popular.
 Normalized.css instead setting defaults to look standardize across browser.
 
 normalized.csss
+
 ```
 .hidden (display:none)
 .sr-only (screen-reader only)
@@ -29,9 +30,11 @@ normalized.csss
 ```
 
 ## 2 - Classless CSS
+
 Lots of references: https://github.com/troxler/awesome-css-frameworks
 
 ## 3 - CSS Variables 101
+
 ```
 :root {
   --black: #222;
@@ -47,6 +50,7 @@ body {
 ## 4 - Variable Scoping
 
 non-JS color changing.
+
 ```
 :root {
   --background: blue;
@@ -72,12 +76,12 @@ This? -> https://designcode.io/design-system-figma
 He also refers to things as 'colors of intentions'.
 Like, your actions. Your action for clicking is red or something. I dunno. Still figuring it out.
 
-1) Define :root{} as colors.
-like `--blue: blue;`
+1. Define :root{} as colors.
+   like `--blue: blue;`
 
-2) Then define the 'intentions'.
-So instead of saying `background: blue;`
-You say `background: var(--background);`
+2. Then define the 'intentions'.
+   So instead of saying `background: blue;`
+   You say `background: var(--background);`
 
 ## 6 - CSS Specificity
 
@@ -125,13 +129,17 @@ h1 {
 ```
 
 ## 7 - Typography
+
 https://type-scale.com/
 
 ## 8 - Kitchen Sink Files
+
 This is where we play around with the demo file to see if it aligns with our design.
 
 ## 9 - Forms and Inputs
+
 To target placeholder text, you use
+
 ```
 ::placeholder {
   color: var(--grey);
@@ -139,6 +147,7 @@ To target placeholder text, you use
 ```
 
 ## 10 - Buttons
+
 Design tokens - made popular by Tailwind
 
 ```
@@ -162,17 +171,53 @@ button.cancel {
 }
 
 ```
-You turn your default colors of a button into these tokens. Then change them within the state.
 
+You turn your default colors of a button into these tokens. Then change them within the state.
 
 ## 11 - Elevations
 
 Create a elevation system (He stole it from [tailwind](https://tailwindcss.com/docs/box-shadow/)) to control your shadows and depth.
 
+## 12 - Form Elements and Layouts
 
-## 12 - Elements and Layouts
+adding custom grid and flex classes.
 
 ## 13 - Media Queries
+
+You have to hard-code your widths in media queries.
+
+THIS IS NOT VALID CSS!!! You can't use variables
+
+```
+@media only screen and (min-width: var(--med)) {
+    body {
+        background: red !important;
+    }
+}
+```
+
+For incredibly responsive design:
+
+```
+.flex {
+    --justifyContent: space-between;
+    display: block;
+    justify-content: var(--justifyContent);
+}
+
+/* Final Media Query */
+@media only screen and (min-width: 800px) {
+    :root {
+        --baseFontSize: 80.5%;
+    }
+
+    .flex {
+        display: flex;
+    }
+}
+```
+
+So on small screens, it's a block element. It only starts breaking into flex patterns on bigger screens.
 
 ## 14 - Header
 

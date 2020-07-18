@@ -21,7 +21,7 @@
     /* Type */
     --headingFont: 'Space Mono', monospace;
     --bodyFont: 'Work Sans', sans-serif;
-
+    --baseFontSize: 112.5%;
     --h1: 3.052em;
     --h2: 2.441em;
     --h3: 1.953em;
@@ -37,19 +37,25 @@
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Media Queries */
+    --med: 400px;
 }
 
 /* FROM type scale */
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400');
 
 html {
-    font-size: 112.5%;
+    font-size: var(--baseFontSize);
 } /*18px*/
 
 body {
     font-family: var(--bodyFont);
     font-weight: 400;
     line-height: 1.65;
+    background: var(--background);
+    color: var(--textColor);
+    padding-bottom: 300px;
 }
 
 p {
@@ -106,11 +112,6 @@ h5 {
 small,
 .text_small {
     font-size: var(--smallText);
-}
-
-body {
-    background: var(--background);
-    color: var(--textColor);
 }
 
 label {
@@ -183,10 +184,10 @@ button:hover {
     width: 95%;
 }
 
-/* generic grid */
+/* layout components */
 .grid {
     --gridColumns: 1;
-    display: grid;
+    display: block;
     grid-template-columns: repeat(var(--gridColumns), 1fr);
 }
 
@@ -200,10 +201,25 @@ button:hover {
 
 .flex {
     --justifyContent: space-between;
-    display: flex;
+    display: block;
     justify-content: var(--justifyContent);
 }
 
 .flex-around {
     --justifyContent: space-around;
+}
+
+/* Final Media Query */
+@media only screen and (min-width: 800px) {
+    :root {
+        --baseFontSize: 80.5%;
+    }
+
+    .grid {
+        display: grid;
+    }
+
+    .flex {
+        display: flex;
+    }
 }
