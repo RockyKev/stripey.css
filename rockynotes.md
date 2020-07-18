@@ -267,6 +267,29 @@ footer a {
 
 ## 16 - BEM and Cards
 
+BEM - element means no standalone meaning
+
+1. Identify key pieces and focus on intentions.
+2. Abstract major elements
+
+---
+
+ISSUE: You put your elements in a card, and they're using the margin that was defined from other elements. This is a easy way to remove it.
+
+This says:
+The first element inside `.card`, remove the margin-top.
+The last element inside `.card`, remove the margin-bottom.
+
+```
+.card > *:first-child {
+    margin-top: 0;
+}
+
+.card > *:last-child {
+    margin-bottom: 0;
+}
+```
+
 ## 17 - When to make New Elements
 
 ## 18 - Super Easy Dark Mode

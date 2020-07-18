@@ -7,6 +7,7 @@
     --darkBlue: #00214d;
     --grey: #bfbfbf;
     --lightGrey: #f2f4f6;
+    --white: #fff;
 
     /* Define colors intentions */
     --primary: var(--green);
@@ -17,6 +18,7 @@
     --lineColor: var(--grey);
 
     --line: solid 1px var(--lineColor);
+    --cardBg: var(--white);
 
     /* Type */
     --headingFont: 'Space Mono', monospace;
@@ -41,6 +43,7 @@
     /* Positioning */
     --containerPadding: 2.5%;
     --headerHeight: 3rem;
+    --borderRadius: 10px;
 }
 
 /* FROM type scale */
@@ -67,7 +70,6 @@ body {
     line-height: 1.65;
     background: var(--background);
     color: var(--textColor);
-    padding-bottom: 300px;
 }
 
 header {
@@ -131,7 +133,7 @@ blockquote {
     border-left: solid 1px var(--darkBlue);
     margin: 2em 1em;
     padding: 1em;
-    background: white;
+    background: var(--cardBg);
     box-shadow: var(--level-3);
 }
 
@@ -268,6 +270,21 @@ button:hover {
     /* padding: 0 var(--containerPadding); */
     /* top padding header height + watever padding we want */
     padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+}
+
+.card {
+    padding: 2em;
+    background: var(--cardBg);
+    box-shadow: var(--level-3);
+    border-radius: var(--borderRadius);
+}
+
+.card > *:first-child {
+    margin-top: 0;
+}
+
+.card > *:last-child {
+    margin-bottom: 0;
 }
 
 /* Final Media Query */
