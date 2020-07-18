@@ -247,6 +247,24 @@ if you do 100%, it adds 100% PLUS padding.
 
 ## 15 - The footer
 
+Scope with CSS Variables
+
+So you typically define things into :root as a global.
+
+But this ALSO works.
+`footerTextColor` exists in the parent element, so it borrows it from here.
+
+```
+footer {
+    --footerTextColor: white;
+    color: var(--footerTextColor);
+}
+
+footer a {
+    color: var(--footerTextColor);
+}
+```
+
 ## 16 - BEM and Cards
 
 ## 17 - When to make New Elements

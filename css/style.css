@@ -99,6 +99,23 @@ header nav a + a {
     margin-left: 15px;
 }
 
+footer {
+    --footerTextColor: var(--lightGrey);
+    color: var(--footerTextColor);
+    background: var(--black);
+    padding: 2rem var(--containerPadding);
+    text-align: center;
+}
+
+footer a {
+    color: var(--footerTextColor);
+}
+
+footer p {
+    margin-bottom: 0;
+    max-width: none;
+}
+
 p {
     margin-bottom: 1.15rem;
     max-width: 40em;
