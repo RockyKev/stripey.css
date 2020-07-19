@@ -325,4 +325,10 @@ https://www.happyhues.co/
 
 ## 20 Bonus - Oled Theme and Overrides
 
+Oled - specific oled monitors use black as 'no-pixel', so it doesn't have to render. THus, doesn't us epower.
+
 ## 21 - WHere to go from here
+
+A design token is an abstraction of a visual property such as color, font, width, animation, etc. These raw values are language application agnostic and once transformed and formatted can be used on any platform.
+https://design.firefox.com/photon/resources/design-tokens.html
+https://css-tricks.com/what-are-design-tokens/

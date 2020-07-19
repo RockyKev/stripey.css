@@ -1,3 +1,9 @@
+/*******************************************************************
+  ROOT SECTION:
+  Define a vanilla DEFAULT template here.
+  For making new themes, scroll down to the section titled "THEMES"
+*******************************************************************/
+
 :root {
     /* Define colors as colors */
     --black: #1b2d45;
@@ -25,6 +31,22 @@
     --line: solid 1px var(--lineColor);
     --cardBg: var(--white);
 
+    /* COLORS
+	- default body text  #ffffcc
+	- subtitle h2 text   #ff9900
+	- form input borders #cc9933
+	- default p text     #f0f0f0
+	- pre borders        #ffff99
+*/
+
+    /* FONTS
+	- default body text  Arial, Helvetica Neue, Helvetica, sans-serif
+	- subtitle h2 text   Garamond, Hoefler Text, Times New Roman, Times, serif
+	- form input text    Cambria, Georgia, Times, Times New Roman, Times, serif
+	- default p text     Copperplate Light, Copperplate Gothic Light, serif
+	- pre and code       Consolas, Lucida Console, Monaco, monospace
+*/
+
     /* Type */
     --headingFont: 'Space Mono', monospace;
     --bodyFont: 'Work Sans', sans-serif;
@@ -51,10 +73,15 @@
     --borderRadius: 10px;
 }
 
-/* FROM type scale */
+/*******************************************************************
+  IMPORTS SECTION
+
+*******************************************************************/
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400');
 
-/* TYPE SCALE */
+/*******************************************************************
+  RESET SECTION:
+*******************************************************************/
 html {
     font-size: var(--baseFontSize); /*18px*/
     box-sizing: border-box;
@@ -67,14 +94,37 @@ html {
     box-sizing: inherit;
 }
 
-/* THE CSS CODE */
+/*******************************************************************
+  DYNAMIC SECTION
+  The goal of these sections is that it grabs the key variables as
+  possible from the :root or theme class.
 
+  It's organized in alphabetical order.
+
+*******************************************************************/
 body {
     font-family: var(--bodyFont);
     font-weight: 400;
     line-height: 1.65;
     background: var(--background);
     color: var(--textColor);
+}
+
+footer {
+    --footerTextColor: var(--lightGrey);
+    color: var(--footerTextColor);
+    background: var(--footerBackground);
+    padding: 2rem var(--containerPadding);
+    text-align: center;
+}
+
+footer a {
+    color: var(--footerTextColor);
+}
+
+footer p {
+    margin-bottom: 0;
+    max-width: none;
 }
 
 header {
@@ -102,23 +152,6 @@ header nav a {
 
 header nav a + a {
     margin-left: 15px;
-}
-
-footer {
-    --footerTextColor: var(--lightGrey);
-    color: var(--footerTextColor);
-    background: var(--footerBackground);
-    padding: 2rem var(--containerPadding);
-    text-align: center;
-}
-
-footer a {
-    color: var(--footerTextColor);
-}
-
-footer p {
-    margin-bottom: 0;
-    max-width: none;
 }
 
 p {
@@ -243,7 +276,13 @@ button:hover {
     box-shadow: var(--level-2);
 }
 
-/* layout components */
+/*******************************************************************
+  UTILITIES SECTION
+  Unfortunately, classless css is impossible. These classes are for layouts
+  and mobile responsiveness. Avoid creating the 'tailwindcss' experience.
+
+*******************************************************************/
+
 .grid {
     --gridColumns: 1;
     display: block;
@@ -268,7 +307,6 @@ button:hover {
     --justifyContent: space-around;
 }
 
-/* UTILITY CLASSES */
 .layout {
     /* margin: 0 auto;
     width: 95%; */
@@ -276,6 +314,13 @@ button:hover {
     /* top padding header height + watever padding we want */
     padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
 }
+
+/*******************************************************************
+  COMPONENTS SECTION
+  Unfortunately, classless css is impossible. These classes are for
+  defined elements within a website.
+
+*******************************************************************/
 
 .card {
     padding: 2em;
@@ -299,7 +344,11 @@ button:hover {
     margin: 0;
 }
 
-/* THEMEING */
+/*******************************************************************
+  THEME SECTION
+  These themes are swapped by shoving them in the body tag via JS.
+
+*******************************************************************/
 
 .theme {
     /* Define colors as colors */
@@ -365,7 +414,11 @@ button:hover {
     --cardBg: var(--darkGrey);
 }
 
-/* Final Media Query */
+/*******************************************************************
+  MEDIA QUEIRY SECTION
+  This is at the bottom of the CSS to have the highest priority on a site.
+
+*******************************************************************/
 @media only screen and (min-width: 800px) {
     :root {
         --baseFontSize: 100.5%;
@@ -379,3 +432,9 @@ button:hover {
         display: flex;
     }
 }
+
+/*******************************************************************
+  HACKY OVERRIDES SECTION
+  You know why you're here. ;-)
+
+*******************************************************************/
