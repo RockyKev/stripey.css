@@ -17,9 +17,6 @@
     --white: #fff;
 
     /* Define colors intentions - VERY SUBJECTIVE*/
-    --primary: var(--green);
-    --danger: var(--red);
-
     --background: var(--lightGrey);
     --textColor: var(--black);
     --buttonTextColor: var(--black);
@@ -134,31 +131,25 @@ header {
     width: 100%;
 
     height: var(--headerHeight);
-    color: white;
-    height: 3rem;
     background: var(--headerBackground);
+    padding: 0 var(--containerPadding);
     box-shadow: var(--level-2);
+    color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 var(--containerPadding);
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    border-bottom: none;
+    align-items: flex-end;
 }
 
 header nav ul {
     list-style: none;
     margin: 0;
     padding-left: 0;
+    display: flex;
 }
 
 header nav li {
-    color: #fff;
-    background: darkorange;
+    color: white;
+    /* background: darkorange; */
     display: block;
     float: left;
     padding: 1rem;
@@ -169,7 +160,7 @@ header nav li {
 
 header nav li:hover,
 header nav li:focus-within {
-    background: red;
+    background: purple;
     cursor: pointer;
 }
 
@@ -178,12 +169,12 @@ header nav li:focus-within a {
 }
 
 header nav li ul {
-    background: orange;
+    background: green;
     visibility: hidden;
     opacity: 0;
-    min-width: 5rem;
+    min-width: 12rem;
     position: absolute;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     margin-top: 1rem;
     left: 0;
     display: none;
@@ -203,8 +194,14 @@ header nav li ul li {
     width: 100%;
 }
 
-/* header nav a + a {
-    margin-left: 15px;
+header nav a {
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* header nav li + li {
+    margin-left: 20px;
 } */
 
 p {
