@@ -36,8 +36,8 @@
         <nav role="navigation">
             <ul>
                 <li>
-                    <a href="#text">Text</a>
-                    <!-- <ul>
+                    <a href="#text" aria-haspopup="true">Text</a>
+                    <ul class="dropdown" aria-label="text submenu">
                         <li><a href="#text__headings">Headings</a></li>
                         <li><a href="#text__paragraphs">Paragraphs</a></li>
                         <li><a href="#text__blockquotes">Blockquotes</a></li>
@@ -47,11 +47,11 @@
                         <li><a href="#text__code">Code</a></li>
                         <li><a href="#text__inline">Inline elements</a></li>
                         <li><a href="#text__comments">HTML Comments</a></li>
-                    </ul> -->
+                    </ul>
                 </li>
                 <li>
-                    <a href="#embedded">Embedded content</a>
-                    <!-- <ul>
+                    <a href="#embedded" aria-haspopup="true">Embedded content</a>
+                    <ul class="dropdown" aria-label="text submenu">
                         <li><a href="#embedded__images">Images</a></li>
                         <li><a href="#embedded__audio">Audio</a></li>
                         <li><a href="#embedded__video">Video</a></li>
@@ -60,11 +60,11 @@
                         <li><a href="#embedded__progress">Progress</a></li>
                         <li><a href="#embedded__svg">Inline SVG</a></li>
                         <li><a href="#embedded__iframe">IFrames</a></li>
-                    </ul> -->
+                    </ul>
                 </li>
                 <li>
-                    <a href="#forms">Form elements</a>
-                    <!-- <ul>
+                    <a href="#forms" aria-haspopup="true">Form elements</a>
+                    <ul class="dropdown" aria-label="text submenu">
                         <li><a href="#forms__input">Input fields</a></li>
                         <li><a href="#forms__select">Select menus</a></li>
                         <li><a href="#forms__checkbox">Checkboxes</a></li>
@@ -72,10 +72,11 @@
                         <li><a href="#forms__textareas">Textareas</a></li>
                         <li><a href="#forms__html5">HTML5 inputs</a></li>
                         <li><a href="#forms__action">Action buttons</a></li>
-                    </ul> -->
+                    </ul>
                 </li>
             </ul>
         </nav>
+
         <div>A BUNCH OF ICONS</div>
     </header>
 
@@ -88,7 +89,7 @@
         Steal it from the 2nd part.
         -->
         <section>
-            <h2>Text Content (h2)</h2>
+            <h2>Text Content</h2>
 
             <div>
                 <h1>Heading 1</h1>
@@ -123,6 +124,7 @@
                 <p> Single Lines</p>
 
             </div>
+
             <div>
                 <h3>Block Quote (h3)</h3>
                 <blockquote>
@@ -161,7 +163,11 @@
 
             <div>
                 <h3>Inline Styles (h3) </h3>
-                <p><a href="#!">This is a text link</a>.</p>
+                <p><a href="#!">This is a text link - No state</a>.</p>
+                <p><a href="#!">This is a text link - simulated Active state</a>.</p>
+                <p><a href="#!">This is a text link - simulated Hover state</a>.</p>
+                <p><a href="#!">This is a text link - simulated Focus state</a>.</p>
+                <p><a href="#!">This is a text link - simulated Visited state</a>.</p>
                 <p><strong>Strong is used to indicate strong importance.</strong></p>
                 <p><em>This text has added emphasis.</em></p>
                 <p>The <b>b element</b> is stylistically different text from normal text, without any special
@@ -185,14 +191,22 @@
                 <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
                 <p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
             </div>
+
         </section>
 
         <!-- SECTION -> Text Code
         Steal it from the FIRST
         -->
         <section>
+            <h2> Text Code </h2>
+
             <div>
-                <h3>Code Block (h3) </h3>
+                <h3>&lt;code&gt; Line (code tag)</h3>
+                <code>Single Line code (like Slack)</code>
+            </div>
+
+            <div>
+                <h3>&lt;code&gt; Block (pre + code tag)</h3>
                 <pre><code>define foobar() {
             print &quot;Welcome to flavor country!&quot;;
         }</code></pre>
@@ -207,17 +221,29 @@
         <span class="bu">range</span>(<span class="dv">10</span>):
             <span class="co"># (but not *too* quick)</span>
             time.sleep(<span class="fl">0.5</span>)
-            <span class="bu">print</span> i</code></pre>
-            </div> -->
+            <span class="bu">print</span> i</code></pre>-->
+            </div>
 
-                <h3>pre tag (h3) </h3>
-                <pre><p>Single Line code (like Slack)</p></pre>
+            <div>
+                <h3>&lt;pre&gt; Tag</h3>
+                <pre>P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~ </pre>
+            </div>
 
-                <h3>Misc? (h3) </h3>
-                <p><strong>Some code blocks</strong></p>
-                <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>
-                <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>
+
+            <h3>Misc: </h3>
+            <div>
+                <p><strong>Keyboard input:</strong>(&lt;kbd&gt;&lt;/kbd&gt;): <kbd>Cmd</kbd></p>
                 <p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp></p>
+            </div>
+
+            <h3>Horizontal Line</h3>
+            <hr />
 
         </section>
 
@@ -225,42 +251,35 @@
         Steal it from the FIRST
         -->
         <section>
-
-            <pre>P R E F O R M A T T E D T E X T
-! " # $ % &amp; ' ( ) * + , - . /
-0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-@ A B C D E F G H I J K L M N O
-P Q R S T U V W X Y Z [ \ ] ^ _
-` a b c d e f g h i j k l m n o
-p q r s t u v w x y z { | } ~ </pre>
         </section>
 
-        <!-- SECTION -> Divider
-        -->
-        <hr />
 
         <!-- SECTION -> Image
             steal from 2nd part
         -->
         <section>
 
+            <h2> Embedded Content </h2>
+
             <div>
                 <h3>No <code>&lt;figure&gt;</code> element</h3>
+
                 <p><img src="http://placekitten.com/480/480" alt="Image alt text"></p>
+            </div>
+
+            <div>
                 <h3>Wrapped in a <code>&lt;figure&gt;</code> element, no <code>&lt;figcaption&gt;</code></h3>
                 <figure><img src="http://placekitten.com/420/420" alt="Image alt text"></figure>
+            </div>
+
+            <div>
                 <h3>Wrapped in a <code>&lt;figure&gt;</code> element, with a <code>&lt;figcaption&gt;</code></h3>
                 <figure>
                     <img src="http://placekitten.com/420/420" alt="Image alt text">
                     <figcaption>Here is a caption for this image.</figcaption>
                 </figure>
             </div>
-        </section>
 
-        <!-- SECTION -> Embeds
-            MP3 / video - steal
-        -->
-        <section>
             <div>
                 <h3>Audio</h3>
                 <div><audio controls="">audio</audio></div>
@@ -273,12 +292,12 @@ p q r s t u v w x y z { | } ~ </pre>
 
             <div>
                 <h3>Canvas</h3>
-                <div><canvas>canvas</canvas></div>
+                <div><canvas id="canvas"></canvas></div>
             </div>
 
             <div>
-                <h3>Meter</h3>
-                <div><meter value="2" min="0" max="10">2 out of 10</meter></div>
+                <h3>Meter (50% out of 100%)</h3>
+                <div><meter value="50" min="0" max="100">50 out of 100</meter></div>
             </div>
 
             <div>
@@ -353,128 +372,107 @@ p q r s t u v w x y z { | } ~ </pre>
             </div>
 
             <div>
-                <h2>IFrame</h2>
-                <div><iframe src="index.html" height="300"></iframe></div>
+                <h3>IFrame</h3>
+                <div><iframe src="index.html" height="300" width="100%"></iframe></div>
             </div>
 
         </section>
+
         <!-- SECTION -> TABLE
             USE BOTH!
         -->
 
         <section>
-
-            <table>
-                <caption>Table Caption</caption>
-                <thead>
-                    <tr>
-                        <th>Table Heading 1</th>
-                        <th>Table Heading 2</th>
-                        <th>Table Heading 3</th>
-                        <th>Table Heading 4</th>
-                        <th>Table Heading 5</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>Table Footer 1</th>
-                        <th>Table Footer 2</th>
-                        <th>Table Footer 3</th>
-                        <th>Table Footer 4</th>
-                        <th>Table Footer 5</th>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <tr>
-                        <td>Table Cell 1</td>
-                        <td>Table Cell 2</td>
-                        <td>Table Cell 3</td>
-                        <td>Table Cell 4</td>
-                        <td>Table Cell 5</td>
-                    </tr>
-                    <tr>
-                        <td>Table Cell 1</td>
-                        <td>Table Cell 2</td>
-                        <td>Table Cell 3</td>
-                        <td>Table Cell 4</td>
-                        <td>Table Cell 5</td>
-                    </tr>
-                    <tr>
-                        <td>Table Cell 1</td>
-                        <td>Table Cell 2</td>
-                        <td>Table Cell 3</td>
-                        <td>Table Cell 4</td>
-                        <td>Table Cell 5</td>
-                    </tr>
-                    <tr>
-                        <td>Table Cell 1</td>
-                        <td>Table Cell 2</td>
-                        <td>Table Cell 3</td>
-                        <td>Table Cell 4</td>
-                        <td>Table Cell 5</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Tables</h2>
 
 
-            <table>
-                <caption>
-                    Shoes, their sizes, and what they're made of
-                </caption>
-                <thead>
-                    <tr>
-                        <th align="left">size</th>
-                        <th align="left">material</th>
-                        <th align="left">color</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td align="left">9</td>
-                        <td align="left">leather</td>
-                        <td align="left">brown</td>
-                    </tr>
-                    <tr>
-                        <td align="left">10</td>
-                        <td align="left">hemp canvas</td>
-                        <td align="left">natural</td>
-                    </tr>
-                    <tr>
-                        <td align="left">11</td>
-                        <td align="left">glass</td>
-                        <td align="left">transparent</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <h3> Standard Table</h3>
+                <table>
+                    <caption>Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>Table Heading 1</th>
+                            <th>Table Heading 2</th>
+                            <th>Table Heading 3</th>
+                            <th>Table Heading 4</th>
+                            <th>Table Heading 5</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Table Footer 1</th>
+                            <th>Table Footer 2</th>
+                            <th>Table Footer 3</th>
+                            <th>Table Footer 4</th>
+                            <th>Table Footer 5</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Table Cell 1</td>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                            <td>Table Cell 4</td>
+                            <td>Table Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Table Cell 1</td>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                            <td>Table Cell 4</td>
+                            <td>Table Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Table Cell 1</td>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                            <td>Table Cell 4</td>
+                            <td>Table Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Table Cell 1</td>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                            <td>Table Cell 4</td>
+                            <td>Table Cell 5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <p>Multi-line tables:</p>
-            <table style="width: 46%;">
-                <colgroup>
-                    <col width="13%" />
-                    <col width="31%" />
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th align="left">keyword</th>
-                        <th align="left">text</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td align="left">red</td>
-                        <td align="left">
-                            Sunsets, apples, and other red or reddish things.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left">green</td>
-                        <td align="left">
-                            Leaves, grass, frogs and other things it's not easy
-                            being.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+
+                <h3> Multi-line tables:</h3>
+
+                <table style="width: 46%;">
+                    <colgroup>
+                        <col width="13%" />
+                        <col width="31%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>keyword</th>
+                            <th>text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>red</td>
+                            <td>
+                                Sunsets, apples, and other red or reddish things.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>green</td>
+                            <td>
+                                Leaves, grass, frogs and other things it's not easy
+                                being.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </section>
 
@@ -485,7 +483,11 @@ p q r s t u v w x y z { | } ~ </pre>
         -->
 
         <section>
+
+            <h2> Layouts </h2>
+
             <h3>2 Col Layout - Grid (h3 header)</h3>
+
             <div class="grid cols-2">
                 <p>
                     Tristique nulla aliquet enim tortor at auctor urna nunc id.
@@ -635,7 +637,7 @@ p q r s t u v w x y z { | } ~ </pre>
         <!-- SECTION -> Support stuff
         -->
         <section>
-            <h3>An h3 header (for card)</h3>
+            <h2>An h2 header (for card)</h2>
 
             <div class="card">
                 <h3>An h3 Header within the card</h3>
@@ -652,17 +654,31 @@ p q r s t u v w x y z { | } ~ </pre>
                     Man surprised me most about humanity. Because he sacrifices
                     his health in order to make money.
                 </p>
-                <button>Accept</button>
             </div>
 
-            <div class="card">
-                <h3>card + image</h3>
-                <p>
-                    Man surprised me most about humanity. Because he sacrifices
-                    his health in order to make money.
-                </p>
-                <button>Accept</button>
+            <h3>Inputs with grid (cols-2)</h3>
+            <div class="grid cols-2">
+                <div class="card">
+                    <img src="http://placekitten.com/480/480" alt="Image alt text">
+                    <h3>card + image</h3>
+                    <p>
+                        Man surprised me most about humanity. Because he sacrifices
+                        his health in order to make money.
+                    </p>
+                    <button>Accept</button>
+                </div>
+                <div class="card">
+                    <img src="http://placekitten.com/480/480" alt="Image alt text">
+                    <h3>card + image</h3>
+                    <p>
+                        Man surprised me most about humanity. Because he sacrifices
+                        his health in order to make money.
+                    </p>
+                    <button>Accept</button>
+                </div>
             </div>
+
+
 
 
         </section>
@@ -673,8 +689,9 @@ p q r s t u v w x y z { | } ~ </pre>
         -->
 
         <section>
+            <h2>INPUTS </h2>
             <div>
-                <h3> INPUTS - p tag version </h3>
+                <h3> p tag version </h3>
                 <p>
                     <label for="input__text">Text Input</label>
                     <input id="input__text" placeholder="Text Input" type="text" />
@@ -721,7 +738,7 @@ p q r s t u v w x y z { | } ~ </pre>
                 </p>
             </div>
 
-            <h3> INPUTS - div tag version </h3>
+            <h3> div tag version </h3>
 
             <div>
                 <h3>Inputs with Grid (cols-3)</h3>
@@ -770,7 +787,7 @@ p q r s t u v w x y z { | } ~ </pre>
 
             </div>
 
-            <h3> INPUTS - legends version </h3>
+            <h3> legends version </h3>
             <fieldset id="forms__input">
                 <legend>Input fields</legend>
                 <p>
@@ -948,11 +965,27 @@ p q r s t u v w x y z { | } ~ </pre>
                             &lt;button disabled&gt;
                         </button>
                     </p>
+
                     <p>
-                        <button class="small">Small button</button>
-                        <button class="cancel small">
-                            small button cancel
+                        <input type="submit" value="input Active" />
+                        <input type="button" value="input Hover" />
+                        <input type="reset" value="input Focus" />
+                        <input type="submit" value="input Visited" />
+                    </p>
+                    <p>
+                        <button>
+                            &lt;button active&gt;
                         </button>
+                        <button>
+                            &lt;button hover&gt;
+                        </button>
+                        <button>
+                            &lt;button focus&gt;
+                        </button>
+                        <button>
+                            &lt;button visited&gt;
+                        </button>
+
                     </p>
                 </div>
         </section>
@@ -999,19 +1032,18 @@ p q r s t u v w x y z { | } ~ </pre>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
-        window.ga = function () {
-            ga.q.push(arguments)
-        }
-        ga.q = []
-        ga.l = +new Date()
-        ga('create', 'UA-XXXXX-Y', 'auto')
-        ga('set', 'anonymizeIp', true)
-        ga('set', 'transport', 'beacon')
-        ga('send', 'pageview')
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d')
+        canvas.width = 300;
+        canvas.height = 300;
+        var gradient = context.createLinearGradient(0, 0, 0, 300);
+        gradient.addColorStop(0, "rgb(0, 0, 0)");
+        gradient.addColorStop(1, "rgb(255, 255, 255)");
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, 300, 300);
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
+
 </body>
 
 </html>
