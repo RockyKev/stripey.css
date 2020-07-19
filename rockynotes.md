@@ -310,7 +310,18 @@ This is a easy way to do a 2 column approach.
 
 ## 18 - Super Easy Dark Mode
 
+Define colors intentions - VERY SUBJECTIVE
+
+You might reach a point where you're describing everything as a color intention. This is where you have to make some really strong design choices.
+
+Themes - it's a way to make your site change it's concept without having to fuck around with a lot of edits.
+
 ## 19 - Super Easy Themeing
+
+Design Tokens!
+Creating various elements and then having it trickle down.
+
+https://www.happyhues.co/
 
 ## 20 Bonus - Oled Theme and Overrides
 
