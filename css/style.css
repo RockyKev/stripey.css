@@ -22,6 +22,7 @@
 
   --background: var(--lightGrey);
   --textColor: var(--black);
+  --elementBottom: 1.5rem;
 
   --buttonTextColor: var(--black);
   --lineColor: var(--grey);
@@ -73,17 +74,20 @@
   --smallText: 0.8em;
 
   /* Elevation */
-  --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+--level-1: 0 0 0 1px rgba(0, 0, 0, 0.05);
+--level-2: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+--level-3: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+--level-4: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+--level-5: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+--level-6: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+--level-7: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
   /* Positioning */
   --containerPadding: 2.5%;
-  --borderRadius: 10px;
+  --borderRadius: 1.2rem;
+
+
+
 }
 
 /*******************************************************************
@@ -346,8 +350,12 @@ h5 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1.15rem;
+  margin-bottom: var(--elementBottom);
   max-width: 40em;
+}
+
+div {
+  margin-bottom: var(--elementBottom);
 }
 
 p a,
@@ -362,14 +370,39 @@ small,
   font-size: var(--smallText);
 }
 
-label {
-  display: block;
-  font-size: var(--smallText);
+form ul {
+    list-style-type:none;
+    padding: 0;
 }
 
-input,
+label {
+  display: block;
+  font-weight: 600;
+  color: var(--darkGrey);
+  font-size: var(--smallText);
+  padding-bottom: 2px;
+}
+
+input {
+    /* border: --var(--formBorders); */
+    /* border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid var(--grey);
+    background-color: transparent;
+    padding: 6px 12px;
+    letter-spacing: 0.5px;
+    transition: 0.35s background-color; */
+}
+
+/* input:focus {
+    outline: none !important;
+    box-shadow: var(--level-4);
+    background-color: var(--grey);
+} */
+
 textarea {
-  padding: 4px 6px;
+  padding: 6px 12px;
   border: var(--line);
   border-radius: 4px;
 }
@@ -381,6 +414,29 @@ textarea {
 
 ::placeholder {
   color: var(--grey);
+}
+
+fieldset {
+    padding: 1em 1.5em;
+}
+
+legend {
+    padding: 0px 0.5rem;
+    font-weight: 600;
+    font-size: var(--smallText);
+    /* color: white; */
+}
+
+select {
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../img/arrow.svg) 96% / 15% no-repeat #EEE;
 }
 
 select {
@@ -469,8 +525,12 @@ button:hover {
   max-width: var(--cardWidth);
   padding: 2em;
   background: var(--cardBg);
-  box-shadow: var(--level-3);
+  box-shadow: var(--level-5);
   border-radius: var(--borderRadius);
+}
+
+.card > * {
+    border: 1px solid red;
 }
 
 .card > *:first-child {
@@ -547,7 +607,7 @@ button:hover {
   /* Positioning */
   --containerPadding: 2.5%;
   --headerHeight: 3rem;
-  --borderRadius: 15px;
+  --borderRadius: 0rem;
 }
 
 .dark {
