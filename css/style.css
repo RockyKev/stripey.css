@@ -5,30 +5,42 @@
 *******************************************************************/
 
 :root {
-    /* Define colors as colors */
-    --black: #1b2d45;
-    --green: #00ebc7;
-    --red: #ff5470;
-    --yellow: #fde24f;
-    --darkBlue: #00214d;
-    --darkGrey: #222;
-    --grey: #bfbfbf;
-    --lightGrey: #f2f4f6;
-    --white: #fff;
+  /* Define colors as colors */
+  --black: #1b2d45;
+  --green: #00ebc7;
+  --red: #ff5470;
+  --yellow: #fde24f;
+  --darkBlue: #00214d;
+  --darkGrey: #222;
+  --grey: #bfbfbf;
+  --lightGrey: #f2f4f6;
+  --white: #fff;
 
-    /* Define colors intentions - VERY SUBJECTIVE*/
-    --background: var(--lightGrey);
-    --textColor: var(--black);
-    --buttonTextColor: var(--black);
-    --lineColor: var(--grey);
+  /* Define colors intentions - VERY SUBJECTIVE*/
+  --primary: var(--green);
+  --danger: var(--red);
 
-    --headerBackground: var(--darkBlue);
-    --footerBackground: var(--black);
+  --background: var(--lightGrey);
+  --textColor: var(--black);
 
-    --line: solid 1px var(--lineColor);
-    --cardBg: var(--white);
+  --buttonTextColor: var(--black);
+  --lineColor: var(--grey);
 
-    /* COLORS
+  --headerHeight: 3rem;
+  --headerBackground: var(--darkBlue);
+
+  --footerHeight: 2rem;
+  --footerBackground: var(--black);
+
+  --line: solid 1px var(--lineColor);
+  --cardWidth: 400px;
+  --cardBg: var(--white);
+
+  --syntax-background-color: black;
+  --syntax-text-color: white;
+
+
+  /* COLORS
 	- default body text  #ffffcc
 	- subtitle h2 text   #ff9900
 	- form input borders #cc9933
@@ -36,7 +48,7 @@
 	- pre borders        #ffff99
 */
 
-    /* FONTS
+  /* FONTS
 	- default body text  Arial, Helvetica Neue, Helvetica, sans-serif
 	- subtitle h2 text   Garamond, Hoefler Text, Times New Roman, Times, serif
 	- form input text    Cambria, Georgia, Times, Times New Roman, Times, serif
@@ -44,190 +56,260 @@
 	- pre and code       Consolas, Lucida Console, Monaco, monospace
 */
 
-    /* Type */
-    --headingFont: 'Space Mono', monospace;
-    --bodyFont: 'Work Sans', sans-serif;
-    --baseFontSize: 112.5%;
-    --h1: 3.052em;
-    --h2: 2.441em;
-    --h3: 1.953em;
-    --h4: 1.563em;
-    --h5: 1.25em;
-    --smallText: 0.8em;
+  /* Type */
+  /*     --headingFont: 'Space Mono', monospace;
+    --bodyFont: 'Work Sans', sans-serif; */
+  --headingFont: "Raleway", sans-serif;
+  --headingWeight: 600;
+  --bodyFont: "Merriweather";
+  --bodylineHeight: 2.1;
 
-    /* Elevation */
-    --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --baseFontSize: 100%;
+  --h1: 3.052em;
+  --h2: 2.441em;
+  --h3: 1.953em;
+  --h4: 1.563em;
+  --h5: 1.25em;
+  --smallText: 0.8em;
 
-    /* Positioning */
-    --containerPadding: 2.5%;
-    --headerHeight: 3rem;
-    --borderRadius: 10px;
+  /* Elevation */
+  --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Positioning */
+  --containerPadding: 2.5%;
+  --borderRadius: 10px;
 }
 
 /*******************************************************************
   IMPORTS SECTION
-
 *******************************************************************/
-@import url('https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400');
+@import url("https://fonts.googleapis.com/css?family=Raleway:600|Merriweather:400");
+
+body {
+  background-color: white;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  line-height: var(--bodylineHeight);
+  color: #333;
+}
 
 /*******************************************************************
   RESET SECTION:
 *******************************************************************/
 html {
-    font-size: var(--baseFontSize); /*18px*/
-    box-sizing: border-box;
+  font-size: var(--baseFontSize); /*18px*/
+  box-sizing: border-box;
 }
 
 /* This disables the box sizing defaults bullshit */
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /*******************************************************************
   DYNAMIC SECTION
   The goal of these sections is that it grabs the key variables as
   possible from the :root or theme class.
-
   It's organized in alphabetical order.
-
 *******************************************************************/
 body {
-    font-family: var(--bodyFont);
-    font-weight: 400;
-    line-height: 1.65;
-    background: var(--background);
-    color: var(--textColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.65;
+  background: var(--background);
+  color: var(--textColor);
 }
 
-footer {
-    --footerTextColor: var(--lightGrey);
-    color: var(--footerTextColor);
-    background: var(--footerBackground);
-    padding: 2rem var(--containerPadding);
+/* * {
+  border: 1px solid red;
+}
+ */
+
+/* code {
+  color: var(--red);
+  border: 0.05rem solid var(--grey);
+  border-radius: 0.3rem;
+  padding: 0.25rem;
+  background-color: var(--white);
+}
+ */
+pre {
+/*     background: var(--syntax-background-color);
+    color: var(--syntax-text-color); */
+}
+
+figure {
+    border: 1px #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+}
+
+figure img {
+/*   max-width: 100%; */
+  max-height: 100%;
+}
+figcaption {
+    background-color: var(--darkGrey);
+    color: var(--white);
+    padding: 3px;
     text-align: center;
 }
 
+footer {
+  --footerTextColor: var(--lightGrey);
+  color: var(--footerTextColor);
+  background: var(--footerBackground);
+  padding: var(--footerHeight) var(--containerPadding);
+  text-align: center;
+}
+
 footer a {
-    color: var(--footerTextColor);
+  color: var(--footerTextColor);
 }
 
 footer p {
-    margin-bottom: 0;
-    max-width: none;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+table {
+  border: 2px solid #000000;
+  background-color: var(--grey);
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table td, table th {
+  border: var(--line);
+  padding: 3px 2px;
+}
+table tbody td {
+  font-size: var(--smallText);
+  color: var(--textColor);
+}
+table tr:nth-child(even) {
+  background: var(--lightGrey);
+}
+table thead, table tfoot {
+  background: var(--black);
+}
+table thead th {
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+}
+table tfoot th {
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  font-size: var(--smallText);
+}
+
+table td {
+  font-size: 12px;
 }
 
 header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 
-    height: var(--headerHeight);
-    background: var(--headerBackground);
-    padding: 0 var(--containerPadding);
-    box-shadow: var(--level-2);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  height: var(--headerHeight);
+  background: var(--headerBackground);
+  padding: 0 var(--containerPadding);
+  box-shadow: var(--level-2);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
 }
 
 header nav li {
-    color: white;
-    /* background: darkorange; */
-    display: block;
-    float: left;
-    padding: 1rem;
-    position: relative;
-    text-decoration: none;
-    transition-duration: 0.5s;
+  color: white;
+  /* background: darkorange; */
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
 }
 
 header nav li:hover,
 header nav li:focus-within {
-    background: purple;
-    cursor: pointer;
+  background: purple;
+  cursor: pointer;
 }
 
 header nav li:focus-within a {
-    outline: none;
+  outline: none;
 }
 
 header nav li ul {
-    background: green;
-    visibility: hidden;
-    opacity: 0;
-    min-width: 12rem;
-    position: absolute;
-    transition: all 1s ease;
-    margin-top: 1rem;
-    left: 0;
-    display: none;
+  background: green;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 12rem;
+  position: absolute;
+  transition: all 1s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
 }
 
 header nav li:hover > ul,
 header nav li:focus-within > ul,
 header nav li ul:hover,
 header nav li ul:focus {
-    visibility: visible;
-    opacity: 1;
-    display: block;
+  visibility: visible;
+  opacity: 1;
+  display: block;
 }
 
 header nav li ul li {
-    clear: both;
-    width: 100%;
+  clear: both;
+  width: 100%;
 }
 
 header nav a {
-    color: white;
-    text-decoration: none;
-    border-bottom: none;
+  color: white;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 /* header nav li + li {
     margin-left: 20px;
 } */
 
-p {
-    margin-bottom: 1.15rem;
-    max-width: 40em;
-}
-
 a {
-    color: var(--black);
-    text-decoration: none;
-    border-bottom: solid 2px var(--primary);
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: solid 2px var(--primary);
 }
 
 blockquote {
-    border-left: solid 1px var(--darkBlue);
-    margin: 2em 1em;
-    padding: 1em;
-    background: var(--cardBg);
-    box-shadow: var(--level-3);
-}
-
-p a,
-blockquote a {
-    color: var(--textColor);
-    text-decoration: none;
-    border-bottom: solid 2px var(--primary);
+  border-left: solid 4px var(--darkBlue);
+  margin: 2em 1em;
+  padding: 1em;
+  background: var(--cardBg);
+  box-shadow: var(--level-3);
 }
 
 h1,
@@ -235,258 +317,271 @@ h2,
 h3,
 h4,
 h5 {
-    margin: 2.75rem 0 1.05rem;
-    font-family: var(--headingFont);
-    font-weight: 400;
-    line-height: 1.15;
+  margin: 2.75rem 0 1.05rem;
+  font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
+  line-height: 1.15;
 }
 
 h1 {
-    margin-top: 0;
-    font-size: var(--h1);
+  margin-top: 0;
+  font-size: var(--h1);
 }
 
 h2 {
-    font-size: var(--h2);
+  font-size: var(--h2);
 }
 
 h3 {
-    font-size: var(--h3);
+  font-size: var(--h3);
 }
 
 h4 {
-    font-size: var(--h4);
+  font-size: var(--h4);
 }
 
 h5 {
-    font-size: var(--h5);
+  font-size: var(--h5);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.15rem;
+  max-width: 40em;
+}
+
+p a,
+blockquote a {
+  color: var(--textColor);
+  text-decoration: none;
+  border-bottom: solid 2px var(--primary);
 }
 
 small,
 .text_small {
-    font-size: var(--smallText);
+  font-size: var(--smallText);
 }
 
 label {
-    display: block;
-    font-size: var(--smallText);
+  display: block;
+  font-size: var(--smallText);
 }
 
 input,
 textarea {
-    padding: 4px 6px;
-    border: var(--line);
-    border-radius: 4px;
+  padding: 4px 6px;
+  border: var(--line);
+  border-radius: 4px;
 }
 
 textarea {
-    width: 100%;
-    height: 5rem;
+  width: 100%;
+  height: 5rem;
 }
 
 ::placeholder {
-    color: var(--grey);
+  color: var(--grey);
 }
 
 select {
-    border: var(--line);
+  border: var(--line);
 }
 
 hr {
-    border-top: var(--line);
+  border-top: var(--line);
 }
 
 button {
-    --buttonColor: var(--primary);
+  --buttonColor: var(--primary);
 
-    appearance: none;
-    color: var(--buttonTextColor);
-    background-color: var(--buttonColor);
-    border: none;
-    border-radius: 10px;
-    padding: 5px 25px;
-    box-shadow: var(--level-1);
-    transition: 0.3s ease-in-out box-shadow;
+  appearance: none;
+  color: var(--buttonTextColor);
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: 10px;
+  padding: 5px 25px;
+  box-shadow: var(--level-1);
+  transition: 0.3s ease-in-out box-shadow;
 }
 
 button.cancel {
-    --buttonColor: var(--danger);
-    --textColor: white;
+  --buttonColor: var(--danger);
+  --textColor: white;
 }
 
 button.small {
-    font-size: var(--smallText);
+  font-size: var(--smallText);
 }
 
 button[disabled] {
-    opacity: 0.4;
+  opacity: 0.4;
 }
 
 button:hover {
-    box-shadow: var(--level-2);
+  box-shadow: var(--level-2);
 }
 
 /*******************************************************************
   UTILITIES SECTION
   Unfortunately, classless css is impossible. These classes are for layouts
   and mobile responsiveness. Avoid creating the 'tailwindcss' experience.
-
 *******************************************************************/
 
 .grid {
-    --gridColumns: 1;
-    display: block;
-    grid-template-columns: repeat(var(--gridColumns), 1fr);
+  --gridColumns: 1;
+  display: block;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
 }
 
 .cols-2 {
-    --gridColumns: 2;
+  --gridColumns: 2;
 }
 
 .cols-3 {
-    --gridColumns: 3;
+  --gridColumns: 3;
 }
 
 .flex {
-    --justifyContent: space-between;
-    display: block;
-    justify-content: var(--justifyContent);
+  --justifyContent: space-between;
+  display: block;
+  justify-content: var(--justifyContent);
 }
 
 .flex-around {
-    --justifyContent: space-around;
+  --justifyContent: space-around;
 }
 
 .layout {
-    /* margin: 0 auto;
+  /* margin: 0 auto;
     width: 95%; */
-    /* padding: 0 var(--containerPadding); */
-    /* top padding header height + watever padding we want */
-    padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+  /* padding: 0 var(--containerPadding); */
+  /* top padding header height + watever padding we want */
+  padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
 }
 
 /*******************************************************************
   COMPONENTS SECTION
   Unfortunately, classless css is impossible. These classes are for
   defined elements within a website.
-
 *******************************************************************/
 
 .card {
-    padding: 2em;
-    background: var(--cardBg);
-    box-shadow: var(--level-3);
-    border-radius: var(--borderRadius);
+  max-width: var(--cardWidth);
+  padding: 2em;
+  background: var(--cardBg);
+  box-shadow: var(--level-3);
+  border-radius: var(--borderRadius);
 }
 
 .card > *:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .card > *:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+.card img {
+  width: 100%;
 }
 
 /* Extra classes */
 
 .fake-logo {
-    font-size: var(--baseFontSize);
-    margin: 0;
+  font-size: var(--baseFontSize);
+  margin: 0;
 }
 
 /*******************************************************************
   THEME SECTION
   These themes are swapped by shoving them in the body tag via JS.
-
 *******************************************************************/
 
 .theme {
-    /* Define colors as colors */
-    --black: #1b2d45;
-    --green: #00ebc7;
-    --red: #ff5470;
-    --yellow: #fde24f;
-    --darkBlue: #00214d;
-    --darkGrey: #222;
-    --grey: #bfbfbf;
-    --lightGrey: #f2f4f6;
-    --white: #fff;
+  /* Define colors as colors */
+  --black: #1b2d45;
+  --green: #00ebc7;
+  --red: #ff5470;
+  --yellow: #fde24f;
+  --darkBlue: #00214d;
+  --darkGrey: #222;
+  --grey: #bfbfbf;
+  --lightGrey: #f2f4f6;
+  --white: #fff;
 
-    /* Define colors intentions - VERY SUBJECTIVE*/
-    --primary: var(--green);
-    --danger: var(--red);
+  /* Define colors intentions - VERY SUBJECTIVE*/
+  --primary: var(--green);
+  --danger: var(--red);
 
-    --background: var(--lightGrey);
-    --textColor: var(--black);
-    --buttonTextColor: var(--black);
-    --lineColor: var(--grey);
+  --background: var(--lightGrey);
+  --textColor: var(--black);
+  --buttonTextColor: var(--black);
+  --lineColor: var(--grey);
 
-    --headerBackground: var(--darkBlue);
-    --footerBackground: var(--black);
+  --headerBackground: var(--darkBlue);
+  --footerBackground: var(--black);
 
-    --line: solid 1px var(--lineColor);
-    --cardBg: var(--white);
+  --line: solid 1px var(--lineColor);
+  --cardBg: var(--white);
 
-    /* Type */
-    --headingFont: 'Space Mono', monospace;
-    --bodyFont: 'Work Sans', sans-serif;
-    --baseFontSize: 112.5%;
-    --h1: 3.052em;
-    --h2: 2.441em;
-    --h3: 1.953em;
-    --h4: 1.563em;
-    --h5: 1.25em;
-    --smallText: 0.8em;
+  /* Type */
+  --headingFont: "Space Mono", monospace;
+  --bodyFont: "Work Sans", sans-serif;
+  --baseFontSize: 112.5%;
+  --h1: 3.052em;
+  --h2: 2.441em;
+  --h3: 1.953em;
+  --h4: 1.563em;
+  --h5: 1.25em;
+  --smallText: 0.8em;
 
-    /* Elevation */
-    --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Elevation */
+  --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-    /* Positioning */
-    --containerPadding: 2.5%;
-    --headerHeight: 3rem;
-    --borderRadius: 10px;
+  /* Positioning */
+  --containerPadding: 2.5%;
+  --headerHeight: 3rem;
+  --borderRadius: 15px;
 }
 
 .dark {
-    --background: var(--black);
-    --textColor: var(--lightGrey);
-    --buttonTextColor: var(--black);
+  --background: var(--black);
+  --textColor: var(--lightGrey);
+  --buttonTextColor: var(--black);
 
-    --headerBackground: var(--darkGrey);
-    --footerBackground: var(--darkGrey);
+  --headerBackground: var(--darkGrey);
+  --footerBackground: var(--darkGrey);
 
-    --cardBg: var(--darkGrey);
+  --cardBg: var(--darkGrey);
 }
 
 /*******************************************************************
   MEDIA QUEIRY SECTION
   This is at the bottom of the CSS to have the highest priority on a site.
-
 *******************************************************************/
 @media only screen and (min-width: 800px) {
-    :root {
-        --baseFontSize: 100.5%;
-    }
+  :root {
+    --baseFontSize: 100.5%;
+  }
 
-    .grid {
-        display: grid;
-    }
+  .grid {
+    display: grid;
+  }
 
-    .flex {
-        display: flex;
-    }
+  .flex {
+    display: flex;
+  }
 }
 
 /*******************************************************************
   HACKY OVERRIDES SECTION
   You know why you're here. ;-)
-
 *******************************************************************/
 /* simulated states */
 .link-active {
