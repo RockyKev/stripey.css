@@ -7,16 +7,19 @@
 :root {
     /* Define colors as colors */
     --black: #1b2d45;
-    --green: #00ebc7;
-    --red: #ff5470;
-    --yellow: #fde24f;
-    --darkBlue: #00214d;
-    --darkGrey: #222;
-    --grey: #bfbfbf;
-    --lightGrey: #f2f4f6;
     --white: #fff;
+    --darkGrey: #222;
+    --grey: #ab987a;
+    --lightGrey: #f5f5f5;
 
-    /* Define colors intentions - VERY SUBJECTIVE*/
+    --green: #00ebc7;
+    --red: #ff533d;
+    --lightRed: #ffa08a;
+    --darkRed: #b30700;
+    --yellow: #fde24f;
+    --darkBlue: #0f1626;
+
+    /* Define color intentions*/
 
     /* Positioning */
     --containerPadding: 2.5%;
@@ -46,27 +49,35 @@
     --siteBackground: var(--lightGrey);
     --siteLines: solid 1px var(--grey);
 
+    --linkColor: var(--red);
+    --linkUnderline: solid 2px var(--red);
+    --linkOnHover: var(--grey);
+
     --footerHeight: 2rem;
-    --footerBackground: var(--black);
+    --footerBackground: var(--darkBlue);
 
     --textMarginBottom: var(--globalSpacing);
     --divMarginBottom: var(--globalSpacing);
 
-    --btnTextColor: var(--black);
-    --btnPrimary: orange;
-    --btnSecondary: green;
+    --btnTextColor: var(--white);
+    --btnPrimary: var(--red);
+    --btnSecondary: var(--grey);
     --btnBgColor: var(--btnPrimary);
+    --btnHover: var(--darkRed);
+    --btnFocus: 0 0 0 5px var(--red);
 
-    --figureColor: var(--green);
+    --blockquoteBorder: 4px solid var(--darkBlue);
+
+    --figureColor: var(--darkBlue);
     --figureTextColor: var(--white);
 
-    --tableColor1: var(--green);
-    --tableColor2: var(--darkBlue);
+    --tableColor1: var(--grey);
+    --tableColor2: var(--lightGrey);
 
     --cardWidth: 400px;
     --cardBg: var(--darkBlue);
     --cardPadding: var(--globalSpacing);
-    --cardTextColor: green;
+    --cardTextColor: var(--white);
 
     --formfieldTop: 0px;
     --formfieldRight: 0px;
@@ -75,8 +86,14 @@
 
     --formTextareaX: 24rem;
     --formTextareaY: 8rem;
+    --formfieldBg: var(--grey);
+    --formfieldFocus: 0 0 0 5px var(--grey);
 
-    --blockquoteBorder: 4px solid var(--green);
+    /* Only available with selector.css */
+    --selectSize: 1.2rem;
+    --selectHover: var(--darkBlue);
+    --selectOnClick: var(--lightRed);
+    --selectSelected: var(--red);
 
     /* Elevation */
     --level-1: 0 0 0 1px rgba(0, 0, 0, 0.05);
@@ -89,12 +106,6 @@
     --level-6: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --level-7: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-
-    /* Only available with selector.css */
-    --selectSize: 1.2rem;
-    --selectHover: purple;
-    --selectOnClick: tan;
-    --selectSelected: green;
 }
 
 /*******************************************************************
@@ -218,9 +229,9 @@ div {
 }
 
 p a {
-    color: var(--textColor);
+    color: var(--linkColor);
     text-decoration: none;
-    border-bottom: solid 1px var(--primary);
+    border-bottom: var(--linkUnderline);
 }
 
 small,
@@ -240,7 +251,7 @@ a:hover {
 }
 
 a:hover {
-    color: #d73444;
+    color: var(--linkOnHover);
 }
 
 a:after {
@@ -253,7 +264,7 @@ a:after {
     bottom: -0.15em;
     height: 0.3rem;
     width: 0;
-    background: var(--primary);
+    background: var(--linkOnHover);
 }
 
 a:hover:after {
@@ -270,9 +281,9 @@ blockquote {
 }
 
 blockquote a {
-    color: var(--cardTextColor);
+    color: var(--linkColor);
     text-decoration: none;
-    border-bottom: solid 1px var(--primary);
+    border-bottom: var(--linkUnderline);
 }
 
 /* Tables */
@@ -335,9 +346,12 @@ button.cancel {
     --btnTextColor: white;
 }
 
-input:hover,
+/* input:hover, */
+[type='submit']:hover,
+[type='button']:hover,
+[type='reset']:hover,
 button:hover {
-    background-color: green;
+    background-color: var(--btnHover);
     transition-duration: 0.5s;
     transition-property: color, background-color;
     outline-color: rgba(255, 255, 255, 0);
@@ -349,10 +363,12 @@ button[disabled] {
     opacity: 0.4;
 }
 
-input:focus,
+[type='submit']:focus,
+[type='button']:focus,
+[type='reset']:focus,
 button:focus {
     outline: none;
-    box-shadow: 0 0 0 5px green;
+    box-shadow: var(--btnFocus);
 }
 
 button.small {
@@ -423,6 +439,7 @@ textarea {
     border-bottom: var(--formfieldBottom);
     border-left: var(--formfieldLeft);
     padding: 6px 12px 6px 0px;
+    transition: 0.2s ease-in-out box-shadow;
 }
 
 [type='date'],
@@ -431,6 +448,20 @@ textarea {
 [type='datetime'],
 [type='datetime-local'] {
     padding: 6px 0px;
+}
+
+input:hover {
+    background-color: var(--formfieldBg);
+    transition-duration: 0.5s;
+    transition-property: color, background-color;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: var(--formfieldFocus);
 }
 
 textarea {
