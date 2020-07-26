@@ -1,18 +1,10 @@
-/*
-:root {
-  --primary: hsl(250, 100%, 44%);
-  --other: hsl(0, 0%, 14%);
-} */
-
 /* label */
-label {
+label.custom-inputs {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
-
     margin: 12px 0;
-
     cursor: pointer;
     position: relative;
 }
@@ -30,13 +22,13 @@ input[type='radio'] {
 
 /* .design */
 .design {
-    width: 16px;
-    height: 16px;
+    width: var(--selectSize);
+    height: var(--selectSize);
 
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--other);
+    border: var(--siteLines);
     margin-right: 16px;
     position: relative;
     border-radius: 100%;
@@ -51,25 +43,22 @@ input[type='checkbox'] + .design {
 .design::after {
     content: '';
     display: block;
-
     width: inherit;
     height: inherit;
-
     border-radius: inherit;
-
     position: absolute;
     transform: scale(0);
     transform-origin: center center;
 }
 
 .design:before {
-    background: var(--other);
+    background: var(--selectSelected);
     opacity: 0;
     transition: 0.3s;
 }
 
 .design::after {
-    background: var(--primary);
+    background: var(--selectHover);
     opacity: 0.4;
     transition: 0.6s;
 }
@@ -86,19 +75,19 @@ input[type='checkbox']:hover + .design,
 input[type='checkbox']:focus + .design,
 input[type='radio']:hover + .design,
 input[type='radio']:focus + .design {
-    border: 1px solid var(--primary);
+    border: 1px solid var(--selectOnClick);
 }
 
 input[type='checkbox']:hover + .design:before,
 input[type='checkbox']:focus + .design:before,
 input[type='radio']:hover + .design:before,
 input[type='radio']:focus + .design:before {
-    background: var(--primary);
+    background: var(--selectOnClick);
 }
 
 input[type='checkbox']:hover ~ .text,
 input[type='radio']:hover ~ .text {
-    color: var(--primary);
+    color: var(--selectHover);
 }
 
 input[type='checkbox']:focus + .design::after,

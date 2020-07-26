@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/checkbox.css" />
+    <link rel="stylesheet" href="css/selector.css" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 
@@ -555,55 +555,55 @@ p q r s t u v w x y z { | } ~ </pre>
             <h3>Inputs with Grid (cols-3)</h3>
             <div class="grid cols-3">
                 <div>
-                    <label for="input__text">Text Input</label>
-                    <input id="input__text" placeholder="Text Input" type="text" />
+                    <label for="input_grid__text">Text Input</label>
+                    <input id="input_grid__text" placeholder="Text Input" type="text" />
                 </div>
                 <div>
-                    <label for="input__password">Password</label>
-                    <input id="input__password" placeholder="Type your Password" type="password" />
+                    <label for="input_grid__password">Password</label>
+                    <input id="input_grid__password" placeholder="Type your Password" type="password" />
                 </div>
 
                 <div>
-                    <label for="input__webaddress">Web Address</label>
-                    <input id="input__webaddress" placeholder="http://yoursite.com" type="url" />
+                    <label for="input_grid__webaddress">Web Address</label>
+                    <input id="input_grid__webaddress" placeholder="http://yoursite.com" type="url" />
                 </div>
             </div>
 
             <h3>Inputs with grid (cols-2)</h3>
             <div class="grid cols-2">
                 <div>
-                    <label for="input__emailaddress">Email Address</label>
-                    <input id="input__emailaddress" placeholder="name@email.com" type="email" />
+                    <label for="input_grid__emailaddress">Email Address</label>
+                    <input id="input_grid__emailaddress" placeholder="name@email.com" type="email" />
                 </div>
                 <div>
-                    <label for="input__phone">Phone Number</label>
-                    <input id="input__phone" placeholder="(999) 999-9999" type="tel" />
+                    <label for="input_grid__phone">Phone Number</label>
+                    <input id="input_grid__phone" placeholder="(999) 999-9999" type="tel" />
                 </div>
             </div>
 
             <h3>Inputs with Flex (DEFAULT: space-between)</h3>
             <div class="flex">
                 <div>
-                    <label for="input__search">Search</label>
-                    <input id="input__search" placeholder="Enter Search Term" type="search" />
+                    <label for="input_flex__search">Search</label>
+                    <input id="input_flex__search" placeholder="Enter Search Term" type="search" />
                 </div>
 
                 <div>
-                    <label for="input__text2">Number Input</label>
-                    <input id="input__text2" placeholder="Enter a Number" type="number" />
+                    <label for="input_flex__text2">Number Input</label>
+                    <input id="input_flex__text2" placeholder="Enter a Number" type="number" />
                 </div>
             </div>
 
             <h3>Inputs with Flex (flex-around)</h3>
             <div class="flex flex-around">
                 <div>
-                    <label for="input__text3">Error</label>
-                    <input id="input__text3" placeholder="Text Input" type="text" />
+                    <label for="input_flex__text3">Error</label>
+                    <input id="input_flex__text3" placeholder="Text Input" type="text" />
                 </div>
 
                 <div>
-                    <label for="input__text4">Valid</label>
-                    <input id="input__text4" placeholder="Text Input" type="text" />
+                    <label for="input_flex__text4">Valid</label>
+                    <input id="input_flex__text4" placeholder="Text Input" type="text" />
                 </div>
             </div>
 
@@ -660,48 +660,52 @@ p q r s t u v w x y z { | } ~ </pre>
             <div>
                 <h3> p tag version </h3>
                 <p>
-                    <label for="input__text">Text Input</label>
-                    <input id="input__text" placeholder="Text Input" type="text" />
+                    <label for="input_p__text">Text Input</label>
+                    <input id="input_p__text" placeholder="Text Input" type="text" />
                 </p>
 
                 <p>
-                    <label for="input__password">Password</label>
-                    <input id="input__password" placeholder="Type your Password" type="password" />
+                    <label for="input_p__password">Password</label>
+                    <input id="input_p__password" placeholder="Type your Password" type="password" />
                 </p>
 
                 <p>
-                    <label for="input__webaddress">Web Address</label>
-                    <input id="input__webaddress" placeholder="http://yoursite.com" type="url" />
+                    <label for="input_p__webaddress">URL Address</label>
+                    <input id="input_p__webaddress" placeholder="http://yoursite.com" type="url" />
                 </p>
 
                 <p>
-                    <label for="input__emailaddress">Email Address</label>
-                    <input id="input__emailaddress" placeholder="name@email.com" type="email" />
+                    <label for="input_p__emailaddress">Email Address</label>
+                    <input id="input_p__emailaddress" placeholder="name@email.com" type="email" />
                 </p>
 
                 <p>
-                    <label for="input__phone">Phone Number</label>
-                    <input id="input__phone" placeholder="(999) 999-9999" type="tel" />
+                    <label for="input_p__phone">Phone Number</label>
+                    <input id="input_p__phone" placeholder="(999) 999-9999" type="tel" />
                 </p>
 
                 <p>
-                    <label for="input__search">Search</label>
-                    <input id="input__search" placeholder="Enter Search Term" type="search" />
+                    <label for="input_p__search">Search</label>
+                    <input id="input_p__search" placeholder="Enter Search Term" type="search" />
                 </p>
 
                 <p>
-                    <label for="input__text2">Number Input</label>
-                    <input id="input__text2" placeholder="Enter a Number" type="number" />
+                    <label for="input_p__text2">Number Input</label>
+                    <input id="input_p__text2" placeholder="Enter a Number" type="number" />
                 </p>
 
                 <p>
-                    <label for="input__text3">Error</label>
-                    <input id="input__text3" placeholder="Text Input" type="text" />
+                    <label for="input_p__text3">Error</label>
+                    <input id="input_p__text3" placeholder="Text Input" type="text" />
                 </p>
 
                 <p>
-                    <label for="input__text4">Valid</label>
-                    <input id="input__text4" placeholder="Text Input" type="text" />
+                    <label for="input_p__text4">Valid</label>
+                    <input id="input_p__text4" placeholder="Text Input" type="text" />
+                </p>
+                <p>
+                    <label for="input_p__textarea">Textarea</label>
+                    <textarea id="input_p__textarea" placeholder="Enter your message here"></textarea>
                 </p>
             </div>
 
@@ -709,95 +713,155 @@ p q r s t u v w x y z { | } ~ </pre>
             <div>
                 <h3> div tag version </h3>
                 <div>
-                    <label for="input__text">Text Input</label>
-                    <input id="input__text" placeholder="Text Input" type="text" />
+                    <label for="input_div__text">Text Input</label>
+                    <input id="input_div__text" placeholder="Text Input" type="text" />
                 </div>
                 <div>
-                    <label for="input__password">Password</label>
-                    <input id="input__password" placeholder="Type your Password" type="password" />
+                    <label for="input_div__password">Password</label>
+                    <input id="input_div__password" placeholder="Type your Password" type="password" />
                 </div>
 
                 <div>
-                    <label for="input__webaddress">Web Address</label>
-                    <input id="input__webaddress" placeholder="http://yoursite.com" type="url" />
+                    <label for="input_div__webaddress">Web Address</label>
+                    <input id="input_div__webaddress" placeholder="http://yoursite.com" type="url" />
                 </div>
 
                 <div>
-                    <label for="input__emailaddress">Email Address</label>
-                    <input id="input__emailaddress" placeholder="name@email.com" type="email" />
+                    <label for="input_div__emailaddress">Email Address</label>
+                    <input id="input_div__emailaddress" placeholder="name@email.com" type="email" />
                 </div>
                 <div>
-                    <label for="input__phone">Phone Number</label>
-                    <input id="input__phone" placeholder="(999) 999-9999" type="tel" />
+                    <label for="input_div__phone">Phone Number</label>
+                    <input id="input_div__phone" placeholder="(999) 999-9999" type="tel" />
                 </div>
 
                 <div>
-                    <label for="input__search">Search</label>
-                    <input id="input__search" placeholder="Enter Search Term" type="search" />
+                    <label for="input_div__search">Search</label>
+                    <input id="input_div__search" placeholder="Enter Search Term" type="search" />
                 </div>
 
                 <div>
-                    <label for="input__text2">Number Input</label>
-                    <input id="input__text2" placeholder="Enter a Number" type="number" />
+                    <label for="input_div__text2">Number Input</label>
+                    <input id="input_div__text2" placeholder="Enter a Number" type="number" />
                 </div>
 
                 <div>
-                    <label for="input__text3">Error</label>
-                    <input id="input__text3" placeholder="Text Input" type="text" />
+                    <label for="input_div__text3">Error</label>
+                    <input id="input_div__text3" placeholder="Text Input" type="text" />
                 </div>
 
                 <div>
-                    <label for="input__text4">Valid</label>
-                    <input id="input__text4" placeholder="Text Input" type="text" />
+                    <label for="input_div__text4">Valid</label>
+                    <input id="input_div__text4" placeholder="Text Input" type="text" />
                 </div>
-
+                <div>
+                    <label for="input_div__textarea">Textarea</label>
+                    <textarea id="input_div__textarea" rows="8" cols="48"
+                        placeholder="Enter your message here"></textarea>
+                </div>
             </div>
 
             <h3> legends version </h3>
             <fieldset id="forms__input">
                 <legend>Input fields</legend>
                 <p>
-                    <label for="input__text">Text Input</label>
-                    <input id="input__text" type="text" placeholder="Text Input">
+                    <label for="input_legend__text">Text Input</label>
+                    <input id="input_legend__text" type="text" placeholder="Text Input">
                 </p>
                 <p>
-                    <label for="input__password">Password</label>
-                    <input id="input__password" type="password" placeholder="Type your Password">
+                    <label for="input_legend__password">Password</label>
+                    <input id="input_legend__password" type="password" placeholder="Type your Password">
                 </p>
                 <p>
-                    <label for="input__webaddress">Web Address</label>
-                    <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
+                    <label for="input_legend__webaddress">Web Address</label>
+                    <input id="input_legend__webaddress" type="url" placeholder="http://yoursite.com">
                 </p>
                 <p>
-                    <label for="input__emailaddress">Email Address</label>
-                    <input id="input__emailaddress" type="email" placeholder="name@email.com">
+                    <label for="input_legend__emailaddress">Email Address</label>
+                    <input id="input_legend__emailaddress" type="email" placeholder="name@email.com">
                 </p>
                 <p>
-                    <label for="input__phone">Phone Number</label>
-                    <input id="input__phone" type="tel" placeholder="(999) 999-9999">
+                    <label for="input_legend__phone">Phone Number</label>
+                    <input id="input_legend__phone" type="tel" placeholder="(999) 999-9999">
                 </p>
                 <p>
-                    <label for="input__search">Search</label>
-                    <input id="input__search" type="search" placeholder="Enter Search Term">
+                    <label for="input_legend__search">Search</label>
+                    <input id="input_legend__search" type="search" placeholder="Enter Search Term">
                 </p>
                 <p>
-                    <label for="input__text2">Number Input</label>
-                    <input id="input__text2" type="number" placeholder="Enter a Number">
+                    <label for="input_legend__text2">Number Input</label>
+                    <input id="input_legend__text2" type="number" placeholder="Enter a Number">
                 </p>
                 <p>
-                    <label for="input__text3" class="error">Error</label>
-                    <input id="input__text3" class="is-error" type="text" placeholder="Text Input">
+                    <label for="input_legend__text3" class="error">Error</label>
+                    <input id="input_legend__text3" class="is-error" type="text" placeholder="Text Input">
                 </p>
                 <p>
-                    <label for="input__text4" class="valid">Valid</label>
-                    <input id="input__text4" class="is-valid" type="text" placeholder="Text Input">
+                    <label for="input_legend__text4" class="valid">Valid</label>
+                    <input id="input_legend__text4" class="is-valid" type="text" placeholder="Text Input">
+                </p>
+                <p>
+                    <label for="textarea">Textarea</label>
+                    <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
                 </p>
             </fieldset>
-
         </section>
 
         <section>
             <h3>SELECTORS FORM</h3>
+            <div>
+                <p>Form checkboxes/radio buttons are incredibly difficult to design for using a classless css. It's
+                    dependent on how your markup is organized. This is a optional add-on using the checkbox.css, and
+                    also assuming you are using the markup below.</p>
+            </div>
+
+            <form>
+                <fieldset id="forms__checkbox">
+                    <legend>Checkboxes</legend>
+
+                    <label class="custom-inputs">
+                        <input id="checkbox1" name="checkbox" type="checkbox">
+                        <span class="design"></span>
+                        <span class="text">Option 1</span>
+                    </label>
+
+                    <label class="custom-inputs">
+                        <input id="checkbox2" name="checkbox" type="checkbox">
+                        <span class="design"></span>
+                        <span class="text">Option 2</span>
+                    </label>
+
+
+                    <label class="custom-inputs">
+                        <input id="checkbox3" name="checkbox" type="checkbox">
+                        <span class="design"></span>
+                        <span class="text">Option 3</span>
+                    </label>
+                </fieldset>
+            </form>
+
+
+            <fieldset>
+                <legend>Radio buttons</legend>
+                <label class="custom-inputs">
+                    <input type="radio" name="light" checked>
+                    <span class="design"></span>
+                    <span class="text">Option 1</span>
+                </label>
+
+                <label class="custom-inputs">
+                    <input type="radio" name="light">
+                    <span class="design"></span>
+                    <span class="text">Option 2</span>
+                </label>
+
+                <label class="custom-inputs">
+                    <input type="radio" name="light">
+                    <span class="design"></span>
+                    <span class="text">Option 3</span>
+                </label>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
             <form>
                 <fieldset id="forms__select">
                     <legend>Select menus</legend>
@@ -814,60 +878,6 @@ p q r s t u v w x y z { | } ~ </pre>
                 </fieldset>
             </form>
 
-            <p><a href="#top">[Top]</a></p>
-            <form>
-                <fieldset id="forms__checkbox">
-                    <legend>Checkboxes</legend>
-
-                    <label>
-                        <input id="checkbox1" name="checkbox" type="checkbox">
-                        <span class="design"></span>
-                        <span class="text">Option 1</span>
-                    </label>
-
-                    <label>
-                        <input id="checkbox2" name="checkbox" type="checkbox">
-                        <span class="design"></span>
-                        <span class="text">Option 2</span>
-                    </label>
-
-
-                    <label>
-                        <input id="checkbox3" name="checkbox" type="checkbox">
-                        <span class="design"></span>
-                        <span class="text">Option 3</span>
-                    </label>
-
-
-
-                </fieldset>
-            </form>
-
-
-
-            <p><a href="#top">[Top]</a></p>
-            <fieldset>
-                <legend>Radio buttons</legend>
-                <label>
-                    <input type="radio" name="light" checked>
-                    <span class="design"></span>
-                    <span class="text">Option 1</span>
-                </label>
-
-                <label>
-                    <input type="radio" name="light">
-                    <span class="design"></span>
-                    <span class="text">Option 2</span>
-                </label>
-
-                <label>
-                    <input type="radio" name="light">
-                    <span class="design"></span>
-                    <span class="text">Option 3</span>
-                </label>
-
-
-            </fieldset>
             <p><a href="#top">[Top]</a></p>
             <form>
                 <fieldset id="forms__textareas">
