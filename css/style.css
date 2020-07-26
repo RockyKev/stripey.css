@@ -17,11 +17,8 @@
     --white: #fff;
 
     /* Define colors intentions - VERY SUBJECTIVE*/
-    /* --primary: var(--green);
-    --danger: var(--red); */
 
     --textColor: var(--black);
-    /* for borders */
 
     --elementBottom: 1.5rem;
     --siteBackground: var(--lightGrey);
@@ -41,7 +38,9 @@
     --tableColor1: var(--green);
     --tableColor2: var(--darkBlue);
     --cardWidth: 400px;
-    --cardBg: var(--white);
+    --cardBg: var(--darkBlue);
+    --cardPadding: var(--elementBottom);
+    --cardTextColor: green;
 
     --formfieldTop: 0px;
     --formfieldRight: 0px;
@@ -169,6 +168,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    z-index: 100;
 }
 
 header nav ul {
@@ -249,7 +249,7 @@ footer p {
 }
 
 hr {
-    border-top: var(--borders);
+    border-top: var(--siteLines);
 }
 
 /* Text */
@@ -296,8 +296,7 @@ div {
     margin-bottom: var(--elementBottom);
 }
 
-p a,
-blockquote a {
+p a {
     color: var(--textColor);
     text-decoration: none;
     border-bottom: solid 1px var(--primary);
@@ -345,7 +344,14 @@ blockquote {
     margin: 2em 1em;
     padding: 1em;
     background: var(--cardBg);
+    color: var(--cardTextColor);
     box-shadow: var(--level-3);
+}
+
+blockquote a {
+    color: var(--cardTextColor);
+    text-decoration: none;
+    border-bottom: solid 1px var(--primary);
 }
 
 /* Tables */
@@ -608,14 +614,14 @@ select {
 
 .card {
     max-width: var(--cardWidth);
-    padding: 2em;
     background: var(--cardBg);
     box-shadow: var(--level-5);
     border-radius: var(--borderRadius);
+    color: var(--cardTextColor);
 }
 
 .card > * {
-    border: 1px solid red;
+    margin: 0 var(--cardPadding);
 }
 
 .card > *:first-child {
@@ -623,18 +629,31 @@ select {
 }
 
 .card > *:last-child {
-    margin-bottom: 0;
+    margin-bottom: var(--cardPadding);
+}
+
+.card > p,
+.card > h1,
+.card > h2,
+.card > h3,
+.card > h4,
+.card > h5 {
+    padding-top: var(--cardPadding);
+}
+
+.card > p:last-child {
+    padding-bottom: var(--cardPadding);
 }
 
 .card img {
     width: 100%;
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    margin: 0px;
+    padding: 0px;
 }
 
-/* Extra classes */
-
-.fake-logo {
-    font-size: var(--baseFontSize);
-    margin: 0;
+.card button {
+    margin-top: var(--cardPadding);
 }
 
 /*******************************************************************
@@ -644,7 +663,7 @@ select {
 
 /*
 /*******************************************************************
-  MEDIA QUEIRY SECTION
+  MEDIA QUERY SECTION
   This is at the bottom of the CSS to have the highest priority on a site.
 *******************************************************************/
 @media only screen and (min-width: 800px) {
@@ -665,6 +684,13 @@ select {
   HACKY OVERRIDES SECTION
   You know why you're here. ;-)
 *******************************************************************/
+/* Extra classes */
+
+.fake-logo {
+    font-size: var(--baseFontSize);
+    margin: 0;
+}
+
 /* simulated states */
 .link-active {
 }
