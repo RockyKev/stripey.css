@@ -18,79 +18,13 @@
 
     /* Define colors intentions - VERY SUBJECTIVE*/
 
-    --textColor: var(--black);
-
-    --elementBottom: 1.5rem;
-    --siteBackground: var(--lightGrey);
-    --siteLines: solid 1px var(--grey);
-
-    --buttonTextColor: var(--black);
-
-    --headerHeight: 3rem;
-    --headerBackground: var(--darkBlue);
-
-    --footerHeight: 2rem;
-    --footerBackground: var(--black);
-
-    --figureColor: var(--green);
-    --figureTextColor: var(--white);
-
-    --tableColor1: var(--green);
-    --tableColor2: var(--darkBlue);
-    --cardWidth: 400px;
-    --cardBg: var(--darkBlue);
-    --cardPadding: var(--elementBottom);
-    --cardTextColor: green;
-
-    --formfieldTop: 0px;
-    --formfieldRight: 0px;
-    --formfieldBottom: 2px solid var(--darkBlue);
-    --formfieldLeft: 0px;
-
-    --textareaX: 24rem;
-    --textareaY: 8rem;
-
-    --syntax-background-color: black;
-    --syntax-text-color: white;
-
-    /* Only available with selector.css */
-    --selectSize: 1.2rem;
-    --selectHover: purple;
-    --selectOnClick: tan;
-    --selectSelected: green;
-
     /* Positioning */
     --containerPadding: 2.5%;
     --borderRadius: 1.2rem;
     --gridGap: 2rem;
+    --globalSpacing: 1.5rem;
 
-    /* --audioColor: invert(59%) sepia(97%) saturate(5333%) hue-rotate(168deg)
-        brightness(106%) contrast(101%); Hack to change the color: https://codepen.io/sosuke/pen/Pjoqqp */
-
-    /* COLORS
-	- default body text  #ffffcc
-	- subtitle h2 text   #ff9900
-	- form input borders #cc9933
-	- default p text     #f0f0f0
-	- pre borders        #ffff99
-*/
-
-    /* FONTS
-	- default body text  Arial, Helvetica Neue, Helvetica, sans-serif
-	- subtitle h2 text   Garamond, Hoefler Text, Times New Roman, Times, serif
-	- form input text    Cambria, Georgia, Times, Times New Roman, Times, serif
-	- default p text     Copperplate Light, Copperplate Gothic Light, serif
-	- pre and code       Consolas, Lucida Console, Monaco, monospace
-*/
-
-    /* Type */
-    /*     --headingFont: 'Space Mono', monospace;
-    --bodyFont: 'Work Sans', sans-serif; */
-    --headingFont: 'Raleway', sans-serif;
-    --headingWeight: 600;
-    --bodyFont: 'Merriweather';
-    --bodylineHeight: 2.1;
-
+    /* Typography */
     --baseFontSize: 100%;
     --h1: 3.052em;
     --h2: 2.441em;
@@ -98,6 +32,51 @@
     --h4: 1.563em;
     --h5: 1.25em;
     --smallText: 0.8em;
+
+    --headingFont: 'Raleway', sans-serif;
+    --headingWeight: 600;
+    --bodyFont: 'Merriweather';
+    --bodylineHeight: 2.1;
+    --textColor: var(--black);
+
+    /* Elements */
+    --headerHeight: 3rem;
+    --headerBackground: var(--darkBlue);
+
+    --siteBackground: var(--lightGrey);
+    --siteLines: solid 1px var(--grey);
+
+    --footerHeight: 2rem;
+    --footerBackground: var(--black);
+
+    --textMarginBottom: var(--globalSpacing);
+    --divMarginBottom: var(--globalSpacing);
+
+    --btnTextColor: var(--black);
+    --btnPrimary: orange;
+    --btnSecondary: green;
+    --btnBgColor: var(--btnPrimary);
+
+    --figureColor: var(--green);
+    --figureTextColor: var(--white);
+
+    --tableColor1: var(--green);
+    --tableColor2: var(--darkBlue);
+
+    --cardWidth: 400px;
+    --cardBg: var(--darkBlue);
+    --cardPadding: var(--globalSpacing);
+    --cardTextColor: green;
+
+    --formfieldTop: 0px;
+    --formfieldRight: 0px;
+    --formfieldBottom: 2px solid var(--darkBlue);
+    --formfieldLeft: 0px;
+
+    --formTextareaX: 24rem;
+    --formTextareaY: 8rem;
+
+    --blockquoteBorder: 4px solid var(--green);
 
     /* Elevation */
     --level-1: 0 0 0 1px rgba(0, 0, 0, 0.05);
@@ -110,20 +89,18 @@
     --level-6: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --level-7: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    /* Only available with selector.css */
+    --selectSize: 1.2rem;
+    --selectHover: purple;
+    --selectOnClick: tan;
+    --selectSelected: green;
 }
 
 /*******************************************************************
   IMPORTS SECTION
 *******************************************************************/
 @import url('https://fonts.googleapis.com/css?family=Raleway:600|Merriweather:400');
-
-body {
-    background-color: white;
-    font-family: 'Merriweather', serif;
-    font-weight: 400;
-    line-height: var(--bodylineHeight);
-    color: #333;
-}
 
 /*******************************************************************
   RESET SECTION:
@@ -149,7 +126,7 @@ html {
 body {
     font-family: var(--bodyFont);
     font-weight: 400;
-    line-height: 1.65;
+    line-height: var(--bodylineHeight);
     background: var(--siteBackground);
     color: var(--textColor);
 }
@@ -180,7 +157,6 @@ header nav ul {
 
 header nav li {
     color: white;
-    /* background: darkorange; */
     display: block;
     float: left;
     padding: 1rem;
@@ -288,12 +264,12 @@ h5 {
 
 p {
     margin-top: 0;
-    margin-bottom: var(--elementBottom);
+    margin-bottom: var(--textMarginBottom);
     max-width: 40em;
 }
 
 div {
-    margin-bottom: var(--elementBottom);
+    margin-bottom: var(--divMarginBottom);
 }
 
 p a {
@@ -303,7 +279,7 @@ p a {
 }
 
 small,
-.text_small {
+.text-small {
     font-size: var(--smallText);
 }
 
@@ -340,7 +316,7 @@ a:hover:after {
 }
 
 blockquote {
-    border-left: solid 4px var(--darkBlue);
+    border-left: var(--blockquoteBorder);
     margin: 2em 1em;
     padding: 1em;
     background: var(--cardBg);
@@ -397,11 +373,8 @@ table tfoot th {
 [type='button'],
 [type='reset'],
 button {
-    --buttonColor: purple;
-    --danger: red;
-
-    background-color: var(--buttonColor);
-    color: var(--buttonTextColor);
+    background-color: var(--btnBgColor);
+    color: var(--btnTextColor);
     border-radius: var(--borderRadius);
     box-shadow: var(--level-4);
 
@@ -413,8 +386,8 @@ button {
 
 [type='reset'],
 button.cancel {
-    --buttonColor: var(--danger);
-    --textColor: white;
+    --btnBgColor: var(--btnSecondary);
+    --btnTextColor: white;
 }
 
 input:hover,
@@ -537,8 +510,8 @@ label {
 }
 
 textarea {
-    height: var(--textareaY);
-    width: var(--textareaX);
+    height: var(--formTextareaY);
+    width: var(--formTextareaX);
 }
 
 fieldset {
