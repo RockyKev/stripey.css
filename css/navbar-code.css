@@ -1,18 +1,33 @@
+/* resets defaults  */
+header div {
+    margin: 0;
+}
+
+/* Start this header madness */
 header nav ul {
     list-style: none;
     margin: 0;
     padding-left: 0;
+    display: flex;
+    border: 2px solid blue;
 }
 
 header nav li {
     color: white;
-    /* background: darkorange; */
     display: block;
     float: left;
     /* padding: 1rem; */
     position: relative;
     text-decoration: none;
     transition-duration: 0.5s;
+}
+
+header ul > li {
+    border: 4px solid grey;
+}
+
+.inner li {
+    border: 4px solid red;
 }
 
 header nav li:hover,
