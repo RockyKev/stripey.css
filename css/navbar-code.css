@@ -1,0 +1,73 @@
+/* resets defaults  */
+header div {
+    margin: 0;
+}
+
+/* Start this header madness */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    border: 2px solid blue;
+}
+
+header nav li {
+    color: white;
+    display: block;
+    float: left;
+    /* padding: 1rem; */
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+header ul > li {
+    border: 4px solid grey;
+}
+
+.inner li {
+    border: 4px solid red;
+}
+
+header nav li:hover,
+header nav li:focus-within {
+    background: purple;
+    cursor: pointer;
+}
+
+header nav li:focus-within a {
+    outline: none;
+}
+
+header nav li ul {
+    background: green;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 12rem;
+    position: absolute;
+    transition: all 1s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+header nav li:hover > ul,
+header nav li:focus-within > ul,
+header nav li ul:hover,
+header nav li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+header nav li ul li {
+    clear: both;
+    width: 100%;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}

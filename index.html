@@ -1,57 +1,536 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8" />
-        <title></title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:title" content="" />
-        <meta property="og:type" content="" />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="" />
+<head>
+    <meta charset="utf-8" />
+    <title>Stripey.css - a (semi-)classless CSS Design System</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="manifest" href="site.webmanifest" />
-        <link rel="apple-touch-icon" href="icon.png" />
-        <!-- Place favicon.ico in the root directory -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
 
-        <meta name="theme-color" content="#fafafa" />
-    </head>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/themes.css" />
 
-    <body class="theme">
-        <!-- Add your site or application content here -->
+    <!-- <link rel="stylesheet" href="css/navbar-code.css" /> -->
 
-        <header>
-            <h1 class="fake-logo">Fake Logo</h1>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </nav>
-        </header>
+    <link rel="stylesheet" href="css/selector.css" />
 
-        <main class="layout">
-            <h1>Sakura demo</h1>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 
+</head>
+
+
+
+
+<body class="theme3">
+
+    <header>
+        <div>
+
+            <h2 class="fake-logo">FAKE LOGO</h2>
+        </div>
+        <div>
+            <!-- A BUNCH OF ICONS -->
+            <button id="theme1">1</button>
+            <button id="theme2">2</button>
+            <button id="theme3">3</button>
+            <button id="theme4">4</button>
+            <button id="theme5">5</button>
+
+        </div>
+
+    </header>
+
+    <main class="layout">
+
+        <h1>STRIPEY.CSS</h1>
+        <p>Steal the meta for this.</p>
+
+        <section>
+            <h2>Text Content</h2>
+
+            <div>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </div>
+
+            <div>
+                <h3>Paragraph (h3)</h3>
+                <p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst
+                    building
+                    CSS systems and frameworks.</p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Tellus rutrum tellus pellentesque eu tincidunt. Aliquet nec
+                    ullamcorper sit amet risus nullam eget felis eget. Lacinia quis
+                    vel eros donec ac odio. Orci porta non pulvinar neque laoreet
+                    suspendisse interdum consectetur libero. Nulla pellentesque
+                    dignissim enim sit amet venenatis urna cursus. Vulputate eu
+                    scelerisque felis imperdiet. Tortor condimentum lacinia quis vel
+                    eros donec ac. Turpis egestas maecenas pharetra convallis
+                    posuere morbi leo urna molestie. Sed nisi lacus sed viverra
+                    tellus in hac habitasse platea.
+                </p>
+                <p> Single Lines</p>
+                <p> Single Lines</p>
+                <p> Single Lines</p>
+
+            </div>
+
+            <div>
+                <h3>Inline Styles (h3) </h3>
+                <p><a href="#!">This is a text link - hover for different states</a>.</p>
+                <!-- <p><a href="#!" class="link-active">This is a text link - simulated Active state</a>.</p>
+                <p><a href="#!" class="link-hover">This is a text link - simulated Hover state</a>.</p>
+                <p><a href="#!" class="link-focus">This is a text link - simulated Focus state</a>.</p>
+                <p><a href="#!" class="link-visited">This is a text link - simulated Visited state</a>.</p> -->
+                <p><strong>Strong is used to indicate strong importance.</strong></p>
+                <p><em>This text has added emphasis.</em></p>
+                <p>The <b>b element</b> is stylistically different text from normal text, without any special
+                    importance.
+                </p>
+                <p>The <i>i element</i> is text that is offset from the normal text.</p>
+                <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual
+                    annotation.
+                </p>
+                <p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
+                <p><s>This text has a strikethrough</s>.</p>
+                <p>Superscript<sup>®</sup>.</p>
+                <p>Subscript for things like H<sub>2</sub>O.</p>
+                <p><small>This small text is small for for fine print, etc.</small></p>
+                <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+                <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline
+                        quotation.</q></p>
+                <p><cite>This is a citation.</cite></p>
+                <p>The <dfn>dfn element</dfn> indicates a definition.</p>
+                <p>The <mark>mark element</mark> indicates a highlight.</p>
+                <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
+                <p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
+            </div>
+
+
+
+            <div>
+                <h3>Definition list</h3>
+                <dl>
+                    <dt>Definition List Title</dt>
+                    <dd>This is a definition list division.</dd>
+                </dl>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                </ol>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Block Quote (h3)</h3>
+                <blockquote>
+                    <p>A block quotation (also known as a long quotation or extract) is a quotation in a written
+                        document,
+                        that
+                        is set off from the main text as a paragraph, or block of text.</p>
+                    <p>It is typically distinguished visually using indentation and a different typeface or smaller size
+                        quotation. It may or may not include a citation, usually placed at the bottom.</p>
+                    <cite><a href="#!">Said no one, ever.</a></cite>
+                </blockquote>
+
+            </div>
+        </section>
+
+        <section>
+            <h3>Cards (h3)</h3>
+
+            <div class="card">
+                <h3>An h3 Header within the card</h3>
+                <p>
+                    Man surprised me most about humanity. Because he sacrifices
+                    his health in order to make money.
+                </p>
+                <button>Accept</button>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <h3>An h3 Header for just pure text</h3>
+                <p>
+                    Man surprised me most about humanity. Because he sacrifices
+                    his health in order to make money.
+                </p>
+            </div>
+
+            <h3>Inputs with grid (cols-2)</h3>
+            <div class="grid cols-2">
+                <div class="card">
+                    <img src="http://placekitten.com/480/480" alt="Image alt text">
+                    <h3>card + image</h3>
+                    <p>
+                        Man surprised me most about humanity. Because he sacrifices
+                        his health in order to make money.
+                    </p>
+                    <button>Accept</button>
+                </div>
+                <div class="card">
+                    <img src="http://placekitten.com/480/480" alt="Image alt text">
+                    <h3>card + image</h3>
+                    <p>
+                        Man surprised me most about humanity. Because he sacrifices
+                        his health in order to make money.
+                    </p>
+                    <button>Accept</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h3>Action buttons</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Tellus rutrum tellus pellentesque eu tincidunt. Aliquet nec
-                ullamcorper sit amet risus nullam eget felis eget. Lacinia quis
-                vel eros donec ac odio. Orci porta non pulvinar neque laoreet
-                suspendisse interdum consectetur libero. Nulla pellentesque
-                dignissim enim sit amet venenatis urna cursus. Vulputate eu
-                scelerisque felis imperdiet. Tortor condimentum lacinia quis vel
-                eros donec ac. Turpis egestas maecenas pharetra convallis
-                posuere morbi leo urna molestie. Sed nisi lacus sed viverra
-                tellus in hac habitasse platea.
+                <input type="submit" value="input type=submit" />
+                <input type="button" value="input type=button" />
+                <input type="reset" value="input type=reset" />
+                <input disabled type="submit" value="input disabled" />
             </p>
 
-            <h2>An h2 header - with grid (cols-2)</h2>
+            <p>
+                <button type="submit">
+                    &lt;button type=submit&gt;
+                </button>
+                <button type="button">
+                    &lt;button type=button&gt;
+                </button>
+                <button type="reset">
+                    &lt;button type=reset&gt;
+                </button>
+            </p>
+            <p>
+                <button class="cancel">Cancel</button>
+                <button type="button">button &xrarr;</button>
+                <button disabled type="button">
+                    &lt;button disabled&gt;
+                </button>
+            </p>
+
+            <p>
+                <input type="submit" value="input Active" />
+                <input type="button" value="input Hover" />
+                <input type="reset" value="input Focus" />
+                <input type="submit" value="input Visited" />
+            </p>
+            <p>
+                <button>
+                    &lt;button active&gt;
+                </button>
+                <button>
+                    &lt;button hover&gt;
+                </button>
+                <button>
+                    &lt;button focus&gt;
+                </button>
+                <button>
+                    &lt;button visited&gt;
+                </button>
+
+            </p>
+        </section>
+
+
+        <section>
+            <h2> Text Code </h2>
+
+            <div>
+                <h3>&lt;code&gt; Line (code tag)</h3>
+                <p>The code below is on it's own separate line.</p>
+
+                <p>
+                <pre><code class="language-css">.p { font-size: 16px; }</code></pre>
+                </p>
+
+                <p>
+                <pre><code class="language-css">.p { font-size: 16px; }</code></pre> The code is before the text.
+                </p>
+
+                <p>The code is after the text.
+                <pre><code class="language-css">.p { font-size: 16px; }</code></pre>
+                </p>
+
+
+            </div>
+
+            <div>
+                <h3>&lt;code&gt; Block (pre + code tag)</h3>
+                <pre><code class="language-javascript">const stripey = () => {
+            console.log(&quot;You're a good boy!&quot;);
+        }</code></pre>
+
+            </div>
+
+            <div>
+                <h3>&lt;pre&gt; Tag</h3>
+                <pre>P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~ </pre>
+            </div>
+
+
+            <h3>Horizontal Line</h3>
+            <hr />
+
+        </section>
+
+
+        <section>
+
+            <h2> Embedded Content </h2>
+
+            <div>
+                <h3>No <code>&lt;figure&gt;</code> element</h3>
+
+                <p><img src="http://placekitten.com/480/480" alt="Image alt text"></p>
+            </div>
+
+            <div>
+                <h3>Wrapped in a <code>&lt;figure&gt;</code> element, no <code>&lt;figcaption&gt;</code></h3>
+                <figure><img src="http://placekitten.com/420/420" alt="Image alt text"></figure>
+            </div>
+
+            <div>
+                <h3>Wrapped in a <code>&lt;figure&gt;</code> element, with a <code>&lt;figcaption&gt;</code></h3>
+                <figure>
+                    <img src="http://placekitten.com/420/420" alt="Image alt text">
+                    <figcaption>Here is a caption for this image.</figcaption>
+                </figure>
+            </div>
+
+            <div>
+                <h3>Audio</h3>
+                <div><audio controls="">audio</audio></div>
+            </div>
+
+            <div>
+                <h3>Video</h3>
+                <div><video controls="">video</video></div>
+            </div>
+
+            <div>
+                <h3>Canvas</h3>
+                <div><canvas id="canvas"></canvas></div>
+            </div>
+
+            <div>
+                <h3>Meter (50% out of 100%)</h3>
+                <div><meter value="50" min="0" max="100">50 out of 100</meter></div>
+            </div>
+
+            <div>
+                <h3>Progress</h3>
+                <div><progress>progress</progress></div>
+            </div>
+
+            <div>
+                <h3>Inline SVG</h3>
+                <div>
+                    <svg width="100px" height="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                        style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path
+                                    d="M480.711,258.894L458.198,0l-9.774,3.261c-1.157,0.386-28.68,9.674-57.101,28.291c-34.256,22.438-54.978,48.98-60.563,77.338c-23.918-9.272-49.017-13.965-74.759-13.965s-50.842,4.693-74.76,13.965c-5.587-28.356-26.309-54.901-60.563-77.338C92.255,12.935,64.733,3.648,63.575,3.261L53.802,0L31.29,258.894c-2.26,10.834,3.639,20.033,8.856,28.166c3.762,5.866,7.317,11.406,7.317,16.402c0,28.596,5.681,56.304,16.885,82.354l14.927-6.421c-10.326-24.01-15.563-49.558-15.563-75.934c0-9.76-5.254-17.949-9.888-25.176c-3.92-6.111-7.623-11.884-6.58-16.282l0.136-0.578L68.164,22.412c9.177,3.779,23.742,10.404,38.88,19.781v82.523h16.25V53.314c22.015,16.717,41.534,39.352,43.129,67.634l0.664,11.781l10.768-4.823c24.791-11.103,51.082-16.732,78.145-16.732c27.062,0,53.353,5.629,78.144,16.732l10.768,4.823l0.665-11.781c1.595-28.283,21.114-50.919,43.129-67.635v71.402h16.25V42.192c15.139-9.378,29.706-16.003,38.88-19.78l20.732,238.423l0.051,0.591l0.137,0.577c1.042,4.399-2.661,10.172-6.58,16.283c-4.635,7.226-9.888,15.417-9.888,25.176c0,106.028-86.26,192.288-192.288,192.288c-34.28,0-67.924-9.122-97.294-26.38c-28.521-16.759-52.39-40.729-69.026-69.319l-14.045,8.172c18.037,30.998,43.916,56.987,74.839,75.157C182.337,502.104,218.827,512,255.999,512c55.717,0,108.088-21.688,147.469-61.068c39.381-39.38,61.068-91.753,61.068-147.469c0-4.995,3.554-10.536,7.317-16.402C477.071,278.927,482.97,269.729,480.711,258.894z" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M180.168,181.59c-25.387,0-46.041,20.653-46.041,46.041s20.653,46.041,46.041,46.041s46.041-20.653,46.041-46.041S205.555,181.59,180.168,181.59z M180.168,257.422c-16.427,0-29.791-13.364-29.791-29.791c0-16.427,13.364-29.791,29.791-29.791c16.427,0,29.791,13.364,29.791,29.791C209.959,244.058,196.595,257.422,180.168,257.422z" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M331.831,181.59c-25.387,0-46.041,20.653-46.041,46.041s20.653,46.041,46.041,46.041c25.387,0,46.041-20.653,46.041-46.041S357.219,181.59,331.831,181.59z M331.831,257.422c-16.427,0-29.791-13.364-29.791-29.791c0-16.427,13.364-29.791,29.791-29.791c16.427,0,29.791,13.364,29.791,29.791C361.622,244.058,348.259,257.422,331.831,257.422z" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M270.32,412.823c-4.224-5.417-5.797-11.022-6.195-12.696v-34.973c10.186-1.496,18.572-5.815,24.985-12.91c15.212-16.828,12.89-43.032,12.784-44.141l-0.705-7.348h-90.472l-0.719,7.33c-0.109,1.107-2.489,27.319,12.693,44.154c6.448,7.149,14.899,11.483,25.184,12.949v35c-0.821,3.831-6.675,25.148-35.208,25.148v16.25c22.04,0,35.646-9.943,43.332-20.729c7.686,10.787,21.292,20.729,43.332,20.729v-16.25C286.557,425.335,276.795,421.125,270.32,412.823z M256.001,349.503h-0.198c-9.234-0.051-16.103-2.701-20.999-8.1c-6.416-7.075-8.206-17.459-8.632-24.399h59.515c-0.454,6.94-2.268,17.305-8.63,24.342C272.138,346.787,265.237,349.457,256.001,349.503z" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <rect x="323.704" y="208.342" width="16.25" height="38.576" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <rect x="109.75" y="306.165" width="27.083" height="16.25" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <rect x="136.833" y="338.665" width="27.083" height="16.25" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <rect x="342.662" y="338.665" width="27.083" height="16.25" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <rect x="369.745" y="306.165" width="27.083" height="16.25" />
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <rect x="172.063" y="208.342" width="16.25" height="38.576" />
+                            </g>
+                        </g>
+
+                    </svg>
+
+                </div>
+            </div>
+
+            <div>
+                <h3>IFrame</h3>
+                <div><iframe src="index.html" height="300" width="100%"></iframe></div>
+            </div>
+
+        </section>
+
+
+        <section>
+            <h2>Tables</h2>
+
+            <div>
+                <h3> Standard Table</h3>
+                <table>
+                    <caption>Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>Table Heading 1</th>
+                            <th>Table Heading 2</th>
+                            <th>Table Heading 3</th>
+                            <th>Table Heading 4</th>
+                            <th>Table Heading 5</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Table Footer 1</th>
+                            <th>Table Footer 2</th>
+                            <th>Table Footer 3</th>
+                            <th>Table Footer 4</th>
+                            <th>Table Footer 5</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Table Cell 1</td>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                            <td>Table Cell 4</td>
+                            <td>Table Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Table Cell 1</td>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                            <td>Table Cell 4</td>
+                            <td>Table Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Table Cell 1</td>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                            <td>Table Cell 4</td>
+                            <td>Table Cell 5</td>
+                        </tr>
+                        <tr>
+                            <td>Table Cell 1</td>
+                            <td>Table Cell 2</td>
+                            <td>Table Cell 3</td>
+                            <td>Table Cell 4</td>
+                            <td>Table Cell 5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+
+                <h3> Multi-line tables:</h3>
+
+                <table style="width: 46%;">
+                    <colgroup>
+                        <col width="13%" />
+                        <col width="31%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>keyword</th>
+                            <th>text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>red</td>
+                            <td>
+                                Sunsets, apples, and other red or reddish things.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>green</td>
+                            <td>
+                                Leaves, grass, frogs and other things it's not easy
+                                being.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2> Layouts </h2>
+
+            <h3>2 Col Layout - Grid (h3 header)</h3>
+
             <div class="grid cols-2">
                 <p>
                     Tristique nulla aliquet enim tortor at auctor urna nunc id.
@@ -88,539 +567,493 @@
                 </p>
             </div>
 
-            <p>
-                This is an anchor tag/hyper link:
-                <a href="https://github.com/oxalorg/sakura"
-                    >sakura - Github Repository</a
-                >
-            </p>
-            <p>
-                Paragraphs look like this. Font size along with line height and
-                maximum width are optimized for reading.
-            </p>
-
-            <p>
-                <em>Italic</em>, <strong>bold</strong>, and
-                <code>monospace</code>. Itemized lists look like:
-            </p>
-            <ul>
-                <li>this one</li>
-                <li>that one</li>
-                <li>the other one</li>
-            </ul>
-
-            <p><strong>Here's a block quote</strong>:</p>
-            <blockquote>
+            <h3>3 Col Layout - Grid (h3 header)</h3>
+            <div class="grid cols-3">
                 <p>
-                    Man surprised me most about humanity. Because he sacrifices
-                    his health in order to make money. Then he sacrifices money
-                    to recuperate his health. And then he is so anxious about
-                    the future that he does not enjoy the present; the result
-                    being that he does not live in the present or the future; he
-                    lives as if he is never going to die, and then dies having
-                    never really lived. -James J Lachard
+                    Tristique nulla aliquet enim tortor at auctor urna nunc id.
+                    Faucibus turpis in eu mi bibendum neque egestas congue. Id
+                    venenatis a condimentum vitae sapien pellentesque habitant
+                    morbi. Nam at lectus urna duis convallis convallis tellus.
+                    Enim blandit volutpat maecenas volutpat blandit aliquam
+                    etiam erat velit. Dui ut ornare lectus sit amet est. Ac
+                    placerat vestibulum lectus mauris ultrices. Suspendisse
+                    potenti nullam ac tortor vitae. Vitae justo eget magna
+                    fermentum iaculis. Consequat semper viverra nam libero justo
+                    laoreet sit amet. Porttitor leo a diam sollicitudin tempor
+                    id eu nisl nunc. Lobortis feugiat vivamus at augue eget arcu
+                    dictum. Ultrices neque ornare aenean euismod elementum nisi
+                    quis eleifend. Commodo viverra maecenas accumsan lacus vel
+                    facilisis volutpat est velit.
                 </p>
-            </blockquote>
-
-            <h2 id="an-h2-header">An h2 header</h2>
-            <p><strong>Some code blocks</strong></p>
-            <pre><code>define foobar() {
-    print &quot;Welcome to flavor country!&quot;;
-}</code></pre>
-
-            <div class="sourceCode">
-                <pre
-                    class="sourceCode python"
-                ><code class="sourceCode python"><span class="im">import</span> time
-<span class="co"># Quick, count to ten!</span>
-<span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">10</span>):
-    <span class="co"># (but not *too* quick)</span>
-    time.sleep(<span class="fl">0.5</span>)
-    <span class="bu">print</span> i</code></pre>
-            </div>
-
-            <hr />
-            <h2>An h2 header (for card)</h2>
-
-            <div class="card">
-                <h3>An h3 Header within the card</h3>
                 <p>
-                    Man surprised me most about humanity. Because he sacrifices
-                    his health in order to make money.
+                    Tristique nulla aliquet enim tortor at auctor urna nunc id.
+                    Faucibus turpis in eu mi bibendum neque egestas congue. Id
+                    venenatis a condimentum vitae sapien pellentesque habitant
+                    morbi. Nam at lectus urna duis convallis convallis tellus.
+                    Enim blandit volutpat maecenas volutpat blandit aliquam
+                    etiam erat velit. Dui ut ornare lectus sit amet est. Ac
+                    placerat vestibulum lectus mauris ultrices. Suspendisse
+                    potenti nullam ac tortor vitae. Vitae justo eget magna
+                    fermentum iaculis. Consequat semper viverra nam libero justo
+                    laoreet sit amet. Porttitor leo a diam sollicitudin tempor
+                    id eu nisl nunc. Lobortis feugiat vivamus at augue eget arcu
+                    dictum. Ultrices neque ornare aenean euismod elementum nisi
+                    quis eleifend. Commodo viverra maecenas accumsan lacus vel
+                    facilisis volutpat est velit.
                 </p>
-                <button>Accept</button>
-            </div>
-
-            <hr />
-            <h2>An h2 header (for this split)</h2>
-
-            <div class="split">
-                <aside>
-                    <p>
-                        Man surprised me most about humanity. Because he
-                        sacrifices his health in order to make money.
-                    </p>
-                </aside>
                 <p>
-                    Man surprised me most about humanity. Because he sacrifices
-                    his health in order to make money.
+                    Tortor pretium viverra suspendisse potenti nullam ac tortor
+                    vitae purus. Est lorem ipsum dolor sit amet. Aliquam sem
+                    fringilla ut morbi tincidunt augue interdum. Nec ultrices
+                    dui sapien eget mi proin sed libero enim. Mattis ullamcorper
+                    velit sed ullamcorper morbi. Vivamus arcu felis bibendum ut
+                    tristique. Non arcu risus quis varius quam quisque id diam
+                    vel. Vitae justo eget magna fermentum iaculis. Ac turpis
+                    egestas maecenas pharetra convallis. Neque convallis a cras
+                    semper auctor neque vitae tempus. Sociis natoque penatibus
+                    et magnis dis parturient montes nascetur. Odio ut enim
+                    blandit volutpat maecenas volutpat. Pellentesque adipiscing
+                    commodo elit at. Urna molestie at elementum eu facilisis.
+                    Risus nullam eget felis eget nunc lobortis mattis aliquam.
+                    Aenean vel elit scelerisque mauris pellentesque pulvinar
+                    pellentesque. Purus semper eget duis at tellus at.
                 </p>
             </div>
 
-            <h3 id="an-h3-header">An h3 header</h3>
-            <p>A nested list:</p>
-            <ol style="list-style-type: decimal;">
-                <li>
-                    <p>First, get these ingredients:</p>
-                    <ul>
-                        <li>carrots</li>
-                        <li>celery</li>
-                        <li>lentils</li>
-                    </ul>
-                </li>
-                <li>
-                    <p>Boil some water.</p>
-                </li>
-                <li>
-                    <p>Dump everything in the pot and follow this algorithm:</p>
-                    <pre><code>find wooden spoon
-uncover pot
-stir
-cover pot
-balance wooden spoon precariously on pot handle
-wait 10 minutes
-goto first step (or shut off burner when done)</code></pre>
-                    <p>Do not bump wooden spoon or it will fall.</p>
-                </li>
-            </ol>
+            <h3>Inputs with Grid (cols-3)</h3>
+            <div class="grid cols-3">
+                <div>
+                    <label for="input_grid__text">Text Input</label>
+                    <input id="input_grid__text" placeholder="Text Input" type="text" />
+                </div>
+                <div>
+                    <label for="input_grid__password">Password</label>
+                    <input id="input_grid__password" placeholder="Type your Password" type="password" />
+                </div>
 
-            <h1 id="header-level-1">Header level 1</h1>
-            <h2 id="header-level-2">Header level 2</h2>
-            <h3 id="header-level-3">Header level 3</h3>
-            <h4 id="header-level-4">Header level 4</h4>
-            <h5 id="header-level-5">Header level 5</h5>
-            <h6 id="header-level-6">Header level 6</h6>
+                <div>
+                    <label for="input_grid__webaddress">Web Address</label>
+                    <input id="input_grid__webaddress" placeholder="http://yoursite.com" type="url" />
+                </div>
+            </div>
 
-            <p>A horizontal line:</p>
-            <hr />
-            <p><a href="#top">[Top]</a></p>
+            <h3>Inputs with grid (cols-2)</h3>
+            <div class="grid cols-2">
+                <div>
+                    <label for="input_grid__emailaddress">Email Address</label>
+                    <input id="input_grid__emailaddress" placeholder="name@email.com" type="email" />
+                </div>
+                <div>
+                    <label for="input_grid__phone">Phone Number</label>
+                    <input id="input_grid__phone" placeholder="(999) 999-9999" type="tel" />
+                </div>
+            </div>
 
-            <p>
-                Here's a link to <a href="http://foo.bar">a website</a>, to a
-                <a href="#">local doc</a>, and to a
-                <a href="#an-h2-header">section heading in the current doc</a>.
-                Here's a footnote <a href="#fn1" id="fnref1"><sup>1</sup></a
-                >.
-            </p>
-            <p>Tables can look like this:</p>
+            <h3>Inputs with Flex (DEFAULT: space-between)</h3>
+            <div class="flex">
+                <div>
+                    <label for="input_flex__search">Search</label>
+                    <input id="input_flex__search" placeholder="Enter Search Term" type="search" />
+                </div>
 
-            <table>
-                <caption>
-                    Shoes, their sizes, and what they're made of
-                </caption>
-                <thead>
-                    <tr>
-                        <th align="left">size</th>
-                        <th align="left">material</th>
-                        <th align="left">color</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td align="left">9</td>
-                        <td align="left">leather</td>
-                        <td align="left">brown</td>
-                    </tr>
-                    <tr>
-                        <td align="left">10</td>
-                        <td align="left">hemp canvas</td>
-                        <td align="left">natural</td>
-                    </tr>
-                    <tr>
-                        <td align="left">11</td>
-                        <td align="left">glass</td>
-                        <td align="left">transparent</td>
-                    </tr>
-                </tbody>
-            </table>
+                <div>
+                    <label for="input_flex__text2">Number Input</label>
+                    <input id="input_flex__text2" placeholder="Enter a Number" type="number" />
+                </div>
+            </div>
 
-            <p>Multi-line tables:</p>
-            <table style="width: 46%;">
-                <colgroup>
-                    <col width="13%" />
-                    <col width="31%" />
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th align="left">keyword</th>
-                        <th align="left">text</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td align="left">red</td>
-                        <td align="left">
-                            Sunsets, apples, and other red or reddish things.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left">green</td>
-                        <td align="left">
-                            Leaves, grass, frogs and other things it's not easy
-                            being.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h3>Inputs with Flex (flex-around)</h3>
+            <div class="flex flex-around">
+                <div>
+                    <label for="input_flex__text3">Error</label>
+                    <input id="input_flex__text3" placeholder="Text Input" type="text" />
+                </div>
 
-            <p>A horizontal rule follows.</p>
-            <hr />
-            <p>Images are responsive by default:</p>
+                <div>
+                    <label for="input_flex__text4">Valid</label>
+                    <input id="input_flex__text4" placeholder="Text Input" type="text" />
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>INPUTS </h2>
             <div>
-                <!-- <img alt="example image" src="sakura.png" title="An exemplary image"> -->
-                <p>example image</p>
+                <h3> p tag version </h3>
+                <p>
+                    <label for="input_p__text">Text Input</label>
+                    <input id="input_p__text" placeholder="Text Input" type="text" />
+                </p>
+
+                <p>
+                    <label for="input_p__password">Password</label>
+                    <input id="input_p__password" placeholder="Type your Password" type="password" />
+                </p>
+
+                <p>
+                    <label for="input_p__webaddress">URL Address</label>
+                    <input id="input_p__webaddress" placeholder="http://yoursite.com" type="url" />
+                </p>
+
+                <p>
+                    <label for="input_p__emailaddress">Email Address</label>
+                    <input id="input_p__emailaddress" placeholder="name@email.com" type="email" />
+                </p>
+
+                <p>
+                    <label for="input_p__phone">Phone Number</label>
+                    <input id="input_p__phone" placeholder="(999) 999-9999" type="tel" />
+                </p>
+
+                <p>
+                    <label for="input_p__search">Search</label>
+                    <input id="input_p__search" placeholder="Enter Search Term" type="search" />
+                </p>
+
+                <p>
+                    <label for="input_p__text2">Number Input</label>
+                    <input id="input_p__text2" placeholder="Enter a Number" type="number" />
+                </p>
+
+                <p>
+                    <label for="input_p__text3">Error</label>
+                    <input id="input_p__text3" placeholder="Text Input" type="text" />
+                </p>
+
+                <p>
+                    <label for="input_p__text4">Valid</label>
+                    <input id="input_p__text4" placeholder="Text Input" type="text" />
+                </p>
+                <p>
+                    <label for="input_p__textarea">Textarea</label>
+                    <textarea id="input_p__textarea" placeholder="Enter your message here"></textarea>
+                </p>
             </div>
-            <p><a href="#top">[Top]</a></p>
-            <hr />
 
-            <h1 id="form-elements">Form Elements</h1>
+
+            <div>
+                <h3> div tag version </h3>
+                <div>
+                    <label for="input_div__text">Text Input</label>
+                    <input id="input_div__text" placeholder="Text Input" type="text" />
+                </div>
+                <div>
+                    <label for="input_div__password">Password</label>
+                    <input id="input_div__password" placeholder="Type your Password" type="password" />
+                </div>
+
+                <div>
+                    <label for="input_div__webaddress">Web Address</label>
+                    <input id="input_div__webaddress" placeholder="http://yoursite.com" type="url" />
+                </div>
+
+                <div>
+                    <label for="input_div__emailaddress">Email Address</label>
+                    <input id="input_div__emailaddress" placeholder="name@email.com" type="email" />
+                </div>
+                <div>
+                    <label for="input_div__phone">Phone Number</label>
+                    <input id="input_div__phone" placeholder="(999) 999-9999" type="tel" />
+                </div>
+
+                <div>
+                    <label for="input_div__search">Search</label>
+                    <input id="input_div__search" placeholder="Enter Search Term" type="search" />
+                </div>
+
+                <div>
+                    <label for="input_div__text2">Number Input</label>
+                    <input id="input_div__text2" placeholder="Enter a Number" type="number" />
+                </div>
+
+                <div>
+                    <label for="input_div__text3">Error</label>
+                    <input id="input_div__text3" placeholder="Text Input" type="text" />
+                </div>
+
+                <div>
+                    <label for="input_div__text4">Valid</label>
+                    <input id="input_div__text4" placeholder="Text Input" type="text" />
+                </div>
+                <div>
+                    <label for="input_div__textarea">Textarea</label>
+                    <textarea id="input_div__textarea" rows="8" cols="48"
+                        placeholder="Enter your message here"></textarea>
+                </div>
+            </div>
+
+            <h3> legends version </h3>
+            <fieldset id="forms__input">
+                <legend>Input fields</legend>
+                <p>
+                    <label for="input_legend__text">Text Input</label>
+                    <input id="input_legend__text" type="text" placeholder="Text Input">
+                </p>
+                <p>
+                    <label for="input_legend__password">Password</label>
+                    <input id="input_legend__password" type="password" placeholder="Type your Password">
+                </p>
+                <p>
+                    <label for="input_legend__webaddress">Web Address</label>
+                    <input id="input_legend__webaddress" type="url" placeholder="http://yoursite.com">
+                </p>
+                <p>
+                    <label for="input_legend__emailaddress">Email Address</label>
+                    <input id="input_legend__emailaddress" type="email" placeholder="name@email.com">
+                </p>
+                <p>
+                    <label for="input_legend__phone">Phone Number</label>
+                    <input id="input_legend__phone" type="tel" placeholder="(999) 999-9999">
+                </p>
+                <p>
+                    <label for="input_legend__search">Search</label>
+                    <input id="input_legend__search" type="search" placeholder="Enter Search Term">
+                </p>
+                <p>
+                    <label for="input_legend__text2">Number Input</label>
+                    <input id="input_legend__text2" type="number" placeholder="Enter a Number">
+                </p>
+                <p>
+                    <label for="input_legend__text3" class="error">Error</label>
+                    <input id="input_legend__text3" class="is-error" type="text" placeholder="Text Input">
+                </p>
+                <p>
+                    <label for="input_legend__text4" class="valid">Valid</label>
+                    <input id="input_legend__text4" class="is-valid" type="text" placeholder="Text Input">
+                </p>
+                <p>
+                    <label for="textarea">Textarea</label>
+                    <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+                </p>
+            </fieldset>
+        </section>
+
+        <section>
+            <h3>SELECTORS FORM</h3>
+            <div>
+                <p>Form checkboxes/radio buttons are incredibly difficult to design for using a classless css. It's
+                    dependent on how your markup is organized. This is a optional add-on using the checkbox.css, and
+                    also assuming you are using the markup below.</p>
+            </div>
+
             <form>
-                <div id="forms__input1">
-                    <h3>Input fields (Wrapped in p tags)</h3>
-                    <p>
-                        <label for="input__text">Text Input</label>
-                        <input
-                            id="input__text"
-                            placeholder="Text Input"
-                            type="text"
-                        />
-                    </p>
+                <fieldset id="forms__checkbox">
+                    <legend>Checkboxes</legend>
 
-                    <p>
-                        <label for="input__password">Password</label>
-                        <input
-                            id="input__password"
-                            placeholder="Type your Password"
-                            type="password"
-                        />
-                    </p>
+                    <label class="custom-inputs">
+                        <input id="checkbox1" name="checkbox" type="checkbox">
+                        <span class="design"></span>
+                        <span class="text">Option 1</span>
+                    </label>
 
-                    <p>
-                        <label for="input__webaddress">Web Address</label>
-                        <input
-                            id="input__webaddress"
-                            placeholder="http://yoursite.com"
-                            type="url"
-                        />
-                    </p>
+                    <label class="custom-inputs">
+                        <input id="checkbox2" name="checkbox" type="checkbox">
+                        <span class="design"></span>
+                        <span class="text">Option 2</span>
+                    </label>
 
-                    <p>
-                        <label for="input__emailaddress">Email Address</label>
-                        <input
-                            id="input__emailaddress"
-                            placeholder="name@email.com"
-                            type="email"
-                        />
-                    </p>
 
-                    <p>
-                        <label for="input__phone">Phone Number</label>
-                        <input
-                            id="input__phone"
-                            placeholder="(999) 999-9999"
-                            type="tel"
-                        />
-                    </p>
+                    <label class="custom-inputs">
+                        <input id="checkbox3" name="checkbox" type="checkbox">
+                        <span class="design"></span>
+                        <span class="text">Option 3</span>
+                    </label>
+                </fieldset>
+            </form>
 
-                    <p>
-                        <label for="input__search">Search</label>
-                        <input
-                            id="input__search"
-                            placeholder="Enter Search Term"
-                            type="search"
-                        />
-                    </p>
 
-                    <p>
-                        <label for="input__text2">Number Input</label>
-                        <input
-                            id="input__text2"
-                            placeholder="Enter a Number"
-                            type="number"
-                        />
-                    </p>
+            <fieldset>
+                <legend>Radio buttons</legend>
+                <label class="custom-inputs">
+                    <input type="radio" name="light" checked>
+                    <span class="design"></span>
+                    <span class="text">Option 1</span>
+                </label>
 
-                    <p>
-                        <label for="input__text3">Error</label>
-                        <input
-                            id="input__text3"
-                            placeholder="Text Input"
-                            type="text"
-                        />
-                    </p>
+                <label class="custom-inputs">
+                    <input type="radio" name="light">
+                    <span class="design"></span>
+                    <span class="text">Option 2</span>
+                </label>
 
-                    <p>
-                        <label for="input__text4">Valid</label>
-                        <input
-                            id="input__text4"
-                            placeholder="Text Input"
-                            type="text"
-                        />
-                    </p>
-                </div>
-
-                <div id="forms__input2">
-                    <h2>Input fields (Wrapped in div tags)</h2>
-
-                    <h3>Inputs with Grid (cols-3)</h3>
-                    <div class="grid cols-3">
-                        <div>
-                            <label for="input__text">Text Input</label>
-                            <input
-                                id="input__text"
-                                placeholder="Text Input"
-                                type="text"
-                            />
-                        </div>
-                        <div>
-                            <label for="input__password">Password</label>
-                            <input
-                                id="input__password"
-                                placeholder="Type your Password"
-                                type="password"
-                            />
-                        </div>
-
-                        <div>
-                            <label for="input__webaddress">Web Address</label>
-                            <input
-                                id="input__webaddress"
-                                placeholder="http://yoursite.com"
-                                type="url"
-                            />
-                        </div>
-                    </div>
-
-                    <h3>Inputs with grid (cols-2)</h3>
-
-                    <div class="grid cols-2">
-                        <div>
-                            <label for="input__emailaddress"
-                                >Email Address</label
-                            >
-                            <input
-                                id="input__emailaddress"
-                                placeholder="name@email.com"
-                                type="email"
-                            />
-                        </div>
-                        <div>
-                            <label for="input__phone">Phone Number</label>
-                            <input
-                                id="input__phone"
-                                placeholder="(999) 999-9999"
-                                type="tel"
-                            />
-                        </div>
-                    </div>
-
-                    <h3>Inputs with Flex (DEFAULT: space-between)</h3>
-                    <div class="flex">
-                        <div>
-                            <label for="input__search">Search</label>
-                            <input
-                                id="input__search"
-                                placeholder="Enter Search Term"
-                                type="search"
-                            />
-                        </div>
-
-                        <div>
-                            <label for="input__text2">Number Input</label>
-                            <input
-                                id="input__text2"
-                                placeholder="Enter a Number"
-                                type="number"
-                            />
-                        </div>
-                    </div>
-
-                    <h3>Inputs with Flex (flex-around)</h3>
-                    <div class="flex flex-around">
-                        <div>
-                            <label for="input__text3">Error</label>
-                            <input
-                                id="input__text3"
-                                placeholder="Text Input"
-                                type="text"
-                            />
-                        </div>
-
-                        <div>
-                            <label for="input__text4">Valid</label>
-                            <input
-                                id="input__text4"
-                                placeholder="Text Input"
-                                type="text"
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                <p><a href="#top">[Top]</a></p>
-
-                <div id="forms__select">
-                    <h3>Select menus</h3>
+                <label class="custom-inputs">
+                    <input type="radio" name="light">
+                    <span class="design"></span>
+                    <span class="text">Option 3</span>
+                </label>
+            </fieldset>
+            <p><a href="#top">[Top]</a></p>
+            <form>
+                <fieldset id="forms__select">
+                    <legend>Select menus</legend>
                     <p>
                         <label for="select">Select</label>
                         <select id="select">
                             <optgroup label="Option Group">
-                                <option>
-                                    Option One
-                                </option>
-                                <option>
-                                    Option Two
-                                </option>
-                                <option>
-                                    Option Three
-                                </option>
+                                <option>Option One</option>
+                                <option>Option Two</option>
+                                <option>Option Three</option>
                             </optgroup>
                         </select>
                     </p>
-                </div>
+                </fieldset>
+            </form>
 
-                <div id="forms__checkbox">
-                    <h3>Checkboxes</h3>
-                    <ul style="list-style: none;">
-                        <li>
-                            <label for="checkbox1"
-                                ><input
-                                    checked="checked"
-                                    id="checkbox1"
-                                    name="checkbox"
-                                    type="checkbox"
-                                />
-                                Choice A</label
-                            >
-                        </li>
-                        <li>
-                            <label for="checkbox2"
-                                ><input
-                                    id="checkbox2"
-                                    name="checkbox"
-                                    type="checkbox"
-                                />
-                                Choice B</label
-                            >
-                        </li>
-                        <li>
-                            <label for="checkbox3"
-                                ><input
-                                    id="checkbox3"
-                                    name="checkbox"
-                                    type="checkbox"
-                                />
-                                Choice C</label
-                            >
-                        </li>
-                    </ul>
-                </div>
-
-                <div id="forms__textareas">
-                    <h3>Textareas</h3>
+            <p><a href="#top">[Top]</a></p>
+            <form>
+                <fieldset id="forms__textareas">
+                    <legend>Textareas</legend>
                     <p>
                         <label for="textarea">Textarea</label>
-                        <textarea
-                            cols="48"
-                            id="textarea"
-                            placeholder="Enter your message here"
-                            rows="8"
-                        ></textarea>
+                        <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
                     </p>
-                </div>
-
-                <div id="forms__html5">
-                    <div id="forms__action">
-                        <h3>Action buttons</h3>
-                        <p>
-                            <input type="submit" value="input type=submit" />
-                            <input type="button" value="input type=button" />
-                            <input type="reset" value="input type=reset" />
-                            <input
-                                disabled
-                                type="submit"
-                                value="input disabled"
-                            />
-                        </p>
-
-                        <p>
-                            <button type="submit">
-                                &lt;button type=submit&gt;
-                            </button>
-                            <button type="button">
-                                &lt;button type=button&gt;
-                            </button>
-                            <button type="reset">
-                                &lt;button type=reset&gt;
-                            </button>
-                        </p>
-                        <p>
-                            <button class="cancel">Cancel</button>
-                            <button type="button">button &xrarr;</button>
-                            <button disabled type="button">
-                                &lt;button disabled&gt;
-                            </button>
-                        </p>
-                        <p>
-                            <button class="small">Small button</button>
-                            <button class="cancel small">
-                                small button cancel
-                            </button>
-                        </p>
-                    </div>
-                    <p><a href="#top">[Top]</a></p>
-                </div>
+                </fieldset>
             </form>
+        </section>
+
+        <section>
             <div>
-                <hr />
-                <ol>
-                    <li id="fn1">
-                        <p>Footnote text goes here.<a href="#fnref1">↩</a></p>
+                <h3>HTML5 ELEMENTS</h3>
+                <fieldset id="forms__html5">
+                    <legend>HTML5 inputs</legend>
+                    <p>
+                        <label for="ic">Color input</label>
+                        <input type="color" id="ic" value="#000000">
+                    </p>
+                    <p>
+                        <label for="in">Number input</label>
+                        <input type="number" id="in" min="0" max="10" value="5">
+                    </p>
+                    <p>
+                        <label for="ir">Range input</label>
+                        <input type="range" id="ir" value="10">
+                    </p>
+                    <p>
+                        <label for="idd">Date input</label>
+                        <input type="date" id="idd" value="1970-01-01">
+                    </p>
+                    <p>
+                        <label for="idm">Month input</label>
+                        <input type="month" id="idm" value="1970-01">
+                    </p>
+                    <p>
+                        <label for="idw">Week input</label>
+                        <input type="week" id="idw" value="1970-W01">
+                    </p>
+                    <p>
+                        <label for="idt">Datetime input</label>
+                        <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+                    </p>
+                    <p>
+                        <label for="idtl">Datetime-local input</label>
+                        <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+                    </p>
+                </fieldset>
+
+            </div>
+
+        </section>
+
+
+        <section>
+            <hr />
+            <div>
+                <ol class="text-small">
+                    <!-- <li>
+                        CSS Dropdown via .<a href="https://css-tricks.com/solved-with-css-dropdown-menus/">PAGE
+                            HERE</a>
+                    </li> -->
+                    <li>
+                        Elevation Code stolen from <a href="#tailwind">TAILWIND NEED LINK</a>
+                    </li>
+                    <li>
+                        Templated Forked from <a href="http://twitter.com/cbracco">@cbracco</a> | <a
+                            href="http://github.com/cbracco/html5-test-page">GitHub</a>.
                     </li>
                 </ol>
             </div>
-        </main>
+        </section>
+    </main>
 
-        <footer>
-            <h3 class="fake-logo">Fake Logo</h3>
-            <nav>
-                <a href="#">THING</a>
-                <a href="#">THING</a>
-                <a href="#">THING</a>
-            </nav>
-            <p>&copy; 2020 It's Rocky stuff</p>
-        </footer>
+    <footer>
+        <h3 class="fake-logo">Fake Logo</h3>
+        <nav>
+            <a href="#">THING</a>
+            <a href="#">THING</a>
+            <a href="#">THING</a>
+        </nav>
+        <p>&copy; 2020 It's Rocky stuff</p>
 
-        <!-- STUFF -->
-        <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+    </footer>
 
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga = function () {
-                ga.q.push(arguments)
-            }
-            ga.q = []
-            ga.l = +new Date()
-            ga('create', 'UA-XXXXX-Y', 'auto')
-            ga('set', 'anonymizeIp', true)
-            ga('set', 'transport', 'beacon')
-            ga('send', 'pageview')
-        </script>
-        <script
-            src="https://www.google-analytics.com/analytics.js"
-            async
-        ></script>
-    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script>
+
+        const body = document.querySelector("body");
+        const theme1 = document.querySelector("#theme1");
+        const theme2 = document.querySelector("#theme2");
+        const theme3 = document.querySelector("#theme3");
+        const theme4 = document.querySelector("#theme4");
+        const theme5 = document.querySelector("#theme5");
+
+
+        /* TODO: Refactor into a loop */
+
+        theme1.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme1");
+
+            // body.style.opacity = 0;
+            // setTimeout(() => {
+            //     body.style.opacity = 1;
+            // }, 2000);
+        })
+
+        theme2.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme2");
+
+            // body.style.opacity = 0;
+            // setTimeout(() => {
+            //     body.style.opacity = 1;
+            // }, 1000);
+        })
+        theme3.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme3");
+
+            // body.style.opacity = 0;
+            // setTimeout(() => {
+            //     body.style.opacity = 1;
+            // }, 1000);
+        })
+        theme4.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme4");
+
+            body.style.opacity = 0;
+            setTimeout(() => {
+                body.style.opacity = 1;
+            }, 1000);
+        })
+        theme5.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme5");
+
+        })
+
+
+    </script>
+
+
 </html>

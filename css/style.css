@@ -1,34 +1,34 @@
+/*******************************************************************
+  ROOT SECTION:
+  Define a vanilla DEFAULT template here.
+  For making new themes, scroll down to the section titled "THEMES"
+*******************************************************************/
+
 :root {
     /* Define colors as colors */
     --black: #1b2d45;
-    --green: #00ebc7;
-    --red: #ff5470;
-    --yellow: #fde24f;
-    --darkBlue: #00214d;
-    --darkGrey: #222;
-    --grey: #bfbfbf;
-    --lightGrey: #f2f4f6;
     --white: #fff;
+    --darkGrey: #222;
+    --grey: #ab987a;
+    --lightGrey: #f5f5f5;
 
-    /* Define colors intentions - VERY SUBJECTIVE*/
-    --primary: var(--green);
-    --danger: var(--red);
+    --green: #00ebc7;
+    --red: #ff533d;
+    --lightRed: #ffa08a;
+    --darkRed: #b30700;
+    --yellow: #fde24f;
+    --darkBlue: #0f1626;
 
-    --background: var(--lightGrey);
-    --textColor: var(--black);
-    --buttonTextColor: var(--black);
-    --lineColor: var(--grey);
+    /* Define color intentions*/
 
-    --headerBackground: var(--darkBlue);
-    --footerBackground: var(--black);
+    /* Positioning */
+    --containerPadding: 2.5%;
+    --borderRadius: 1.2rem;
+    --gridGap: 2rem;
+    --globalSpacing: 1.5rem;
 
-    --line: solid 1px var(--lineColor);
-    --cardBg: var(--white);
-
-    /* Type */
-    --headingFont: 'Space Mono', monospace;
-    --bodyFont: 'Work Sans', sans-serif;
-    --baseFontSize: 112.5%;
+    /* Typography */
+    --baseFontSize: 100%;
     --h1: 3.052em;
     --h2: 2.441em;
     --h3: 1.953em;
@@ -36,27 +36,95 @@
     --h5: 1.25em;
     --smallText: 0.8em;
 
-    /* Elevation */
-    --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --headingFont: 'Raleway', sans-serif;
+    --headingWeight: 600;
+    --bodyFont: 'Merriweather';
+    --bodylineHeight: 2.1;
+    --textColor: var(--black);
 
-    /* Positioning */
-    --containerPadding: 2.5%;
+    /* Elements */
     --headerHeight: 3rem;
-    --borderRadius: 10px;
+    --headerBackground: var(--darkBlue);
+
+    --siteBackground: var(--lightGrey);
+    --siteLines: solid 1px var(--grey);
+
+    --linkColor: var(--red);
+    --linkUnderline: solid 2px var(--red);
+    --linkOnHover: var(--grey);
+
+    --footerHeight: 2rem;
+    --footerBackground: var(--darkBlue);
+
+    --textMarginBottom: var(--globalSpacing);
+    --divMarginBottom: var(--globalSpacing);
+
+    --btnTextColor: var(--white);
+    --btnPrimary: var(--red);
+    --btnSecondary: var(--grey);
+    --btnBgColor: var(--btnPrimary);
+    --btnHover: var(--darkRed);
+    --btnFocus: 0 0 0 5px var(--red);
+
+    --blockquoteBorder: 4px solid var(--darkBlue);
+
+    --figureColor: var(--darkBlue);
+    --figureTextColor: var(--white);
+
+    --tableHeaderBgColor: var(--darkBlue);
+    --tableHeaderColor: var(--textColor);
+    --tableBodyColor: var(--textColor);
+    --tableRowColor1: var(--grey);
+    --tableRowColor2: var(--lightGrey);
+
+    --cardWidth: 400px;
+    --cardBg: var(--darkBlue);
+    --cardPadding: var(--globalSpacing);
+    --cardTextColor: var(--white);
+
+    --formfieldTop: 0px;
+    --formfieldRight: 0px;
+    --formfieldBottom: 2px solid var(--darkBlue);
+    --formfieldLeft: 0px;
+
+    --formTextareaX: 24rem;
+    --formTextareaY: 8rem;
+
+    --formfieldLabel: var(--darkGrey);
+    --formfieldBg: var(--grey);
+    --formfieldFocus: 0 0 0 5px var(--grey);
+    --formfieldHover: yellow;
+
+    /* Only available with selector.css */
+    --selectSize: 1.2rem;
+    --selectHover: var(--darkBlue);
+    --selectOnClick: var(--lightRed);
+    --selectSelected: var(--red);
+
+    /* Elevation */
+    --level-1: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    --level-2: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --level-3: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --level-4: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --level-5: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --level-6: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --level-7: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-/* FROM type scale */
-@import url('https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400');
+/*******************************************************************
+  IMPORTS SECTION
+*******************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Raleway:600|Merriweather:400');
 
-/* TYPE SCALE */
+@import url('https://fonts.googleapis.com/css?family=Prata:400|Preahvihear:400');
+
+/*******************************************************************
+  RESET SECTION:
+*******************************************************************/
 html {
-    font-size: var(--baseFontSize); /*18px*/
     box-sizing: border-box;
 }
 
@@ -67,14 +135,21 @@ html {
     box-sizing: inherit;
 }
 
-/* THE CSS CODE */
-
+/*******************************************************************
+  DYNAMIC SECTION
+  The goal of these sections is that it grabs the key variables as
+  possible from the :root or theme class.
+  It's organized in alphabetical order.
+*******************************************************************/
 body {
+    font-size: var(--baseFontSize);
     font-family: var(--bodyFont);
     font-weight: 400;
-    line-height: 1.65;
-    background: var(--background);
+    line-height: var(--bodylineHeight);
+    background: var(--siteBackground);
     color: var(--textColor);
+    max-height: 100vh;
+    /* transition: 2s ease-in-out; */
 }
 
 header {
@@ -84,31 +159,25 @@ header {
     width: 100%;
 
     height: var(--headerHeight);
-    color: white;
-    height: 3rem;
     background: var(--headerBackground);
+    padding: 0 var(--containerPadding);
     box-shadow: var(--level-2);
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--containerPadding);
+    z-index: 100;
 }
 
-header nav a {
-    color: white;
-    text-decoration: none;
-    border-bottom: none;
-}
-
-header nav a + a {
-    margin-left: 15px;
+header div {
+    margin: 0;
 }
 
 footer {
     --footerTextColor: var(--lightGrey);
     color: var(--footerTextColor);
     background: var(--footerBackground);
-    padding: 2rem var(--containerPadding);
+    padding: var(--footerHeight) var(--containerPadding);
     text-align: center;
 }
 
@@ -121,31 +190,11 @@ footer p {
     max-width: none;
 }
 
-p {
-    margin-bottom: 1.15rem;
-    max-width: 40em;
+hr {
+    border-top: var(--siteLines);
 }
 
-a {
-    color: var(--black);
-    text-decoration: none;
-    border-bottom: solid 2px var(--primary);
-}
-
-blockquote {
-    border-left: solid 1px var(--darkBlue);
-    margin: 2em 1em;
-    padding: 1em;
-    background: var(--cardBg);
-    box-shadow: var(--level-3);
-}
-
-p a,
-blockquote a {
-    color: var(--textColor);
-    text-decoration: none;
-    border-bottom: solid 2px var(--primary);
-}
+/* Text */
 
 h1,
 h2,
@@ -154,7 +203,7 @@ h4,
 h5 {
     margin: 2.75rem 0 1.05rem;
     font-family: var(--headingFont);
-    font-weight: 400;
+    font-weight: var(--headingWeight);
     line-height: 1.15;
 }
 
@@ -179,75 +228,318 @@ h5 {
     font-size: var(--h5);
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: var(--textMarginBottom);
+    max-width: 40em;
+}
+
+div {
+    margin-bottom: var(--divMarginBottom);
+}
+
+p a {
+    color: var(--linkColor);
+    text-decoration: none;
+    border-bottom: var(--linkUnderline);
+}
+
 small,
-.text_small {
+.text-small {
     font-size: var(--smallText);
 }
 
-label {
-    display: block;
-    font-size: var(--smallText);
+a,
+a:hover {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    transition: 0.5s color ease;
+    text-decoration: none;
+    /* color: var(--black); */
+    padding-bottom: 0.2rem;
 }
 
-input,
-textarea {
-    padding: 4px 6px;
-    border: var(--line);
-    border-radius: 4px;
+a:hover {
+    color: var(--linkOnHover);
 }
 
-textarea {
+a:after {
+    left: 0;
+    content: '';
+    transition: 0.5s all ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    bottom: -0.15em;
+    height: 0.3rem;
+    width: 0;
+    background: var(--linkOnHover);
+}
+
+a:hover:after {
     width: 100%;
-    height: 5rem;
 }
 
-::placeholder {
-    color: var(--grey);
+blockquote {
+    border-left: var(--blockquoteBorder);
+    margin: 2em 1em;
+    padding: 1em;
+    background: var(--blockquoteBg);
+    color: var(--blockquoteTextColor);
+    box-shadow: var(--level-3);
 }
 
-select {
-    border: var(--line);
+blockquote a {
+    color: var(--linkColor);
+    text-decoration: none;
+    border-bottom: var(--linkUnderline);
 }
 
-hr {
-    border-top: var(--line);
+/* Tables */
+
+table {
+    border: var(--siteLines);
+    background-color: var(--tableRowColor1);
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
 }
 
+table tr:nth-child(even) {
+    background: var(--tableRowColor2);
+}
+
+table td,
+table th {
+    border: var(--siteLines);
+    padding: 3px 2px;
+}
+
+table tbody td {
+    font-size: var(--smallText);
+    color: var(--tableBodyColor);
+}
+
+table thead th,
+table tfoot th {
+    background: var(--tableHeaderBgColor);
+    font-weight: 600;
+    color: var(--tableHeaderColor);
+    text-align: center;
+}
+
+table tfoot th {
+    font-size: var(--smallText);
+}
+
+/* Buttons */
+
+[type='submit'],
+[type='button'],
+[type='reset'],
 button {
-    --buttonColor: var(--primary);
+    background-color: var(--btnBgColor);
+    color: var(--btnTextColor);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--level-4);
 
     appearance: none;
-    color: var(--buttonTextColor);
-    background-color: var(--buttonColor);
-    border: none;
-    border-radius: 10px;
     padding: 5px 25px;
-    box-shadow: var(--level-1);
-    transition: 0.3s ease-in-out box-shadow;
+    border: none;
+    transition: 0.3s ease-in-out;
 }
 
+[type='reset'],
 button.cancel {
-    --buttonColor: var(--danger);
-    --textColor: white;
+    --btnBgColor: var(--btnSecondary);
+    --btnTextColor: white;
+}
+
+/* input:hover, */
+[type='submit']:hover,
+[type='button']:hover,
+[type='reset']:hover,
+button:hover {
+    background-color: var(--btnHover);
+    transition-duration: 0.5s;
+    transition-property: color, background-color;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+}
+
+input:disabled,
+button[disabled] {
+    opacity: 0.4;
+}
+
+[type='submit']:focus,
+[type='button']:focus,
+[type='reset']:focus,
+button:focus {
+    outline: none;
+    box-shadow: var(--btnFocus);
 }
 
 button.small {
     font-size: var(--smallText);
 }
 
-button[disabled] {
-    opacity: 0.4;
+/* Code */
+pre {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
 }
 
-button:hover {
-    box-shadow: var(--level-2);
+/* Media */
+figure {
+    border: 2px var(--figureColor) solid;
+    display: inline-flex;
+    flex-flow: column;
+    margin: auto;
 }
 
-/* layout components */
+figure img {
+    max-height: 100%;
+}
+figcaption {
+    background-color: var(--figureColor);
+    color: var(--figureTextColor);
+    font-size: var(--smallText);
+    padding: 3px;
+    font-weight: 600;
+    text-align: center;
+}
+
+audio {
+    box-shadow: var(--level-5);
+    border-radius: var(--borderRadius);
+    transform: scale(1.05);
+}
+
+video {
+    border-radius: var(--borderRadius);
+    box-shadow: var(--level-5);
+}
+
+iframe {
+    box-shadow: var(--level-5);
+    border: 2px solid var(--figureColor);
+}
+
+/* form */
+
+/* style all the text inputs the same */
+[type='text'],
+[type='password'],
+[type='url'],
+[type='email'],
+[type='tel'],
+[type='search'],
+[type='number'],
+[type='date'],
+[type='month'],
+[type='week'],
+[type='datetime'],
+[type='datetime-local'],
+textarea {
+    border: none;
+    border-top: var(--formfieldTop);
+    border-right: var(--formfieldTop);
+    border-bottom: var(--formfieldBottom);
+    border-left: var(--formfieldLeft);
+    padding: 6px 12px 6px 0px;
+    transition: 0.2s ease-in-out box-shadow;
+    background-color: var(--formfieldBg);
+    color: var(--textColor);
+}
+
+[type='date'],
+[type='month'],
+[type='week'],
+[type='datetime'],
+[type='datetime-local'] {
+    padding: 6px 0px;
+    color: var(--textColor);
+}
+
+input:hover {
+    background-color: var(--formfieldHover);
+    transition-duration: 0.5s;
+    transition-property: color, background-color;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: var(--formfieldFocus);
+}
+
+textarea {
+    padding: 12px;
+}
+
+[type='color'] {
+    width: 40px;
+    height: 40px;
+}
+
+::placeholder {
+    color: var(--grey);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: var(--formfieldLabel);
+    font-size: var(--smallText);
+    padding-bottom: 2px;
+}
+
+textarea {
+    height: var(--formTextareaY);
+    width: var(--formTextareaX);
+}
+
+fieldset {
+    padding: 1em 1.5em;
+}
+
+legend {
+    padding: 0px 0.5rem;
+    font-weight: 600;
+    font-size: var(--smallText);
+}
+
+select {
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../img/arrow.svg) 96% / 15% no-repeat #eee;
+}
+
+select {
+    border: var(--siteLines);
+}
+
+/*******************************************************************
+  UTILITIES SECTION
+  Unfortunately, classless css is impossible. These classes are for layouts
+  and mobile responsiveness. Avoid creating the 'tailwindcss' experience.
+*******************************************************************/
+
 .grid {
     --gridColumns: 1;
     display: block;
     grid-template-columns: repeat(var(--gridColumns), 1fr);
+    grid-gap: var(--gridGap);
 }
 
 .cols-2 {
@@ -268,20 +560,26 @@ button:hover {
     --justifyContent: space-around;
 }
 
-/* UTILITY CLASSES */
 .layout {
-    /* margin: 0 auto;
-    width: 95%; */
-    /* padding: 0 var(--containerPadding); */
-    /* top padding header height + watever padding we want */
     padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
 }
 
+/*******************************************************************
+  COMPONENTS SECTION
+  Unfortunately, classless css is impossible. These classes are for
+  defined elements within a website.
+*******************************************************************/
+
 .card {
-    padding: 2em;
+    max-width: var(--cardWidth);
     background: var(--cardBg);
-    box-shadow: var(--level-3);
+    box-shadow: var(--level-5);
     border-radius: var(--borderRadius);
+    color: var(--cardTextColor);
+}
+
+.card > * {
+    margin: 0 var(--cardPadding);
 }
 
 .card > *:first-child {
@@ -289,83 +587,38 @@ button:hover {
 }
 
 .card > *:last-child {
-    margin-bottom: 0;
+    margin-bottom: var(--cardPadding);
 }
 
-/* Extra classes */
-
-.fake-logo {
-    font-size: var(--baseFontSize);
-    margin: 0;
+.card > p,
+.card > h1,
+.card > h2,
+.card > h3,
+.card > h4,
+.card > h5 {
+    padding-top: var(--cardPadding);
 }
 
-/* THEMEING */
-
-.theme {
-    /* Define colors as colors */
-    --black: #1b2d45;
-    --green: #00ebc7;
-    --red: #ff5470;
-    --yellow: #fde24f;
-    --darkBlue: #00214d;
-    --darkGrey: #222;
-    --grey: #bfbfbf;
-    --lightGrey: #f2f4f6;
-    --white: #fff;
-
-    /* Define colors intentions - VERY SUBJECTIVE*/
-    --primary: var(--green);
-    --danger: var(--red);
-
-    --background: var(--lightGrey);
-    --textColor: var(--black);
-    --buttonTextColor: var(--black);
-    --lineColor: var(--grey);
-
-    --headerBackground: var(--darkBlue);
-    --footerBackground: var(--black);
-
-    --line: solid 1px var(--lineColor);
-    --cardBg: var(--white);
-
-    /* Type */
-    --headingFont: 'Space Mono', monospace;
-    --bodyFont: 'Work Sans', sans-serif;
-    --baseFontSize: 112.5%;
-    --h1: 3.052em;
-    --h2: 2.441em;
-    --h3: 1.953em;
-    --h4: 1.563em;
-    --h5: 1.25em;
-    --smallText: 0.8em;
-
-    /* Elevation */
-    --level-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --level-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
-    /* Positioning */
-    --containerPadding: 2.5%;
-    --headerHeight: 3rem;
-    --borderRadius: 10px;
+.card > p:last-child {
+    padding-bottom: var(--cardPadding);
 }
 
-.dark {
-    --background: var(--black);
-    --textColor: var(--lightGrey);
-    --buttonTextColor: var(--black);
-
-    --headerBackground: var(--darkGrey);
-    --footerBackground: var(--darkGrey);
-
-    --cardBg: var(--darkGrey);
+.card img {
+    width: 100%;
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    margin: 0px;
+    padding: 0px;
 }
 
-/* Final Media Query */
+.card button {
+    margin-top: var(--cardPadding);
+}
+
+/*
+/*******************************************************************
+  MEDIA QUERY SECTION
+  This is at the bottom of the CSS to have the highest priority on a site.
+*******************************************************************/
 @media only screen and (min-width: 800px) {
     :root {
         --baseFontSize: 100.5%;
@@ -378,4 +631,27 @@ button:hover {
     .flex {
         display: flex;
     }
+}
+
+/*******************************************************************
+  HACKY OVERRIDES SECTION
+  You know why you're here. ;-)
+*******************************************************************/
+
+.fake-logo {
+    margin: 0;
+    color: red;
+    font-size: 20px;
+}
+
+/* simulated states */
+.link-active {
+}
+.link-hover {
+}
+.link-hover {
+}
+.link-focus {
+}
+.link-visited {
 }

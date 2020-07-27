@@ -1,0 +1,334 @@
+/*******************************************************************
+  THEME SECTION
+  These themes are swapped by shoving them in the body tag via JS.
+*******************************************************************/
+
+/* DEFAULT - NEEDS FIXING */
+.theme1 {
+    /* Define colors as colors */
+    --black: #1b2d45;
+    --white: #fff;
+    --darkGrey: #222;
+    --grey: #ab987a;
+    --lightGrey: #f5f5f5;
+
+    --green: #00ebc7;
+    --red: #ff533d;
+    --lightRed: #ffa08a;
+    --darkRed: #b30700;
+    --yellow: #fde24f;
+    --darkBlue: #0f1626;
+
+    /* Define color intentions*/
+
+    /* Positioning */
+    --containerPadding: 2.5%;
+    --borderRadius: 1.2rem;
+    --gridGap: 2rem;
+    --globalSpacing: 1.5rem;
+
+    /* Typography */
+    --baseFontSize: 100%;
+    --h1: 3.052em;
+    --h2: 2.441em;
+    --h3: 1.953em;
+    --h4: 1.563em;
+    --h5: 1.25em;
+    --smallText: 0.8em;
+
+    --headingFont: 'Raleway', sans-serif;
+    --headingWeight: 600;
+    --bodyFont: 'Merriweather';
+    --bodylineHeight: 2.1;
+    --textColor: var(--black);
+
+    /* Elements */
+    --headerHeight: 3rem;
+    --headerBackground: var(--darkBlue);
+
+    --siteBackground: var(--lightGrey);
+    --siteLines: solid 1px var(--grey);
+
+    --linkColor: var(--red);
+    --linkUnderline: solid 2px var(--red);
+    --linkOnHover: var(--grey);
+
+    --footerHeight: 2rem;
+    --footerBackground: var(--darkBlue);
+
+    --textMarginBottom: var(--globalSpacing);
+    --divMarginBottom: var(--globalSpacing);
+
+    --btnTextColor: var(--white);
+    --btnPrimary: var(--red);
+    --btnSecondary: var(--grey);
+    --btnBgColor: var(--btnPrimary);
+    --btnHover: var(--darkRed);
+    --btnFocus: 0 0 0 5px var(--red);
+
+    --blockquoteBorder: 4px solid var(--darkBlue);
+
+    --figureColor: var(--darkBlue);
+    --figureTextColor: var(--white);
+
+    --tableColor1: var(--grey);
+    --tableColor2: var(--lightGrey);
+
+    --cardWidth: 400px;
+    --cardBg: var(--darkBlue);
+    --cardPadding: var(--globalSpacing);
+    --cardTextColor: var(--white);
+
+    --formfieldTop: 0px;
+    --formfieldRight: 0px;
+    --formfieldBottom: 2px solid var(--darkBlue);
+    --formfieldLeft: 0px;
+
+    --formTextareaX: 24rem;
+    --formTextareaY: 8rem;
+    --formfieldBg: var(--grey);
+    --formfieldFocus: 0 0 0 5px var(--grey);
+
+    /* Only available with selector.css */
+    --selectSize: 1.2rem;
+    --selectHover: var(--darkBlue);
+    --selectOnClick: var(--lightRed);
+    --selectSelected: var(--red);
+
+    /* Elevation */
+    --level-1: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    --level-2: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --level-3: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --level-4: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --level-5: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --level-6: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --level-7: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* DARK MODE - NEEDS FIXING */
+.theme2 {
+    /* Define colors as colors */
+    --black: #1b2d45;
+    --white: #fff;
+    --darkGrey: #222;
+    --grey: #ab987a;
+    --lightGrey: #f5f5f5;
+
+    --green: #00ebc7;
+    --red: #ff533d;
+    --lightRed: #ffa08a;
+    --darkRed: #b30700;
+    --yellow: #fde24f;
+    --darkBlue: #0f1626;
+
+    /* Define color intentions*/
+
+    /* Positioning */
+    --containerPadding: 2.5%;
+    --borderRadius: 1.2rem;
+    --gridGap: 2rem;
+    --globalSpacing: 1.5rem;
+
+    /* Typography */
+    --baseFontSize: 120%;
+    --h1: 3.052em;
+    --h2: 2.441em;
+    --h3: 1.953em;
+    --h4: 1.563em;
+    --h5: 1.25em;
+    --smallText: 0.8em;
+
+    --headingFont: 'Raleway', sans-serif;
+    --headingWeight: 600;
+    --bodyFont: 'Merriweather';
+    --bodylineHeight: 2.1;
+    --textColor: var(--white);
+
+    /* Elements */
+    --headerHeight: 3rem;
+    --headerBackground: var(--darkBlue);
+
+    --siteBackground: var(--black);
+    --siteLines: solid 1px var(--grey);
+
+    --linkColor: var(--red);
+    --linkUnderline: solid 2px var(--red);
+    --linkOnHover: var(--grey);
+
+    --footerHeight: 2rem;
+    --footerBackground: var(--darkBlue);
+
+    --textMarginBottom: var(--globalSpacing);
+    --divMarginBottom: var(--globalSpacing);
+
+    --btnTextColor: var(--lightGrey);
+    --btnPrimary: var(--darkGrey);
+    --btnSecondary: var(--grey);
+    --btnBgColor: var(--btnPrimary);
+    --btnHover: var(--darkRed);
+    --btnFocus: 0 0 0 5px var(--red);
+
+    --blockquoteBorder: 4px solid var(--darkBlue);
+
+    --figureColor: var(--darkBlue);
+    --figureTextColor: var(--white);
+
+    --tableHeaderBgColor: var(--darkBlue);
+    --tableHeaderColor: var(--white);
+    --tableBodyColor: var(--black);
+    --tableRowColor1: var(--grey);
+    --tableRowColor2: var(--lightGrey);
+
+    --cardWidth: 400px;
+    --cardBg: var(--darkBlue);
+    --cardPadding: var(--globalSpacing);
+    --cardTextColor: var(--white);
+
+    --formfieldTop: 0px;
+    --formfieldRight: 0px;
+    --formfieldBottom: 4px solid var(--red);
+    --formfieldLeft: 0px;
+
+    --formTextareaX: 24rem;
+    --formTextareaY: 8rem;
+
+    --formfieldLabel: var(--white);
+    --formfieldBg: var(--darkGrey);
+    --formfieldFocus: 0 0 0 5px var(--grey);
+    --formfieldHover: transparent;
+
+    /* Only available with selector.css */
+    --selectSize: 1.2rem;
+    --selectHover: var(--darkBlue);
+    --selectOnClick: var(--lightRed);
+    --selectSelected: var(--red);
+
+    /* Elevation */
+    --level-1: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    --level-2: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --level-3: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --level-4: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --level-5: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --level-6: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --level-7: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* HUMMINGBIRD */
+.theme3 {
+    /* Define colors as colors */
+    --black: #1b2d45;
+    --white: #fff;
+
+    --darkGrey: #7e6457;
+    --grey: #a8bcb0;
+    --lightGrey: #e1d0c8;
+    --green: #b2c16c;
+    --lightGreen: #e5f49f;
+    --darkGreen: #7f8e39;
+
+    --red: #e38e8b;
+    --lightRed: #ffc1be;
+    --darkRed: #b05b58;
+
+    /* Define color intentions*/
+
+    /* Positioning */
+    --containerPadding: 2.5%;
+    --borderRadius: 1.2rem;
+    --gridGap: 2rem;
+    --globalSpacing: 1rem;
+
+    /* Typography */
+    --baseFontSize: 110%;
+    --h1: 4.209em;
+    --h2: 3.157em;
+    --h3: 2.369em;
+    --h4: 1.777em;
+    --h5: 1.333em;
+    --smallText: 0.8em;
+
+    --headingFont: 'Prata', serif;
+    --headingWeight: 400;
+    --bodyFont: 'Preahvihear', sans-serif;
+    --bodylineHeight: 1.65;
+    --textColor: var(--black);
+
+    /* Elements */
+    --headerHeight: 3rem;
+    --headerBackground: var(--darkGrey);
+
+    --siteBackground: var(--lightGrey);
+    --siteLines: solid 1px var(--grey);
+
+    --linkColor: var(--textColor);
+    --linkUnderline: solid 2px var(--green);
+    --linkOnHover: var(--green);
+
+    --textMarginBottom: var(--globalSpacing);
+    --divMarginBottom: var(--globalSpacing);
+
+    --cardWidth: 400px;
+    --cardBg: var(--lightRed);
+    --cardPadding: var(--globalSpacing);
+    --cardTextColor: var(--black);
+
+    --blockquoteBg: var(--cardBg);
+    --blockquoteTextColor: var(--cardTextColor);
+    --blockquoteBorder: 4px solid var(--darkRed);
+
+    --btnTextColor: var(--lightGrey);
+    --btnPrimary: var(--darkRed);
+    --btnSecondary: var(--grey);
+    --btnBgColor: var(--btnPrimary);
+    --btnHover: var(--lightGreen);
+    --btnFocus: 0 0 0 5px var(--green);
+
+    --figureColor: var(--darkRed);
+    --figureTextColor: var(--white);
+
+    --tableHeaderBgColor: var(--darkRed);
+    --tableHeaderColor: var(--white);
+    --tableBodyColor: var(--black);
+    --tableRowColor1: var(--lightRed);
+    --tableRowColor2: var(--red);
+
+    --formfieldTop: 4px solid var(--red);
+    --formfieldRight: 4px solid var(--red);
+    --formfieldBottom: 5px solid var(--red);
+    --formfieldLeft: 4px solid var(--red);
+
+    --formTextareaX: 24rem;
+    --formTextareaY: 8rem;
+
+    --formfieldLabel: var(--black);
+    --formfieldBg: var(--white);
+    --formfieldFocus: 0 0 0 5px var(--grey);
+    --formfieldHover: transparent;
+
+    --footerHeight: 2rem;
+    --footerBackground: var(--darkGrey);
+
+    /* Only available with selector.css */
+    --selectSize: 1.2rem;
+    --selectHover: var(--darkBlue);
+    --selectOnClick: var(--lightRed);
+    --selectSelected: var(--red);
+
+    /* Elevation */
+    --level-1: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    --level-2: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --level-3: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --level-4: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --level-5: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --level-6: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --level-7: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
