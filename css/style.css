@@ -71,8 +71,11 @@
     --figureColor: var(--darkBlue);
     --figureTextColor: var(--white);
 
-    --tableColor1: var(--grey);
-    --tableColor2: var(--lightGrey);
+    --tableHeaderBgColor: var(--darkBlue);
+    --tableHeaderColor: var(--textColor);
+    --tableBodyColor: var(--textColor);
+    --tableRowColor1: var(--grey);
+    --tableRowColor2: var(--lightGrey);
 
     --cardWidth: 400px;
     --cardBg: var(--darkBlue);
@@ -86,8 +89,11 @@
 
     --formTextareaX: 24rem;
     --formTextareaY: 8rem;
+
+    --formfieldLabel: var(--darkGrey);
     --formfieldBg: var(--grey);
     --formfieldFocus: 0 0 0 5px var(--grey);
+    --formfieldHover: yellow;
 
     /* Only available with selector.css */
     --selectSize: 1.2rem;
@@ -113,11 +119,12 @@
 *******************************************************************/
 @import url('https://fonts.googleapis.com/css?family=Raleway:600|Merriweather:400');
 
+@import url('https://fonts.googleapis.com/css?family=Prata:400|Preahvihear:400');
+
 /*******************************************************************
   RESET SECTION:
 *******************************************************************/
 html {
-    font-size: var(--baseFontSize); /*18px*/
     box-sizing: border-box;
 }
 
@@ -135,11 +142,14 @@ html {
   It's organized in alphabetical order.
 *******************************************************************/
 body {
+    font-size: var(--baseFontSize);
     font-family: var(--bodyFont);
     font-weight: 400;
     line-height: var(--bodylineHeight);
     background: var(--siteBackground);
     color: var(--textColor);
+    max-height: 100vh;
+    /* transition: 2s ease-in-out; */
 }
 
 header {
@@ -246,7 +256,7 @@ a:hover {
     position: relative;
     transition: 0.5s color ease;
     text-decoration: none;
-    color: var(--black);
+    /* color: var(--black); */
     padding-bottom: 0.2rem;
 }
 
@@ -275,8 +285,8 @@ blockquote {
     border-left: var(--blockquoteBorder);
     margin: 2em 1em;
     padding: 1em;
-    background: var(--cardBg);
-    color: var(--cardTextColor);
+    background: var(--blockquoteBg);
+    color: var(--blockquoteTextColor);
     box-shadow: var(--level-3);
 }
 
@@ -290,14 +300,14 @@ blockquote a {
 
 table {
     border: var(--siteLines);
-    background-color: var(--tableColor1);
+    background-color: var(--tableRowColor1);
     width: 100%;
     text-align: center;
     border-collapse: collapse;
 }
 
 table tr:nth-child(even) {
-    background: var(--tableColor2);
+    background: var(--tableRowColor2);
 }
 
 table td,
@@ -308,14 +318,14 @@ table th {
 
 table tbody td {
     font-size: var(--smallText);
-    color: var(--textColor);
+    color: var(--tableBodyColor);
 }
 
 table thead th,
 table tfoot th {
-    background: var(--black);
+    background: var(--tableHeaderBgColor);
     font-weight: 600;
-    color: var(--white);
+    color: var(--tableHeaderColor);
     text-align: center;
 }
 
@@ -440,6 +450,8 @@ textarea {
     border-left: var(--formfieldLeft);
     padding: 6px 12px 6px 0px;
     transition: 0.2s ease-in-out box-shadow;
+    background-color: var(--formfieldBg);
+    color: var(--textColor);
 }
 
 [type='date'],
@@ -448,10 +460,11 @@ textarea {
 [type='datetime'],
 [type='datetime-local'] {
     padding: 6px 0px;
+    color: var(--textColor);
 }
 
 input:hover {
-    background-color: var(--formfieldBg);
+    background-color: var(--formfieldHover);
     transition-duration: 0.5s;
     transition-property: color, background-color;
     outline-color: rgba(255, 255, 255, 0);
@@ -480,7 +493,7 @@ textarea {
 label {
     display: block;
     font-weight: 600;
-    color: var(--darkGrey);
+    color: var(--formfieldLabel);
     font-size: var(--smallText);
     padding-bottom: 2px;
 }
@@ -548,10 +561,6 @@ select {
 }
 
 .layout {
-    /* margin: 0 auto;
-    width: 95%; */
-    /* padding: 0 var(--containerPadding); */
-    /* top padding header height + watever padding we want */
     padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
 }
 
@@ -605,11 +614,6 @@ select {
     margin-top: var(--cardPadding);
 }
 
-/*******************************************************************
-  THEME SECTION
-  These themes are swapped by shoving them in the body tag via JS.
-*******************************************************************/
-
 /*
 /*******************************************************************
   MEDIA QUERY SECTION
@@ -633,12 +637,8 @@ select {
   HACKY OVERRIDES SECTION
   You know why you're here. ;-)
 *******************************************************************/
-/* Extra classes */
 
 .fake-logo {
-    /* font-size: var(--baseFontSize);
-    margin: 0; */
-
     margin: 0;
     color: red;
     font-size: 20px;

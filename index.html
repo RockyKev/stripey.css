@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/themes.css" />
+
     <!-- <link rel="stylesheet" href="css/navbar-code.css" /> -->
 
     <link rel="stylesheet" href="css/selector.css" />
@@ -29,7 +31,7 @@
 
 
 
-<body class="">
+<body class="theme3">
 
     <header>
         <div>
@@ -37,7 +39,13 @@
             <h2 class="fake-logo">FAKE LOGO</h2>
         </div>
         <div>
-            A BUNCH OF ICONS
+            <!-- A BUNCH OF ICONS -->
+            <button id="theme1">1</button>
+            <button id="theme2">2</button>
+            <button id="theme3">3</button>
+            <button id="theme4">4</button>
+            <button id="theme5">5</button>
+
         </div>
 
     </header>
@@ -85,42 +93,6 @@
             </div>
 
             <div>
-                <h3>Block Quote (h3)</h3>
-                <blockquote>
-                    <p>A block quotation (also known as a long quotation or extract) is a quotation in a written
-                        document,
-                        that
-                        is set off from the main text as a paragraph, or block of text.</p>
-                    <p>It is typically distinguished visually using indentation and a different typeface or smaller size
-                        quotation. It may or may not include a citation, usually placed at the bottom.</p>
-                    <cite><a href="#!">Said no one, ever.</a></cite>
-                </blockquote>
-
-            </div>
-
-            <div>
-                <h3>Definition list</h3>
-                <dl>
-                    <dt>Definition List Title</dt>
-                    <dd>This is a definition list division.</dd>
-                </dl>
-
-                <h3>Ordered List</h3>
-                <ol>
-                    <li>List Item 1</li>
-                    <li>List Item 2</li>
-                    <li>List Item 3</li>
-                </ol>
-
-                <h3>Unordered List</h3>
-                <ul>
-                    <li>List Item 1</li>
-                    <li>List Item 2</li>
-                    <li>List Item 3</li>
-                </ul>
-            </div>
-
-            <div>
                 <h3>Inline Styles (h3) </h3>
                 <p><a href="#!">This is a text link - hover for different states</a>.</p>
                 <!-- <p><a href="#!" class="link-active">This is a text link - simulated Active state</a>.</p>
@@ -151,6 +123,141 @@
                 <p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
             </div>
 
+
+
+            <div>
+                <h3>Definition list</h3>
+                <dl>
+                    <dt>Definition List Title</dt>
+                    <dd>This is a definition list division.</dd>
+                </dl>
+
+                <h3>Ordered List</h3>
+                <ol>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                </ol>
+
+                <h3>Unordered List</h3>
+                <ul>
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Block Quote (h3)</h3>
+                <blockquote>
+                    <p>A block quotation (also known as a long quotation or extract) is a quotation in a written
+                        document,
+                        that
+                        is set off from the main text as a paragraph, or block of text.</p>
+                    <p>It is typically distinguished visually using indentation and a different typeface or smaller size
+                        quotation. It may or may not include a citation, usually placed at the bottom.</p>
+                    <cite><a href="#!">Said no one, ever.</a></cite>
+                </blockquote>
+
+            </div>
+        </section>
+
+        <section>
+            <h3>Cards (h3)</h3>
+
+            <div class="card">
+                <h3>An h3 Header within the card</h3>
+                <p>
+                    Man surprised me most about humanity. Because he sacrifices
+                    his health in order to make money.
+                </p>
+                <button>Accept</button>
+            </div>
+
+            <br />
+
+            <div class="card">
+                <h3>An h3 Header for just pure text</h3>
+                <p>
+                    Man surprised me most about humanity. Because he sacrifices
+                    his health in order to make money.
+                </p>
+            </div>
+
+            <h3>Inputs with grid (cols-2)</h3>
+            <div class="grid cols-2">
+                <div class="card">
+                    <img src="http://placekitten.com/480/480" alt="Image alt text">
+                    <h3>card + image</h3>
+                    <p>
+                        Man surprised me most about humanity. Because he sacrifices
+                        his health in order to make money.
+                    </p>
+                    <button>Accept</button>
+                </div>
+                <div class="card">
+                    <img src="http://placekitten.com/480/480" alt="Image alt text">
+                    <h3>card + image</h3>
+                    <p>
+                        Man surprised me most about humanity. Because he sacrifices
+                        his health in order to make money.
+                    </p>
+                    <button>Accept</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h3>Action buttons</h3>
+            <p>
+                <input type="submit" value="input type=submit" />
+                <input type="button" value="input type=button" />
+                <input type="reset" value="input type=reset" />
+                <input disabled type="submit" value="input disabled" />
+            </p>
+
+            <p>
+                <button type="submit">
+                    &lt;button type=submit&gt;
+                </button>
+                <button type="button">
+                    &lt;button type=button&gt;
+                </button>
+                <button type="reset">
+                    &lt;button type=reset&gt;
+                </button>
+            </p>
+            <p>
+                <button class="cancel">Cancel</button>
+                <button type="button">button &xrarr;</button>
+                <button disabled type="button">
+                    &lt;button disabled&gt;
+                </button>
+            </p>
+
+            <p>
+                <input type="submit" value="input Active" />
+                <input type="button" value="input Hover" />
+                <input type="reset" value="input Focus" />
+                <input type="submit" value="input Visited" />
+            </p>
+            <p>
+                <button>
+                    &lt;button active&gt;
+                </button>
+                <button>
+                    &lt;button hover&gt;
+                </button>
+                <button>
+                    &lt;button focus&gt;
+                </button>
+                <button>
+                    &lt;button visited&gt;
+                </button>
+
+            </p>
         </section>
 
 
@@ -571,52 +678,6 @@ p q r s t u v w x y z { | } ~ </pre>
         </section>
 
         <section>
-            <h2>An h2 header (for card)</h2>
-
-            <div class="card">
-                <h3>An h3 Header within the card</h3>
-                <p>
-                    Man surprised me most about humanity. Because he sacrifices
-                    his health in order to make money.
-                </p>
-                <button>Accept</button>
-            </div>
-
-            <br />
-
-            <div class="card">
-                <h3>An h3 Header for just pure text</h3>
-                <p>
-                    Man surprised me most about humanity. Because he sacrifices
-                    his health in order to make money.
-                </p>
-            </div>
-
-            <h3>Inputs with grid (cols-2)</h3>
-            <div class="grid cols-2">
-                <div class="card">
-                    <img src="http://placekitten.com/480/480" alt="Image alt text">
-                    <h3>card + image</h3>
-                    <p>
-                        Man surprised me most about humanity. Because he sacrifices
-                        his health in order to make money.
-                    </p>
-                    <button>Accept</button>
-                </div>
-                <div class="card">
-                    <img src="http://placekitten.com/480/480" alt="Image alt text">
-                    <h3>card + image</h3>
-                    <p>
-                        Man surprised me most about humanity. Because he sacrifices
-                        his health in order to make money.
-                    </p>
-                    <button>Accept</button>
-                </div>
-            </div>
-
-        </section>
-
-        <section>
             <h2>INPUTS </h2>
             <div>
                 <h3> p tag version </h3>
@@ -894,59 +955,6 @@ p q r s t u v w x y z { | } ~ </pre>
 
         </section>
 
-        <section>
-            <div id="forms__html5">
-                <div id="forms__action">
-                    <h3>Action buttons</h3>
-                    <p>
-                        <input type="submit" value="input type=submit" />
-                        <input type="button" value="input type=button" />
-                        <input type="reset" value="input type=reset" />
-                        <input disabled type="submit" value="input disabled" />
-                    </p>
-
-                    <p>
-                        <button type="submit">
-                            &lt;button type=submit&gt;
-                        </button>
-                        <button type="button">
-                            &lt;button type=button&gt;
-                        </button>
-                        <button type="reset">
-                            &lt;button type=reset&gt;
-                        </button>
-                    </p>
-                    <p>
-                        <button class="cancel">Cancel</button>
-                        <button type="button">button &xrarr;</button>
-                        <button disabled type="button">
-                            &lt;button disabled&gt;
-                        </button>
-                    </p>
-
-                    <p>
-                        <input type="submit" value="input Active" />
-                        <input type="button" value="input Hover" />
-                        <input type="reset" value="input Focus" />
-                        <input type="submit" value="input Visited" />
-                    </p>
-                    <p>
-                        <button>
-                            &lt;button active&gt;
-                        </button>
-                        <button>
-                            &lt;button hover&gt;
-                        </button>
-                        <button>
-                            &lt;button focus&gt;
-                        </button>
-                        <button>
-                            &lt;button visited&gt;
-                        </button>
-
-                    </p>
-                </div>
-        </section>
 
         <section>
             <hr />
@@ -983,6 +991,69 @@ p q r s t u v w x y z { | } ~ </pre>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script>
+
+        const body = document.querySelector("body");
+        const theme1 = document.querySelector("#theme1");
+        const theme2 = document.querySelector("#theme2");
+        const theme3 = document.querySelector("#theme3");
+        const theme4 = document.querySelector("#theme4");
+        const theme5 = document.querySelector("#theme5");
+
+
+        /* TODO: Refactor into a loop */
+
+        theme1.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme1");
+
+            // body.style.opacity = 0;
+            // setTimeout(() => {
+            //     body.style.opacity = 1;
+            // }, 2000);
+        })
+
+        theme2.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme2");
+
+            // body.style.opacity = 0;
+            // setTimeout(() => {
+            //     body.style.opacity = 1;
+            // }, 1000);
+        })
+        theme3.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme3");
+
+            // body.style.opacity = 0;
+            // setTimeout(() => {
+            //     body.style.opacity = 1;
+            // }, 1000);
+        })
+        theme4.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme4");
+
+            body.style.opacity = 0;
+            setTimeout(() => {
+                body.style.opacity = 1;
+            }, 1000);
+        })
+        theme5.addEventListener("click", () => {
+            console.log("Switch body");
+            body.className = '';
+            body.classList.add("theme5");
+
+        })
+
+
+    </script>
 
 
 </html>
