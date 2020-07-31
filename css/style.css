@@ -644,14 +644,8 @@ select {
     font-size: 20px;
 }
 
-/* simulated states */
-.link-active {
-}
-.link-hover {
-}
-.link-hover {
-}
-.link-focus {
-}
-.link-visited {
+#clickable {
+    font-size: 10rem;
+    float: left;
+    color: var(--darkRed);
 }
