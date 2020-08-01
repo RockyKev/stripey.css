@@ -1,87 +1,106 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
 
-    <head>
-        <meta charset="utf-8"/>
-        <title>Stripey.css - a (semi-)classless CSS Design System</title>
-        <meta name="description" content=""/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<head>
+    <meta charset="utf-8" />
+    <title>Stripey.css - a (semi-)classless CSS Design System</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:title" content=""/>
-        <meta property="og:type" content=""/>
-        <meta property="og:url" content=""/>
-        <meta property="og:image" content=""/>
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-        <link rel="manifest" href="site.webmanifest"/>
-        <link rel="apple-touch-icon" href="icon.png"/>
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/themes.css"/>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/themes.css" />
 
-        <!-- <link rel="stylesheet" href="css/navbar-code.css" /> -->
+    <!-- <link rel="stylesheet" href="css/navbar-code.css" /> -->
 
-        <link rel="stylesheet" href="css/selector.css"/>
+    <link rel="stylesheet" href="css/selector.css" />
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" rel="stylesheet"/>
-        <script src="./js/phaser.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="./js/phaser.min.js"></script>
 
-    </head>
+</head>
 
-    <body class="theme3">
+<body class="theme3">
 
-        <header>
+    <header>
+        <div>
+
+            <h2 class="fake-logo">FAKE LOGO</h2>
+        </div>
+        <div>
+            <!-- A BUNCH OF ICONS -->
+            <button id="theme1">1</button>
+            <button id="theme2">2</button>
+            <button id="theme3">3</button>
+            <button id="theme4">4</button>
+            <button id="theme5">5</button>
+
+        </div>
+
+    </header>
+
+    <main class="layout">
+
+        <h1>Search and find game</h1>
+        <p>This is a test page with 3 types of Search and Find style games.</p>
+        <p>Note: This page is using my own <a
+                href="https://dev.to/rockykev/building-your-own-modern-css-design-system-32kd">Stripey.css design
+                system</a> to deploy quickly, only because it's top of mind. For projects, I'd probably use a industry
+            standard like Bootstrap or Tailwind. This is also Pure JS. Not need for React/Vue/etc.</p>
+
+
+        <section>
+
             <div>
+                <div id="game"></div>
 
-                <h2 class="fake-logo">FAKE LOGO</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Aliquet nec ullamcorper sit
+                    amet risus nullam eget felis eget. Lacinia quis vel eros donec ac odio. Orci porta non pulvinar
+                    neque laoreet suspendisse interdum consectetur libero. Nulla pellentesque dignissim enim sit amet
+                    venenatis urna cursus. Vulputate eu scelerisque felis imperdiet. Tortor condimentum lacinia quis vel
+                    eros donec ac. Turpis egestas maecenas pharetra convallis posuere morbi leo urna molestie. Sed nisi
+                    lacus sed viverra tellus in hac habitasse platea.
+                </p>
+
             </div>
-            <div>
-                <!-- A BUNCH OF ICONS -->
-                <button id="theme1">1</button>
-                <button id="theme2">2</button>
-                <button id="theme3">3</button>
-                <button id="theme4">4</button>
-                <button id="theme5">5</button>
 
+            <hr />
+
+            <div class="grid cols-2">
+                <p>
+                    <span id="clickable">T</span>ristique nulla aliquet enim tortor at auctor urna nunc id. faucibus
+                    turpis in eu mi bibendum neque egestas congue. id venenatis a condimentum vitae sapien pellentesque
+                    habitant morbi. nam at lectus urna duis convallis convallis tellus. enim blandit volutpat maecenas
+                    volutpat blandit aliquam etiam erat velit. dui ut ornare lectus sit amet est. ac placerat vestibulum
+                    lectus mauris ultrices. suspendisse potenti nullam ac tortor vitae. vitae justo eget magna fermentum
+                    iaculis. consequat semper viverra nam libero justo laoreet sit amet. porttitor leo a diam
+                    sollicitudin tempor id eu nisl nunc. lobortis feugiat vivamus at augue eget arcu dictum. ultrices
+                    neque ornare aenean euismod elementum nisi quis eleifend. commodo viverra maecenas accumsan lacus
+                    vel facilisis volutpat est velit.
+                </p>
+                <img src="http://placekitten.com/480/480" alt="Image alt text">
             </div>
-
-        </header>
-
-        <main class="layout">
-
-            <h1>Search and find game</h1>
-            <p>Steal the meta for this.</p>
-
-            <section>
-                <h2>Text Content</h2>
-
-                <div>
-                    <p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks.</p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Lacinia quis vel eros donec ac odio. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Nulla pellentesque dignissim enim sit amet venenatis urna cursus. Vulputate eu scelerisque felis imperdiet. Tortor condimentum lacinia quis vel eros donec ac. Turpis egestas maecenas pharetra convallis posuere morbi leo urna molestie. Sed nisi lacus sed viverra tellus in hac habitasse platea.
-                    </p>
-
-                    <div id="game"></div>
-                </div>
-
-                <hr/>
-
-                <div class="grid cols-2">
-                    <p>
-                        <span id="clickable">T</span>ristique nulla aliquet enim tortor at auctor urna nunc id. faucibus turpis in eu mi bibendum neque egestas congue. id venenatis a condimentum vitae sapien pellentesque habitant morbi. nam at lectus urna duis convallis convallis tellus. enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. dui ut ornare lectus sit amet est. ac placerat vestibulum lectus mauris ultrices. suspendisse potenti nullam ac tortor vitae. vitae justo eget magna fermentum iaculis. consequat semper viverra nam libero justo laoreet sit amet. porttitor leo a diam sollicitudin tempor id eu nisl nunc. lobortis feugiat vivamus at augue eget arcu dictum. ultrices neque ornare aenean euismod elementum nisi quis eleifend. commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit.
-                    </p>
-                    <img src="http://placekitten.com/480/480" alt="Image alt text">
-                </div>
 
             </div>
 
             <div>
                 <h3>Block Quote (h3)</h3>
                 <blockquote>
-                    <p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
-                    <p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>
+                    <p>A block quotation (also known as a long quotation or extract) is a quotation in a written
+                        document, that is set off from the main text as a paragraph, or block of text.</p>
+                    <p>It is typically distinguished visually using indentation and a different typeface or smaller size
+                        quotation. It may or may not include a citation, usually placed at the bottom.</p>
                     <cite>
                         <a href="#!">Said no one, ever.</a>
                     </cite>
@@ -211,24 +230,24 @@
                 </p>
             </div>
 
-        <section>
-            <hr />
-            <div>
-                <ol class="text-small">
-                    <!-- <li>
+            <section>
+                <hr />
+                <div>
+                    <ol class="text-small">
+                        <!-- <li>
                         css dropdown via .<a href="https://css-tricks.com/solved-with-css-dropdown-menus/">page
                             here</a>
                     </li> -->
-                    <li>
-                        elevation code stolen from <a href="#tailwind">tailwind need link</a>
-                    </li>
-                    <li>
-                        templated forked from <a href="http://twitter.com/cbracco">@cbracco</a> | <a
-                            href="http://github.com/cbracco/html5-test-page">github</a>.
-                    </li>
-                </ol>
-            </div>
-        </section>
+                        <li>
+                            elevation code stolen from <a href="#tailwind">tailwind need link</a>
+                        </li>
+                        <li>
+                            templated forked from <a href="http://twitter.com/cbracco">@cbracco</a> | <a
+                                href="http://github.com/cbracco/html5-test-page">github</a>.
+                        </li>
+                    </ol>
+                </div>
+            </section>
     </main>
 
     <footer>
@@ -243,11 +262,11 @@
     </footer>
 
 
-        <script src="js/scenes/bootscene.js"></script>
-        <script src="js/scenes/loadingscene.js"></script>
-        <script src="js/scenes/homescene.js"></script>
-        <script src="js/scenes/gamescene.js"></script>
-        <script src="js/main.js"></script>
+    <script src="js/scenes/bootscene.js"></script>
+    <script src="js/scenes/loadingscene.js"></script>
+    <script src="js/scenes/homescene.js"></script>
+    <script src="js/scenes/gamescene.js"></script>
+    <script src="js/main.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
     <script

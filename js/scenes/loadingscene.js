@@ -8,7 +8,7 @@ loadingScene.preload = function () {
     const gameW = this.sys.game.config.width;
 
     //grab logo from bootScene
-    let logo = this.add.sprite(gameW / 2, 250, 'logo');
+    let logo = this.add.sprite(gameW / 2, 200, 'logo');
 
     // progress bar bg
     let bgBar = this.add.graphics();
@@ -37,7 +37,7 @@ loadingScene.preload = function () {
     );
 
     // load assets
-    this.load.image('backyard', 'assets/images/backyard.png');
+    this.load.image('backyard', 'assets/images/flower-bg.jpg');
     this.load.image('apple', 'assets/images/apple.png');
     this.load.image('candy', 'assets/images/candy.png');
     this.load.image('rotate', 'assets/images/rotate.png');
@@ -52,10 +52,10 @@ loadingScene.preload = function () {
     });
 
     // TESTING ONLY COMMENT OUT
-    console.log('load faker is active');
-    for (let i = 0; i < 100; i++) {
-        this.load.image('test' + i, 'assets/images/candy.png');
-    }
+    // console.log('load faker is active');
+    // for (let i = 0; i < 100; i++) {
+    //     this.load.image('test' + i, 'assets/images/candy.png');
+    // }
 };
 
 loadingScene.create = function () {
