@@ -649,3 +649,26 @@ select {
     float: left;
     color: var(--darkRed);
 }
+
+
+/* auto-width on small */
+
+@media only screen and (max-width: 600px) {
+    img, pre {
+          width: 100%;
+  height: auto;
+
+    }
+
+}
+
+
+/* canvas phaser code */
+/* canvas {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
