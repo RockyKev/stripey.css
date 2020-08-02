@@ -8,13 +8,18 @@ homeScene.create = function () {
 
     let bg = this.add.sprite(0, 0, 'backyard').setInteractive();
     bg.setOrigin(0, 0);
+    // scale image to background
+    bg.setDisplaySize(this.sys.game.config.width, this.sys.game.config.height);
 
-    //welcome text
+
+
+
+    // welcome text
 
     const gameH = this.sys.game.config.height;
     const gameW = this.sys.game.config.width;
 
-    let text = this.add.text(gameW / 2, gameH / 2, 'VIRTUAL PET', {
+    let text = this.add.text(gameW / 2, gameH / 2, 'CLICK TO START', {
         font: '40px Arial',
         fill: '#ffffff',
     });

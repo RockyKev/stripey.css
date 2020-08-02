@@ -13,10 +13,8 @@ gameScene.init = function () {
     // decay params
     this.decayRates = {
         health: -2,
-        fun: -5,
+        fun: -20,
     };
-
-    this.isGameOver = false;
 };
 
 // executed once, after assets were loaded
@@ -24,8 +22,7 @@ gameScene.create = function () {
     // game background
     let bg = this.add.sprite(0, 0, 'backyard');
     bg.setOrigin(0, 0);
-    // bg.setDisplaySize(this.sys.canvas.width, this.sys.canvas.height);
-    bg.setDisplaySize(this.sys.game.config.width, this.sys.game.config.height);
+    bg.setDisplaySize(this.sys.canvas.width, this.sys.canvas.height);
 
     // event listener for the bg
     //bg.on('pointerdown', this.placeItem, this);
@@ -44,80 +41,25 @@ gameScene.create = function () {
         gameObject.y = dragY;
     });
 
-
-    // create the flower
-    this.flowerBtn = this.add.sprite(72 * 1, 100, 'flower').setInteractive();
-    this.flowerBtn.on('pointerdown', this.setGameOver);
-
     // create the ui
-    //    this.createUI();
+    this.createUI();
 
     // create the hud
-    // this.createHUD();
-    // this.refreshHUD();
+    this.createHUD();
+    this.refreshHUD();
 
     // value decay of health fun stats
 
-    // this.timedEventsStats = this.time.addEvent({
-    //     delay: 1000,
-    //     repeat: -1, //will repeat forever
-    //     callbackScope: this,
-    //     callback: function () {
-    //         console.log('decrease stats');
-    //         this.updateStats(this.decayRates);
-    //     },
-    // });
-};
-
-gameScene.setGameOver = function () {
-    console.log("Ive been clicked!");
-    //this.isGameOver = true;
-
-    // gameOver();
-
-    // console.log(this);
-
-    // Show victory screen
-    const gameH = this.scene.sys.game.config.height;
-    const gameW = this.scene.sys.game.config.width;
-
-
-    console.log(this);
-
-    let text = this.scene.add.text(gameW / 2, gameH / 2, 'YOU FOUND IT', {
-        font: '40px Arial',
-        fill: '#ffffff',
-    });
-
-    text.setOrigin(0.5, 0.5);
-    text.depth = 1;
-
-    // text background
-    let textBg = this.scene.add.graphics();
-    // to add colors, you start with 0x, so 0xfffff
-    textBg.fillStyle(0x00000, 0.7);
-    textBg.fillRect(
-        gameW / 2 - text.width / 2 - 10,
-        gameH / 2 - text.height / 2 - 10,
-        text.width + 20,
-        text.height + 20
-    );
-
-    // Reset the game after 5 sec
-    this.scene.time.addEvent({
-        delay: 5000,
-        repeat: 0,
+    this.timedEventsStats = this.time.addEvent({
+        delay: 1000,
+        repeat: -1, //will repeat forever
         callbackScope: this,
         callback: function () {
             console.log('decrease stats');
-            this.scene.scene.start('Home');
+            this.updateStats(this.decayRates);
         },
     });
-
-    // console.log("Ive been clicked at end;");
-
-}
-
+};
 
 gameScene.createUI = function () {
     //buttons - and then chained to make them interactive
@@ -271,21 +213,20 @@ gameScene.setUIReady = function () {
 
 gameScene.createHUD = function () {
     // health stat
+    this.healthText = this.add.text(20, 20, 'Health: ', {
+        font: '25px Arial',
+        fill: '#ffffff',
+    });
 
-    // this.healthText = this.add.text(gameW / 2, 20, 'Health: ', {
-    //     font: '25px Arial',
-    //     fill: '#ffffff',
-    // });
-
-    // this.funText = this.add.text(170, 20, 'Fun: ', {
-    //     font: '25px Arial',
-    //     fill: '#ffffff',
-    // })
+    this.funText = this.add.text(170, 20, 'Fun: ', {
+        font: '25px Arial',
+        fill: '#ffffff',
+    });
 };
 
 gameScene.refreshHUD = function () {
-    // this.healthText.setText('Health: ' + this.stats.health);
-    // this.funText.setText('Fun: ' + this.stats.fun);
+    this.healthText.setText('Health: ' + this.stats.health);
+    this.funText.setText('Fun: ' + this.stats.fun);
 };
 
 gameScene.updateStats = function (statDiff) {
@@ -293,26 +234,25 @@ gameScene.updateStats = function (statDiff) {
     // this.stats.health += this.selectedItem.customStats.health;
     // this.stats.fun += this.selectedItem.customStats.fun;
 
-    // see if it's game over
-    //let isGameOver = false;
+    // initiliaze game over
+    let isGameOver = false;
 
-    // console.log(this.selectedItem.customStats);
 
-    // for (stat in statDiff) {
-    //     if (statDiff.hasOwnProperty(stat)) {
-    //         this.stats[stat] += statDiff[stat];
+    for (stat in statDiff) {
+        if (statDiff.hasOwnProperty(stat)) {
+            this.stats[stat] += statDiff[stat];
 
-    //         if (this.stats[stat] <= 0) {
-    //             this.stats[stat] = 0;
-    //             isGameOver = true;
-    //         }
-    //     }
-    // }
+            if (this.stats[stat] <= 0) {
+                this.stats[stat] = 0;
+                isGameOver = true;
+            }
+        }
+    }
 
     //refresh HUD
-    //this.refreshHUD();
+    this.refreshHUD();
 
-    if (this.isGameOver) {
+    if (isGameOver) {
         this.gameOver();
     }
 };
@@ -324,10 +264,8 @@ gameScene.gameOver = function () {
     this.isTheUIBlocked = true;
 
     // change pet to dead
-    //this.pet.setFrame(4);
+    this.pet.setFrame(4);
 
-
-    // Show victory screen
     const gameH = this.sys.game.config.height;
     const gameW = this.sys.game.config.width;
 
@@ -350,16 +288,16 @@ gameScene.gameOver = function () {
         text.height + 20
     );
 
+    console.log("Ive been clicked at end;");
 
-
-    // Reset the game after 5 sec
-    this.time.addEvent({
-        delay: 5000,
-        repeat: 0,
-        callbackScope: this,
-        callback: function () {
-            console.log('decrease stats');
-            this.scene.start('Home');
-        },
-    });
+    // set event time event - pause the game
+    // this.time.addEvent({
+    //     delay: 2000,
+    //     repeat: 0,
+    //     callbackScope: this,
+    //     callback: function () {
+    //         console.log('decrease stats');
+    //         this.scene.start('Home');
+    //     },
+    // });
 };

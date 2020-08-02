@@ -41,7 +41,7 @@ let config = {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
     width: 800,
-    height: 600,
+    height: 450,
     scene: [bootScene, loadingScene, homeScene, gameScene],
     title: 'Virtual Pet',
     pixelArt: false,
