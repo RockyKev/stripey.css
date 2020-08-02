@@ -39,6 +39,10 @@ window.onload = function () {
 This is the clicking using only SVGs and images.
 *******************************************************/
 
+function imageMap(content) {
+    console.log('You selected:', content);
+    alert("You have found the person");
+}
 
 /******************************************************
 KONAMI CODE.
@@ -55,9 +59,10 @@ const allowedKeys = {
 
 // the 'official' Konami Code sequence
 const konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+// const konamiCode = ['up', 'down'];
 
 // a variable to remember the 'position' the user has reached so far.
-const konamiCodePosition = 0;
+let konamiCodePosition = 0;
 
 // add keydown event listener
 document.addEventListener('keydown', function (e) {
@@ -74,7 +79,7 @@ document.addEventListener('keydown', function (e) {
 
         // if the last key is reached, activate cheats
         if (konamiCodePosition == konamiCode.length) {
-            activateCheats();
+            konamiCodeSuccess();
             konamiCodePosition = 0;
         }
     } else {
@@ -82,11 +87,11 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-function activateCheats() {
-    document.body.style = "url('images/cheatBackground.png')";
+function konamiCodeSuccess() {
+    const body = document.querySelector("body");
+    console.log("Switch body");
+    body.className = '';
+    body.classList.add("theme2");
 
-    var audio = new Audio('audio/pling.mp3');
-    audio.play();
-
-    alert("You discovered it!");
+    alert("New Theme unlocked.");
 }

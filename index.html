@@ -63,12 +63,18 @@
 
             <div>
                 <h2>Using Canvas and Phaser </h2>
-                <div id="game"></div>
-
                 <p>
                     GOAL: Find the blue flower. It will appear in one of 8 spots. Check out gamescene.js for code.
                     After finding it, the game will restart.
                 </p>
+
+                <div id="game"></div>
+
+
+                <p>PROS: Lots of flexibility. Transitions are clean. All the code is within Javascript and follows a
+                    system.</p>
+
+                <p>CONS: Uses Phaser, so implementation is done via JS functions.</p>
 
                 <p>
                     NOTE: It's easy on purpose. Imagine if the background was full of flowers or something to increase
@@ -88,7 +94,29 @@
 
 
         </section>
+        <section>
+            <hr />
+            <div>
+                <h2>Using image Maps</h2>
+                <p>
+                    GOAL: Find the person. The clickable area is dark on purpose.
+                </p>
+                <figure class="clickable">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 1200 808">
+                        <image width="100%" xlink:href="assets/images/forest-bg.jpg">
+                        </image>
+                        <rect x="535" y="300" fill="#fff" opacity="0.25" width="120" height="200"
+                            onclick="imageMap(this.id)" />
+                    </svg>
+                </figure>
+                <p>PROS: This is a very clean way to implement. Very clean, no framework.</p>
 
+                <p>CONS: It's limited in what you can do. The canvas method allows you to juice up a experience. This
+                    does not.</p>
+            </div>
+
+        </section>
         <section>
             <div>
                 <hr />
@@ -109,13 +137,18 @@
         </section>
 
 
+
+
+
+
         <section>
             <hr />
             <div>
-                <h3>Konami Code</h3>
+                <h2>Final Easter egg - Konami Code</h2>
 
                 <p>
-                    This is the part wh
+                    This is the standard konami code easter egg. Use arrows + keyboard.
+                    ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a']
                 </p>
 
             </div>
@@ -123,8 +156,8 @@
 
 
         <section>
-
-            <h2> Additional content because why not </h2>
+            <hr />
+            <h2> Additional content - no reason </h2>
 
             <h3>2 col layout - grid (h3 header)</h3>
 
@@ -259,5 +292,7 @@
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
+
+</body>
 
 </html>

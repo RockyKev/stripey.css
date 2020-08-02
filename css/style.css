@@ -663,13 +663,17 @@ select {
 
 }
 
-
-/* canvas phaser code */
-/* canvas {
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
+figure.clickable {
+    /* display: initial; */
+    position: relative;
+	width: 100%;
+padding-bottom: 49%;
+	vertical-align: middle;
+	margin: 0;
+	overflow: hidden;
+}
+figure.clickable svg {
+	display: inline-block;
+	position: absolute;
+	top: 0; left: 0;
+}
