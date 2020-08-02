@@ -9,27 +9,6 @@ letter.addEventListener("click", () => {
     alert("Ive been clicked!");
 });
 
-
-// // No longer used?
-// // https://stackoverflow.com/questions/51518818/how-to-make-canvas-responsive-using-phaser-3
-// function resize() {
-//     var canvas = document.querySelector("canvas");
-//     var windowWidth = window.innerWidth;
-//     var windowHeight = window.innerHeight;
-//     var windowRatio = windowWidth / windowHeight;
-//     var gameRatio = game.config.width / game.config.height;
-
-//     if (windowRatio < gameRatio) {
-//         canvas.style.width = windowWidth + "px";
-//         canvas.style.height = (windowWidth / gameRatio) + "px";
-//     }
-//     else {
-//         canvas.style.width = (windowHeight * gameRatio) + "px";
-//         canvas.style.height = windowHeight + "px";
-//     }
-// }
-
-
 /******************************************************
 This is the clicking using PhaserJS framework.
 In the "/scenes/*.js folder": boot->loading->home->game.
@@ -53,8 +32,6 @@ let config = {
 
 window.onload = function () {
     let game = new Phaser.Game(config);
-    resize();
-    window.addEventListener("resize", resize, false);
 }
 
 
@@ -66,3 +43,50 @@ This is the clicking using only SVGs and images.
 /******************************************************
 KONAMI CODE.
 *******************************************************/
+// a key map of allowed keys
+const allowedKeys = {
+    37: 'left',
+    38: 'up',
+    39: 'right',
+    40: 'down',
+    65: 'a',
+    66: 'b'
+};
+
+// the 'official' Konami Code sequence
+const konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+// a variable to remember the 'position' the user has reached so far.
+const konamiCodePosition = 0;
+
+// add keydown event listener
+document.addEventListener('keydown', function (e) {
+    // get the value of the key code from the key map
+    var key = allowedKeys[e.keyCode];
+    // get the value of the required key from the konami code
+    var requiredKey = konamiCode[konamiCodePosition];
+
+    // compare the key with the required key
+    if (key == requiredKey) {
+
+        // move to the next key in the konami code sequence
+        konamiCodePosition++;
+
+        // if the last key is reached, activate cheats
+        if (konamiCodePosition == konamiCode.length) {
+            activateCheats();
+            konamiCodePosition = 0;
+        }
+    } else {
+        konamiCodePosition = 0;
+    }
+});
+
+function activateCheats() {
+    document.body.style = "url('images/cheatBackground.png')";
+
+    var audio = new Audio('audio/pling.mp3');
+    audio.play();
+
+    alert("You discovered it!");
+}

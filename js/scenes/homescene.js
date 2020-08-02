@@ -8,14 +8,10 @@ homeScene.create = function () {
 
     let bg = this.add.sprite(0, 0, 'backyard').setInteractive();
     bg.setOrigin(0, 0);
-    // scale image to background
     bg.setDisplaySize(this.sys.game.config.width, this.sys.game.config.height);
 
 
-
-
     // welcome text
-
     const gameH = this.sys.game.config.height;
     const gameW = this.sys.game.config.width;
 
@@ -27,9 +23,8 @@ homeScene.create = function () {
     text.setOrigin(0.5, 0.5);
     text.depth = 1;
 
-    // text background
+    // text background -- to add colors, you start with 0x, so 0xfffff
     let textBg = this.add.graphics();
-    // to add colors, you start with 0x, so 0xfffff
     textBg.fillStyle(0x00000, 0.7);
     textBg.fillRect(
         gameW / 2 - text.width / 2 - 10,

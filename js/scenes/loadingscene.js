@@ -38,21 +38,7 @@ loadingScene.preload = function () {
 
     // load assets
     this.load.image('backyard', 'assets/images/trees-bg2.jpg');
-    this.load.image('apple', 'assets/images/apple.png');
-    this.load.image('candy', 'assets/images/candy.png');
-    this.load.image('rotate', 'assets/images/rotate.png');
-    this.load.image('toy', 'assets/images/rubber_duck.png');
     this.load.image('flower', 'assets/images/flower.png');
-
-
-
-    //this turns each into a array
-    this.load.spritesheet('pet', 'assets/images/pet.png', {
-        frameWidth: 97,
-        frameHeight: 83,
-        margin: 1,
-        spacing: 1,
-    });
 
     // TESTING ONLY COMMENT OUT
     // console.log('load faker is active');
@@ -62,14 +48,6 @@ loadingScene.preload = function () {
 };
 
 loadingScene.create = function () {
-    // pet animation
-    this.anims.create({
-        key: 'funnyfaces',
-        frames: this.anims.generateFrameNames('pet', { frames: [1, 2, 3] }),
-        frameRate: 7,
-        yoyo: true,
-        repeat: 0, //1 - to repeat forever -1
-    });
 
     this.scene.start('Home');
 };
